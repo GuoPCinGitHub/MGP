@@ -1,0 +1,406 @@
+@import url('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.css');
+
+/* NintendoFont */
+@import url("https://mzh.moegirl.org.cn/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
+/* MoeSkinPlus - for MoeSkin */
+@import url("https://mzh.moegirl.org.cn/index.php?title=User:鬼影233/moeskinplus.css&action=raw&ctype=text/css");
+/* MoeLatte - for MoeSkin */
+@import url("https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/MoeLatte.css&action=raw&ctype=text/css");
+/* Typicons imported with We Love Icon Fonts */
+@import url("https://weloveiconfonts.com/api/?family=typicons");
+
+/* Customized fonts */
+body {font-family: Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", sans-serif, NospzGothicMoe !important;}
+span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
+span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
+span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
+span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
+html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
+	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", NospzGothicMoe, sans-serif !important;
+	font-size: 1.05em;
+	font-style: normal !important;
+	margin-right: 0;
+}
+sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", sans-serif;}
+table[border="1"] span {font-family: inherit !important;}
+.ace_editor, .ace_editor *, pre, code, kbd, samp, tt {font-family: "Sarasa Term SC", monospace !important;}
+.diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace;}
+.disambig-box {font-family: Lato, Arial, sans-serif, NospzGothicMoe;}
+.fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
+.mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
+.mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
+.kancolle-nav-title {font-family: serif !important;}
+.Wikiplus-Banner {font-family: sans-serif !important;}
+
+/* Colored special links and more */
+/* There are 5 situations as follows:
+   1. Basic links only ([[Link]]); 
+   2. Links are under toggled-on heimus ({{Heimu|[[Link]]}} - toggled on); 
+   3. Links contain toggled-on heimus ([[Link|{{Heimu}}]] - toggled on);
+   4. Links are under heimus ({{Heimu|[[Link]]}});
+   5. Links contain heimus ([[Link|{{Heimu}}]]) */
+
+/* - Preparation: Keep visually hidden under heimus */
+span.heimu a.mw-redirect, span.heimu a.mw-redirect:visited,
+span.heimu a.mw-disambig, span.heimu a.mw-disambig:visited,
+span.heimu a.extiw, span.heimu a.extiw:visited {
+	transition: color .13s linear;
+	color: #252525;
+	text-shadow: none;
+}
+
+/* - Redirections */
+a.mw-redirect,
+body.heimu_toggle_on span.heimu a.mw-redirect,
+body.heimu_toggle_on a.mw-redirect span.heimu,
+span.heimu:hover a.mw-redirect,
+a.mw-redirect:hover span.heimu {color: #B0D;}
+
+/* - Redirections - visited */
+a.mw-redirect:visited,
+body.heimu_toggle_on span.heimu a.mw-redirect:visited,
+body.heimu_toggle_on a.mw-redirect:visited span.heimu,
+span.heimu:hover a.mw-redirect:visited,
+a.mw-redirect:visited:hover span.heimu {color: #9A00B6;}
+
+/* - Redirections - mark: A FLAG */
+a.mw-redirect::after {
+	content: '{';
+	display: inline-block;
+	font-family: Typicons;
+	font-style: normal;
+	font-variant: super;
+	font-weight: normal;
+	margin: 0 -.2em;
+}
+
+/* - Disambiguations */
+a.mw-disambig,
+body.heimu_toggle_on span.heimu a.mw-disambig,
+body.heimu_toggle_on a.mw-disambig span.heimu,
+span.heimu:hover a.mw-disambig,
+a.mw-disambig:hover span.heimu {color: #D27138;}
+
+/* - Disambiguations - visited */
+a.mw-disambig:visited,
+body.heimu_toggle_on span.heimu a.mw-disambig:visited,
+body.heimu_toggle_on a.mw-disambig:visited span.heimu,
+span.heimu:hover a.mw-disambig:visited,
+a.mw-disambig:visited:hover span.heimu {color: #AF5A28;}
+
+/* - Disambiguations - mark: A DIRECTION SIGN */
+a.mw-disambig::after {
+	content: 'r';
+	display: inline-block;
+	font-family: Typicons;
+	font-style: normal;
+	font-variant: super;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 -.2em;
+}
+
+/* - For links are both redirections and disambiguations, I call them "REDIR-DISAM links" */
+a.mw-redirect.mw-disambig::after {
+	content: 'r{';
+	display: inline-block;
+	font-family: Typicons;
+	font-style: normal;
+	font-variant: super;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 -.2em;
+}
+
+/* - Interwiki links, not Moegirl ones - visited */
+a.extiw:not([href*=".moegirl.org.cn"]):visited,
+body.heimu_toggle_on span.heimu a.extiw:not([href*=".moegirl.org.cn"]):visited,
+body.heimu_toggle_on a.extiw:not([href*=".moegirl.org.cn"]):visited span.heimu,
+span.heimu:hover a.extiw:not([href*=".moegirl.org.cn"]):visited,
+a.extiw:not([href*=".moegirl.org.cn"]):visited:hover span.heimu {color: #00886A;}
+
+/* - Interwiki links - mark: A GLOBE */
+a.extiw:not([href*=".moegirl.org.cn"])::after {
+	content: 'a';
+	display: inline-block;
+	font-family: Typicons;
+	font-style: normal;
+	font-variant: super;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 -.2em;
+}
+
+/* - Moegirl links */
+a.extiw[href*=".moegirl.org.cn"],
+body.heimu_toggle_on span.heimu a.extiw[href*=".moegirl.org.cn"],
+body.heimu_toggle_on a.extiw[href*=".moegirl.org.cn"] span.heimu,
+span.heimu:hover a.extiw[href*=".moegirl.org.cn"],
+a.extiw[href*=".moegirl.org.cn"]:hover span.heimu {color: #E7BB5E;}
+
+/* - Moegirl links - visited */
+a.extiw[href*=".moegirl.org.cn"]:visited,
+body.heimu_toggle_on span.heimu a.extiw[href*=".moegirl.org.cn"]:visited,
+body.heimu_toggle_on a.extiw[href*=".moegirl.org.cn"]:visited span.heimu,
+span.heimu:hover a.extiw[href*=".moegirl.org.cn"]:visited,
+a.extiw[href*=".moegirl.org.cn"]:visited:hover span.heimu {color: #D79C20;}
+
+/* - Moegirl links - mark: A HEART */
+a.extiw[href*=".moegirl.org.cn"]::after {
+	content: ';';
+	display: inline-block;
+	font-family: Typicons;
+	font-style: normal;
+	font-variant: super;
+	font-weight: normal;
+	margin: 0 -.2em;
+}
+
+/* Customized blockquotes */
+blockquote {
+	display: flow-root;
+	background: #E4F5E688;
+	border-left: 3px #8ED598 solid;
+	padding: 10px 50px !important;
+	position: relative;
+}
+blockquote::before {
+	content: "「" !important;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	font-size: 1.5rem;
+	color: #D5EFD9;
+}
+blockquote::after {
+	content: "」" !important;
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+	font-size: 1.5rem;
+	color: #D5EFD9;
+}
+
+/* Customized edit abbrs, for .unpatrolled, see vector.js */
+.newpage {color: green;}
+.minoredit {color: gray;}
+.botedit, .minoredit, .newpage, .unpatrolled {
+	display: inline-block;
+	transform: scaleX(60%);
+}
+.mw-enhanced-rc abbr {margin-right: -7px;}
+
+/* Customized colors for wikitable-green */
+.wikitable-green th {background: #97EEC5;}
+.wikitable-green td {background: #FFFE;}
+
+/* Colored selection */
+::selection {
+	background: #8ED598;
+	color: #FFF;
+}
+.diff-context ::selection {
+	background: #6C7A96;
+	color: #FFF;
+}
+.diff-deletedline ::selection {
+	background: #FFBF13;
+	color: #FFF;
+}
+.diff-addedline ::selection {
+	background: #0688FF;
+	color: #FFF;
+}
+
+/* Become rounded */
+code, fieldset, pre, 
+.bilibili-video-container.exec, 
+.errorbox, .infobox, .infoBox, 
+.mw-body, .mw-changeslist-legend, 
+.mw-revslider-container, 
+.mw-warning-with-logexcerpt, 
+.navbox, .navpopup, .saveNotice, 
+.template-documentation, .toccolours, .tocfloatlabel, 
+.thumb, .thumbinner, .vertical-navbox, .ztdh, 
+#catlinks, #p-personal, #talkPageTop_saves, 
+#toc, #userboxes, #bottomRightCorner div, 
+.comment-avatar img, .oldTalkPageSave div {border-radius: 2px;}
+.editOptions {border-radius: 0 0 2px 2px;}
+
+/* Customized hovering and unhovering lyrics */
+.mw-parser-output .bg_hover {
+	border-radius: 3px;
+	transition: all ease-out .5s;
+}
+.mw-parser-output .bg_hover:hover {
+	backdrop-filter: blur(5px);
+	background: #4441 !important;
+	transition: all ease-in .2s;
+}
+
+/* Customized mahjong */
+.mahjong {margin: 0 5px;}
+.mw-parser-output .aka {
+	color: transparent !important;
+	filter: none !important;
+	text-shadow: 0 0 #A50000;
+}
+.mw-parser-output .ao {
+	color: transparent !important;
+	filter: none !important;
+	text-shadow: 0 0 #008040;
+}
+
+/* Customized usergroups */
+.markrights-extendedconfirmed {color: #8D8DAA !important;}
+.markrights-file-maintainer {color: #895737 !important;}
+.markrights-checkuser::after {content: "核" !important;}
+.markrights-flood::after {content: "洪" !important;}
+.markrights-scripteditor::after {content: "稿" !important;}
+
+/* Colored QuickEdit */
+.AnnTools_MarkAsResolved {color: green;}
+#Wikiplus-Edit-TopBtn span a, #Wikiplus-Settings-Intro a,
+#Wikiplus-SR-Intro a, #wphl-settings a, 
+.Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
+.Wikiplus-Edit-EveryWhereBtn {color: #40C040;}
+
+/* Wikiplus */
+.Wikiplus-InterBox .wikiEditor-ui-clear {margin: 5px;}
+#Wikiplus-Quickedit-Summary-Input {font-family: inherit;}
+#Wikiplus-Quickedit-Preview-Submit, #Wikiplus-Quickedit-Submit {
+	background: #FFF;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px #aaa;
+	font-family: inherit;
+	margin: 5px 5px 0 5px;
+	padding: 2px 10px;
+	transition: all .2s ease-out;
+}
+.Wikiplus-Btn {
+	border-radius: 2px;
+	margin: 5px 10px 10px 0 !important;
+	padding: .4em 1em !important;
+	transition: all .2s ease-out;
+}
+#Wikiplus-Quickedit-Preview-Submit:hover, #Wikiplus-Quickedit-Submit:hover,
+.Wikiplus-Btn:hover {background: #F4F4F4;}
+.wphl-lint-subpanel {
+	display: inline-flex;
+	align-items: center;
+}
+.wphl-lint-count {width: auto !important;}
+
+/* Homepage */
+#moe-homeland-app * {font-family: inherit !important;}
+#moe-homeland-app .site-statistics .extra-buttons > a:last-child, 
+#moe-homeland-app .social-links, .banner-slider-container {display: none;}
+.n-popover {max-width: 25em;}
+.topic-list > .capsule-card {
+	position: relative;
+	align-items: flex-start !important;
+	width: 7rem !important;
+	height: 10rem !important;
+}
+.topic-list > .capsule-card .topic-thumb {
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	border-radius: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+.topic-list > .capsule-card .topic-text {
+	position: absolute;
+	top: calc(100% - 1.8em);
+	z-index: 1;
+	backdrop-filter: blur(2px);
+	background: #FFFA;
+	border-radius: .5em;
+	width: 100% !important;
+	height: 100%;
+	transition: all ease-in-out .3s;
+}
+.topic-list > .capsule-card:hover .topic-text {top: 0;}
+.topic-list > .capsule-card .topic-name {
+	font-size: 1.05em;
+	padding: .2em;
+}
+.topic-list > .capsule-card:hover .topic-name {white-space: normal;}
+.topic-list > .capsule-card .topic-desc {
+	color: #555 !important;
+	-webkit-line-clamp: 5 !important;
+	line-height: 1.5em;
+	padding: .2em;
+}
+.topic-list > .capsule-card * {transition: all ease-in-out .2s;}
+.topic-list > .capsule-card img {
+	position: unset !important;
+	transform: none !important;
+	width: unset !important;
+	max-width: unset !important;
+}
+.topic-list > .capsule-card:hover img {transform: scale(1.1) !important;}
+
+/* Other */
+body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
+h4 {font-size: 1.1em !important;}
+pre {display: flow-root;}
+#moe-draw-float-button {
+	right: 100% !important;
+	transform: rotate(50deg);
+}
+#moe-draw-float-button:hover {
+	right: calc(100% - var(--size) / 1.2) !important;
+	transform: rotate(0);
+}
+#topicpath {
+	border: none !important;
+	background: #FFFA !important;
+	margin: .6em 0 !important;
+	box-shadow: 0 -.2em 0 #0002 inset;
+}
+.common-box, .CtxtMenu_Menu, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
+.diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
+.oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
+.infoBoxContent {
+	background: #FBFBFBBB;
+	border: none;
+}
+.hljs-color {line-height: 1.15rem;}
+.keyboard-key {
+	background: #FFF !important;
+	border: 2px solid #CDCDCD !important;
+	border-radius: 3px !important;
+	box-shadow: inset 0 -1px 0 0 #CDCDCD !important;
+	font-family: monospace !important;
+	font-size: .9em !important;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none;
+	padding: 2px 3px !important;
+	margin: 0 2px;
+	vertical-align: text-bottom;
+}
+.mw-datatable.TablePager {display: table;}
+.mw-tag-markers {font-size: 90%;}
+.template-ruby-hidden {user-select: none;}
+.textToggleDisplayButtonLabel {
+	box-shadow: none !important;
+	border-width: 2px 2px 2px 4px !important;
+}
+.textToggleDisplayButtonLabel.cancelButton {
+	margin: 0 4px;
+	height: .97rem !important;
+	line-height: .9rem !important;
+}
+.updatedmarker {
+	background: cornflowerblue !important;
+	color: #FFF;
+	display: inline-block;
+	border-radius: 2px;
+	padding: 0 3px;
+	font-family: serif;
+	font-weight: 700;
+}

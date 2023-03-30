@@ -1,0 +1,60 @@
+/* Customized fonts */
+h2 .mw-headline span[lang="ja"] {font-family: YakuHanMP, serif;}
+span[lang="ja"] {font-family: YakuHanJP, sans-serif;}
+#section_0 span[lang="ja"] {font-family: YakuHanMP, serif !important;}
+
+/* Become rounded */
+.ext-related-articles-card, .toc-mobile {border-radius: 2px;}
+
+/* 表格 */
+.content table.wikitable {border: none;}
+table.wikitable th, table.wikitable td {
+	min-width: 6em;
+	padding: .2em .5em !important;
+}
+table.wikitable tbody > tr:first-child {
+	position: sticky;
+	top: 0;
+}
+
+/* Enable small text */
+small {font-size: small;}
+
+/* Monospace for code */
+.mw-editfont-monospace, .ace_editor, .ace_editor *, pre, code {
+	font-family: monospace;
+	font-size: 1rem;
+}
+
+/* Default Minerva is enough */
+.header > div:last-child, .inlineTopAds, .open-in-app-wrapper {display: none !important;}
+
+/* No tips of music players on Minerva! */
+.music163.exec .subinfo, .appleMusic.exec .subinfo {display: none;}
+
+/* Mainpage gallery alignment */
+.mainpage-1stcontent .gallery {padding-right: 1em;}
+
+/* 更改相关 */
+.mw-enhancedchanges-arrow-space {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+td.mw-enhanced-rc {
+	width: 85px;
+	text-align: right;
+	vertical-align: text-top !important;
+}
+
+/* Minerva Wikiplus related */
+#Wikiplus-Quickedit {background-color: #fff; border: 1px solid #c8ccd1; font-family: monospace; font-size: 1rem;}
+#Wikiplus-Quickedit-Summary-Input {background-color: #fff; border: 1px outset threedlightshadow;}
+#Wikiplus-Quickedit-Submit, #Wikiplus-Quickedit-Preview-Submit {background-color: ButtonFace; border: 2px outset threedlightshadow;}
+
+/* Other */
+h5 {
+	font-size: 1.05em;
+	font-weight: bold;
+}
+.unpatrolled {color: #d33;}

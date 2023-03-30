@@ -1,0 +1,102 @@
+/* Customized fonts */
+h2 .mw-headline span[lang="ja"] {font-family: YakuHanMP, "Kozuka Mincho Pro", serif;}
+h2 .mw-headline span[lang="zh-Hant"], h2 .mw-headline span[lang="zh-TW"] {font-family: "I.MingCP", serif;}
+#firstHeading span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
+#firstHeading span[lang="ko"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
+#firstHeading span[lang="ru"] {font-family: "Source Serif 4", serif !important;}
+#firstHeading[lang="zh-TW"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
+#firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
+#firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC" !important;}
+#firstHeading {font-family: "Source Serif 4", serif !important;}
+
+/* Customized headers */
+h1, h2, h3, h4, h5, h6 {color: #222;}
+h1 {border-bottom: 2px solid #8ED598 !important;}
+h2 {border-bottom: 1px solid #8ED598 !important;}
+
+/* Customized buttons, inputs & selects */
+button, input, select {
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	transition: border .3s;
+}
+button:hover, input:hover, select:hover {border: 1px solid #C7EACC;}
+button:focus, input:focus, select:focus {
+	border: 1px solid transparent;
+	outline: 2px solid #8ED598;
+}
+
+/* Customized personal label */
+#p-personal {
+	display: flex;
+	justify-content: center;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 .5rem #0002 !important;
+	font-weight: 500;
+	position: fixed;
+	overflow-x: auto;
+	max-width: 95%;
+}
+#p-personal ul {display: flex;}
+#pt-avatar a {display: inline-block; padding: 4px 0;}
+#pt-avatar a img {width: 20px;}
+#pt-userstatus {margin-top: 12px !important;}
+.pt-userstatus-img {width: 15px !important;}
+
+/* Customized panel */
+#mw-panel .portal .body {background-image: none !important;}
+#mw-panel .portal h3 {
+	border-bottom: 1px solid #8ED598;
+	color: #222 !important;
+}
+
+/* Customized navigation, based on [[U:あめろ/vector.css]] */
+#mw-head-base {
+	margin-bottom: .6em;
+}
+#left-navigation, #right-navigation, div.vectorTabs ul li.selected {
+	background: #FFFB !important;
+	border-radius: 2px;
+}
+#left-navigation, #right-navigation {
+	position: relative;
+	z-index: 10;
+}
+div.vectorTabs ul li:not(.selected):hover, div.vectorTabs ul li:not(.selected):focus {
+	background: #FFF6 !important;
+	border-radius: 2px;
+	transition: background ease-in .3s;
+}
+div.vectorTabs ul li:not(.selected):hover a, div.vectorTabs ul li:not(.selected) a:focus {
+	text-decoration: none;
+}
+div.vectorTabs ul li:not(.selected) {
+	transition: background ease-out .3s;
+}
+div.vectorTabs li a, div.vectorMenu h3 span {
+	padding-top: .8em;
+}
+.vectorTabs #ca-unwatch.icon a, .vectorTabs #ca-watch.icon a {
+	padding-top: 2.8em;
+}
+#simpleSearch {
+	border: none;
+	margin-top: .5em;
+}
+html.sidebarHiddenOn #sidebarHidden-logo-link {
+	background-image: none !important;
+}
+
+/* Customized Heimu */
+.heimu, .heimu rt, .colormu, .colormu rt {
+	border-radius: .2rem;
+	padding-inline: .2rem;
+}
+
+/* Colored QuickEdit */
+#bhsd-inspector a {color: #FF30A3;}
+#ca-lr-ns2d a {color: #800;}
+
+/* Other */
+span.popup_contribs > a.popupNavLink {display: block;}
+.mw-body {border: none !important;}
