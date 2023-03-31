@@ -14,6 +14,14 @@ if (MOE_SKIN_GLOBAL_DATA.indicators) {
 		.moe-indicator {
 			display: inline-block;
 		}
+		@media (max-width: 768px) {
+			.moe-indicators {
+				float: none;
+				font-size: 0.75em;
+				line-height: 1.2em;
+				text-align: center;
+			}
+		}
 		`);
 		if (indicators["mw-helplink"]) {
 			mw.loader.addStyleTag(`
