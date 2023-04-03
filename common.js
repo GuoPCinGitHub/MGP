@@ -2,9 +2,18 @@ mw.loader.load('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlP
 mw.loader.load('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.js');
 
 // Sharp sign underline, based on [[User:Lihaohong/common.js]]
+mw.loader.addStyleTag(`
+#sharp {
+	background: #6640FF27;
+	border-radius: 2px;
+	box-shadow: inset 0 -1.5px 0 #6640FF;
+	color: #6640FF;
+	font-family: 'Segoe UI';
+}
+`);
 $('#content *').each(function () {
 	if ($(this).clone().children().remove().end().text().includes("\u266f")) {
-		$(this).html($(this).html().replace(/(\u266f{2,})/g,'<span style="text-decoration:underline #6640FF 1.5px;">$1</span>'));
+		$(this).html($(this).html().replace(/(\u266f{2,})/g,'<span id="sharp">$1</span>'));
 	}
 });
 
