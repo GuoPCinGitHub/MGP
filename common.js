@@ -1,6 +1,3 @@
-mw.loader.load('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/HotCat/MediaWiki:Gadget-HotCat.js');
-mw.loader.load('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.js');
-
 // Sharp sign underline, based on [[User:Lihaohong/common.js]]
 mw.loader.addStyleTag(`
 #sharp {
