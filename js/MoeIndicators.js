@@ -1,7 +1,7 @@
 if (MOE_SKIN_GLOBAL_DATA.indicators) {
 	var indicators = MOE_SKIN_GLOBAL_DATA.indicators;
 	delete indicators["noteTA-0"];
-	if (indicators) {
+	if (!$.isEmptyObject(indicators)) {
 		$('h1#firstHeading').append('<div class="moe-indicators"><div class="moe-indicator"></div></div>');
 		mw.loader.addStyleTag(`
 		.moe-indicators {
