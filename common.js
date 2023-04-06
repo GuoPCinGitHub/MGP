@@ -41,15 +41,6 @@ window.popupFixRedirs = true;
 window.popupFixDabs = true;
 window.popupThumbAction = "sizetoggle";
 
-// 未巡查
-if ($.inArray(mw.config.get('wgCanonicalSpecialPageName'), ['Watchlist', 'Recentchanges', 'Recentchangeslinked']) >= 0) {
-	$(function() {
-		$('.unpatrolled').each(function() {
-			$(this).text("喵");
-		});
-	});
-}
-
 // mwPanel
 mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:AnnAngela/js/mwPanel.js&action=raw&ctype=text/javascript');
 
