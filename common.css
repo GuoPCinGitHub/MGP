@@ -14,6 +14,7 @@ body {font-family: Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Colo
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
+span[lang="ko"] {font-family: Gungsuh, sans-serif;}
 span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
 	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", NospzGothicMoe, sans-serif !important;
@@ -181,15 +182,13 @@ blockquote::after {
 	color: #D5EFD9;
 }
 
-/* Customized edit abbrs */
+/* Customized edit abbrs, for .unpatrolled, see common.js */
 .newpage {color: green;}
 .minoredit {color: gray;}
 .botedit, .minoredit, .newpage, .unpatrolled {
 	display: inline-block;
 	transform: scaleX(60%);
 }
-.unpatrolled::before {content: '喵';}
-.unpatrolled {width: 1em;}
 .mw-enhanced-rc abbr {margin-right: -7px;}
 
 /* Customized colors for wikitable-green */
@@ -218,6 +217,7 @@ blockquote::after {
 code, fieldset, pre, 
 .bilibili-video-container.exec, 
 .errorbox, .infobox, .infoBox, 
+.mmdPreviewer-hoverbox, 
 .mw-body, .mw-changeslist-legend, 
 .mw-revslider-container, 
 .mw-warning-with-logexcerpt, 

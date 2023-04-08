@@ -1,16 +1,7 @@
 // Sharp sign underline, based on [[User:Lihaohong/common.js]]
-mw.loader.addStyleTag(`
-#sharp {
-	background: #6640FF27;
-	border-radius: 2px;
-	box-shadow: inset 0 -1.5px 0 #6640FF;
-	color: #6640FF;
-	font-family: 'Segoe UI';
-}
-`);
 $('#content *').each(function () {
 	if ($(this).clone().children().remove().end().text().includes("\u266f")) {
-		$(this).html($(this).html().replace(/(\u266f{2,})/g,'<span id="sharp">$1</span>'));
+		$(this).html($(this).html().replace(/(\u266f{2,})/g, '<span style="background:#6640FF27;border-radius:2px;box-shadow:inset 0 -1.5px 0 #6640FF;color:#6640FF;font-family:Segoe UI;">$1</span>'));
 	}
 });
 
@@ -40,6 +31,15 @@ window.popupShortcutKeys = true;
 window.popupFixRedirs = true;
 window.popupFixDabs = true;
 window.popupThumbAction = "sizetoggle";
+
+// 未巡查
+if ($.inArray(mw.config.get('wgCanonicalSpecialPageName'), ['Watchlist', 'Recentchanges', 'Recentchangeslinked']) >= 0) {
+	$(function() {
+		$('.unpatrolled').each(function() {
+			$(this).text("喵");
+		});
+	});
+}
 
 // mwPanel
 mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:AnnAngela/js/mwPanel.js&action=raw&ctype=text/javascript');
