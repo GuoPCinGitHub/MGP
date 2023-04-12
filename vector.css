@@ -6,13 +6,14 @@ h2 .mw-headline span[lang="zh-Hant"], h2 .mw-headline span[lang="zh-TW"] {font-f
 #firstHeading span[lang="ru"] {font-family: "Source Serif 4", serif !important;}
 #firstHeading[lang="zh-TW"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
 #firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
-#firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC" !important;}
+#firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
 #firstHeading {font-family: "Source Serif 4", serif !important;}
 
 /* Customized headers */
 h1, h2, h3, h4, h5, h6 {color: #222;}
 h1 {border-bottom: 2px solid #8ED598 !important;}
 h2 {border-bottom: 1px solid #8ED598 !important;}
+.home-card-header h2 {border-bottom: none !important;}
 
 /* Customized buttons, inputs & selects */
 button, input, select {
