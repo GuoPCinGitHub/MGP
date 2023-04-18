@@ -14,7 +14,7 @@ body {font-family: Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Colo
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
-span[lang="ko"] {font-family: Gungsuh, sans-serif;}
+span[lang="ko"] {font-family: Gulim, sans-serif;}
 span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
 	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", NospzGothicMoe, sans-serif !important;
