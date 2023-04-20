@@ -1,18 +1,14 @@
-// 在页面最下方添加更多按钮
-if (mw.config.get('wgNamespaceNumber') != -1 && $('#page-secondary-actions').length > 0) {
-	$(function() {
-		$('#page-secondary-actions').append('<a class="wlh-minerva mw-ui-button button" href="/Special:链入页面/' + mw.config.get('wgPageName') + '">链入页面</a><a class="rcl-minerva mw-ui-button button" href="/Special:链出更改/' + mw.config.get('wgPageName') + '">相关更改</a><a class="pml-minerva mw-ui-button button" href="/Special:固定链接/' + mw.config.get('wgRevisionId') + '">固定链接</a>');
-	});
-}
+// 向自定义工具中加链
+mw.util.addPortletLink('p-personal', '/分类:积压工作', '积压工作', 'pt-overstock', '归类为积压工作的内容[Alt+Shift+o]', 'o');
+mw.util.addPortletLink('p-personal', '/分类:萌娘百科数据报告', '数据报告', 'pt-datareport', '展示统计报告[Alt+Shift+d]', 'd');
+mw.util.addPortletLink('p-personal', '/User:' + mw.config.get("wgUserName") + '/Sandbox', '我的沙盒', 'pt-mysandbox', '您的个人沙盒页面[Alt+Shift+s]', 's');
+mw.util.addPortletLink('p-personal', '/Special:log/' + mw.config.get("wgUserName"), '我的日志', 'pt-mylog', '您执行的所有公开日志[Alt+Shift+g]', 'g');
 
-// disambigHelper
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');
+// Better MGP logo
+$('.site-logo, #footer-copyright-text img').attr('src', $('.site-logo').attr('src').replace('9/95/MoegirlPedia-Title.png', '3/33/MoegirlPedia-Title.svg'));
 
-// MobileNav
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:一位史蒂夫/JS/MobileNav.js&action=raw&ctype=text/javascript');
+// CustomSidenavIcon
+mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/CustomSidenavIcon.js&action=raw&ctype=text/javascript');
 
-// 预装JS：Syntax highlighter
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=MediaWiki:Gadget-DotsSyntaxHighlighter.js&action=raw&ctype=text/javascript');
-
-// 预装JS：Wikiplus
-mw.loader.load('https://wikiplus-app.com/Main.js');
+// MoeIndicators
+mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/MoeIndicators.js&action=raw&ctype=text/javascript');
