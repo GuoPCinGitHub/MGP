@@ -348,7 +348,10 @@ code, fieldset, pre,
 /* Other */
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
 h4 {font-size: 1.1em !important;}
-pre {display: flow-root;}
+pre {
+	display: flow-root;
+	tab-size: 4;
+}
 #moe-draw-float-button {
 	right: 100% !important;
 	transform: rotate(50deg);
