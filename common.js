@@ -7,20 +7,21 @@ $('#content *').each(function () {
 
 // 监视列表时段选项自定义
 if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
-	$('.wlinfo').after(
-		'<br> \
-		<span class="rclinks">显示过去 \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=1&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:1,&quot;from&quot;:&quot;&quot;}" data-keys="days,from">1</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=3&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:3,&quot;from&quot;:&quot;&quot;}" data-keys="days,from">3</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=7&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:7,&quot;from&quot;:&quot;&quot;}" data-keys="days,from">7</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=14&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:14,&quot;from&quot;:&quot;&quot;}" data-keys="days,from">14</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=30&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:30,&quot;from&quot;:&quot;&quot;}" data-keys="days,from">30</a>天的最后 \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=50" title="Special:监视列表" data-params="{&quot;limit&quot;:50}" data-keys="limit">50</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=100" title="Special:监视列表" data-params="{&quot;limit&quot;:100}" data-keys="limit">100</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=250" title="Special:监视列表" data-params="{&quot;limit&quot;:250}" data-keys="limit">250</a> | \
-			<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=500" title="Special:监视列表" data-params="{&quot;limit&quot;:500}" data-keys="limit">500</a>个更改 \
-		</span>'
-	);
+	var days = ['1', '3', '7', '14', '30'];
+	var limits = ['50', '100', '250', '500'];
+	var dayLinks = '';
+	var limitLinks = '';
+	for (var i = 0; i < days.length; i++) {
+		dayLinks = dayLinks + '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=' + days[i] + '&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:' + days[i] + ',&quot;from&quot;:&quot;&quot;}" data-keys="days,from">' + days[i] + '</a>';
+		var tail = i == days.length - 1 ? '天的最后' : ' | ';
+		dayLinks = dayLinks + tail;
+	}
+	for (var j = 0; j < limits.length; j++) {
+		limitLinks = limitLinks + '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=' + limits[j] + '" title="Special:监视列表" data-params="{&quot;limit&quot;:' + limits[j] + '}" data-keys="limit">' + limits[j] + '</a>';
+		var tail = j == limits.length - 1 ? '个更改' : ' | ';
+		limitLinks = limitLinks + tail;
+	}
+	$('.wlinfo').after('<br><span class="wllinks">显示过去' + dayLinks + limitLinks +  '</span>');
 	$('.cldays.cloption').hide();
 }
 
