@@ -12,14 +12,12 @@ if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
 	var dayLinks = '';
 	var limitLinks = '';
 	for (var i = 0; i < days.length; i++) {
-		dayLinks = dayLinks + '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=' + days[i] + '&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:' + days[i] + ',&quot;from&quot;:&quot;&quot;}" data-keys="days,from">' + days[i] + '</a>';
-		var tail = i == days.length - 1 ? '天的最后' : ' | ';
-		dayLinks = dayLinks + tail;
+		dayLinks += '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=' + days[i] + '&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:' + days[i] + ',&quot;from&quot;:&quot;&quot;}" data-keys="days,from">' + days[i] + '</a>';
+		dayLinks += i == days.length - 1 ? '天的最后' : ' | ';
 	}
 	for (var j = 0; j < limits.length; j++) {
-		limitLinks = limitLinks + '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=' + limits[j] + '" title="Special:监视列表" data-params="{&quot;limit&quot;:' + limits[j] + '}" data-keys="limit">' + limits[j] + '</a>';
-		var tail = j == limits.length - 1 ? '个更改' : ' | ';
-		limitLinks = limitLinks + tail;
+		limitLinks += '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=' + limits[j] + '" title="Special:监视列表" data-params="{&quot;limit&quot;:' + limits[j] + '}" data-keys="limit">' + limits[j] + '</a>';
+		limitLinks += j == limits.length - 1 ? '个更改' : ' | ';
 	}
 	$('.wlinfo').after('<br><span class="wllinks">显示过去' + dayLinks + limitLinks +  '</span>');
 	$('.cldays.cloption').hide();
