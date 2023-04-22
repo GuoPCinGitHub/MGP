@@ -44,6 +44,15 @@ button:focus, input:focus, select:focus {
 #pt-userstatus {margin-top: 12px !important;}
 .pt-userstatus-img {width: 15px !important;}
 
+/* Wiki logo */
+#mw-panel #p-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 300px;
+}
+#mw-panel #p-logo .mw-wiki-logo {min-height: 100%;}
+
 /* Customized panel */
 #mw-panel .portal .body {background-image: none !important;}
 #mw-panel .portal h3 {
