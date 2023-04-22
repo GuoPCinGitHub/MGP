@@ -369,11 +369,15 @@ pre {
 .common-box, .CtxtMenu_Menu, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
+.fakelink::after {
+	content: "FL";
+	font-variant: super;
+}
+.hljs-color {line-height: 1.15rem;}
 .infoBoxContent {
 	background: #FBFBFBBB;
 	border: none;
 }
-.hljs-color {line-height: 1.15rem;}
 .keyboard-key {
 	background: #FFF !important;
 	border: 2px solid #CDCDCD !important;
