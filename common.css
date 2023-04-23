@@ -261,11 +261,13 @@ code, fieldset, pre,
 .markrights-scripteditor::after {content: "稿" !important;}
 
 /* Colored QuickEdit */
-.AnnTools_MarkAsResolved {color: green;}
+#ca-lr-ns2d a {color: #800;}
+#mass-null-edit a {color: #98D;}
 #Wikiplus-Edit-TopBtn span a, #Wikiplus-Settings-Intro a,
 #Wikiplus-SR-Intro a, #wphl-settings a, 
 .Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
 .Wikiplus-Edit-EveryWhereBtn {color: #40C040;}
+.AnnTools_MarkAsResolved {color: green;}
 
 /* Wikiplus */
 .Wikiplus-InterBox .wikiEditor-ui-clear {margin: 5px;}

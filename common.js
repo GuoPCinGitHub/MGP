@@ -78,6 +78,9 @@ mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/MouseRi
 // WatchlistNoRed
 mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/WatchlistNoRed.js&action=raw&ctype=text/javascript');
 
+// OneKeyPurge
+mw.loader.load('https://cdn.jsdelivr.net/gh/BearBin1215/MoegirlPedia@master/gadgets/OneKeyPurge.min.js');
+
 // Yaku Han JP
 mw.loader.load('https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css', 'text/css');
 mw.loader.load('https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanmp.min.css', 'text/css');
