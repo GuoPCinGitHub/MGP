@@ -56,3 +56,6 @@ mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + 
 
 // AccesskeyVec
 mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
+
+// ExtBoardInPortal
+mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
