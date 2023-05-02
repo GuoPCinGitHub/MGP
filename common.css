@@ -262,7 +262,7 @@ code, fieldset, pre,
 
 /* Colored QuickEdit */
 #ca-lr-ns2d a {color: #800;}
-#mass-null-edit a {color: #98D;}
+#ca-okp a {color: #98D;}
 #Wikiplus-Edit-TopBtn span a, #Wikiplus-Settings-Intro a,
 #Wikiplus-SR-Intro a, #wphl-settings a, 
 .Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
@@ -362,6 +362,7 @@ pre {
 	right: calc(100% - var(--size) / 1.2) !important;
 	transform: rotate(0);
 }
+#profile {transition: all .2s ease-out;}
 #topicpath {
 	border: none !important;
 	background: #FFFA !important;
