@@ -12,9 +12,6 @@
 	width: auto !important;
 }
 
-/* Purge link alignment */
-.right-block {align-items: center;}
-
 /* Subtitle alignment */
 #subtitle .xicon {height: 1.2em !important;}
 
@@ -45,7 +42,11 @@
 /* Siderail */
 .sitenotice-main > div:nth-child(2), 
 #moe-siderail-sitenotice #moeskin-sitenotice, 
-#moe-sitenotice-container .show-more {display: none;}
+#moe-sitenotice-container .show-more, 
+#p-sl h3 ~ div > div {display: none;}
+body.skin-moeskin #moe-custom-sidenav-block-list > li#ca-lr-ns2d a {color: #800;}
+body.skin-moeskin #moe-custom-sidenav-block-list > li#ca-okp a {color: #98D;}
+body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #40C040;}
 
 /* Footer */
 #moe-global-footer {
@@ -59,8 +60,6 @@
 
 /* 窄屏 */
 @media (max-width: 768px) {
-	body.skin-moeskin main.moe-flexible-container {width: 100%;}
-	body.skin-moeskin #moe-article {margin-left: 0;}
 	#mw-body {overflow-x: auto;}
 	.mobile-edit-button {justify-content: center;}
 }
@@ -71,6 +70,7 @@ body div.fc-ab-root {display: none !important;}
 
 /* Other */
 body {background: #F7FAFD;}
+kbd, kbd:active {all: revert !important;}
 /* article div[data-v-app], .adsbyezoic, .google-auto-placed, #ezcnxplayer, */
 .desktop-only .n-badge, .mobile-only .n-badge, 
 #moe-global-background, #moe-open-in-app {display: none;}

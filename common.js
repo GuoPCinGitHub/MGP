@@ -1,3 +1,19 @@
+// [[User:BearBin/js#svg转回]]
+$(function () {
+	$('img[srcset*=".svg"]').each(function () {
+		$(this).attr("src", $(this).attr("src").replaceAll("thumb/", "").replaceAll(/\.svg\/.*/g, ".svg"));
+		$(this).attr("srcset", $(this).attr("srcset").replaceAll("thumb/", "").replaceAll(/\.svg\/[^ ]*/g, ".svg"));
+	});
+	$("img[data-lazy-src*='.svg']").each(function () {
+		var _a;
+		$(this)
+			.attr("src", $(this).attr("data-lazy-src").replaceAll("thumb/", "").replaceAll(/\.svg\/.*/g, ".svg"))
+			.attr("srcset", (_a = $(this).attr("data-lazy-srcset")) === null || _a === void 0 ? void 0 : _a.replaceAll("thumb/", "").replaceAll(/\.svg\/[^ ]*/g, ".svg"))
+			.removeAttr("data-lazy-state");
+		$(this).replaceWith($(this).clone());
+	});
+});
+
 // Sharp sign underline, based on [[User:Lihaohong/common.js]]
 $('#content *').each(function () {
 	if ($(this).clone().children().remove().end().text().includes("\u266f")) {
@@ -53,6 +69,9 @@ mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:AnnAngela/js/upl
 // watchlist-log
 mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:AnnAngela/js/watchlist-log.js&action=raw&ctype=text/javascript');
 
+// OneKeyPurge
+mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:BearBin/js/OneKeyPurge.js&action=raw&ctype=text/javascript');
+
 // code-prettify
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.js');
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.css', 'text/css');
@@ -77,9 +96,6 @@ mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/MouseRi
 
 // WatchlistNoRed
 mw.loader.load('https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/js/WatchlistNoRed.js&action=raw&ctype=text/javascript');
-
-// OneKeyPurge
-mw.loader.load('https://cdn.jsdelivr.net/gh/BearBin1215/MoegirlPedia@master/gadgets/OneKeyPurge.min.js');
 
 // Yaku Han JP
 mw.loader.load('https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css', 'text/css');
