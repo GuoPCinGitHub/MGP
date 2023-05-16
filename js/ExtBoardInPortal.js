@@ -24,7 +24,7 @@ a#n-sidebar-discussionboard-new:hover {
 	text-decoration: none;
 	width: 4.7em;
 }
-#n-sidebar-discussionboard-new:hover::before {
+a#n-sidebar-discussionboard-new:hover::before {
 	content: "${wgULS('添加话题', '添加話題')}";
 	display: inline-block;
 	font-size: .8em;
