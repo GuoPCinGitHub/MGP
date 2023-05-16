@@ -49,6 +49,7 @@ for (var i = 0; i < discussionBoardNames.length; i++) {
 		.attr({
 			'href': '/index.php?title=萌娘百科_talk:讨论版/' + discussionBoardNames[i] + '&action=edit&section=new',
 			'target': '_blank',
+			'rel': 'noopener noreferrer',
 			'id': 'n-sidebar-discussionboard-new'
 		});
 	var discussionBoardLiObj = $('<li>').attr('id', 'n-sidebar-discussionboard' + discussionBoardAbbrs[i])
