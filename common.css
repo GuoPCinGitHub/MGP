@@ -9,8 +9,14 @@
 /* Typicons imported with We Love Icon Fonts */
 @import url("https://weloveiconfonts.com/api/?family=typicons");
 
+@font-face {
+	font-family: "SHSans Full-Width Quotation";
+	src: local("Source Han Sans SC");
+	unicode-range: U+2018, U+2019, U+201C, U+201D;
+}
+
 /* Customized fonts */
-body {font-family: Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", sans-serif, NospzGothicMoe !important;}
+body {font-family: "SHSans Full-Width Quotation", Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", sans-serif, NospzGothicMoe !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
@@ -225,8 +231,8 @@ code, fieldset, pre,
 .navbox, .navpopup, .saveNotice, 
 .template-documentation, .toccolours, .tocfloatlabel, 
 .thumb, .thumbinner, .vertical-navbox, .ztdh, 
-#catlinks, #p-personal, #talkPageTop_saves, 
-#toc, #userboxes, #bottomRightCorner div, 
+#catlinks, #mw-rev-deleted-no-diff, #p-personal, 
+#talkPageTop_saves, #toc, #userboxes, #bottomRightCorner div, 
 .comment-avatar img, .oldTalkPageSave div {border-radius: 2px;}
 .editOptions {border-radius: 0 0 2px 2px;}
 

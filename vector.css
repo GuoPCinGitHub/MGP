@@ -1,13 +1,19 @@
+@font-face {
+	font-family: "SHSerif Full-Width Quotation";
+	src: local("Source Han Serif SC");
+	unicode-range: U+2018, U+2019, U+201C, U+201D ;
+}
+
 /* Customized fonts */
 h2 .mw-headline span[lang="ja"] {font-family: YakuHanMP, "Kozuka Mincho Pro", serif;}
 h2 .mw-headline span[lang="zh-Hant"], h2 .mw-headline span[lang="zh-TW"] {font-family: "I.MingCP", serif;}
 #firstHeading span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
 #firstHeading span[lang="ko"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
 #firstHeading span[lang="ru"] {font-family: "Source Serif 4", serif !important;}
-#firstHeading[lang="zh-TW"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
+#firstHeading[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
 #firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
 #firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
-#firstHeading {font-family: "Source Serif 4", serif !important;}
+#firstHeading {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
 
 /* Customized headers */
 h1, h2, h3, h4, h5, h6 {color: #222;}
