@@ -360,6 +360,7 @@ pre {
 	display: flow-root;
 	tab-size: 4;
 }
+table.mw-changeslist-line {background: inherit;}
 #moe-draw-float-button {
 	right: 100% !important;
 	transform: rotate(50deg);
