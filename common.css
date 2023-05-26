@@ -6,8 +6,6 @@
 @import url("https://mzh.moegirl.org.cn/index.php?title=User:鬼影233/moeskinplus.css&action=raw&ctype=text/css");
 /* MoeLatte - for MoeSkin */
 @import url("https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/MoeLatte.css&action=raw&ctype=text/css");
-/* Typicons imported with We Love Icon Fonts */
-@import url("https://weloveiconfonts.com/api/?family=typicons");
 
 @font-face {
 	font-family: "SHSans Full-Width Quotation";
@@ -47,6 +45,21 @@ table[border="1"] span {font-family: inherit !important;}
    4. Links are under heimus ({{Heimu|[[Link]]}});
    5. Links contain heimus ([[Link|{{Heimu}}]]) */
 
+/* Preparation: Common styles for marks */
+a.mw-redirect::after,
+a.mw-disambig::after,
+a.mw-redirect.mw-disambig::after,
+a.extiw::after {
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0 -12px -10px 0;
+	transform: scale(50%);
+	transform-origin: top left;
+}
+.mw-unwatch-link::after {display: none !important;}
+
 /* - Preparation: Keep visually hidden under heimus */
 span.heimu a.mw-redirect, span.heimu a.mw-redirect:visited,
 span.heimu a.mw-disambig, span.heimu a.mw-disambig:visited,
@@ -72,13 +85,8 @@ a.mw-redirect:visited:hover span.heimu {color: #9A00B6;}
 
 /* - Redirections - mark: A FLAG */
 a.mw-redirect::after {
-	content: '{';
-	display: inline-block;
-	font-family: Typicons;
-	font-style: normal;
-	font-variant: super;
-	font-weight: normal;
-	margin: 0 -.2em;
+	background: #B0D;
+	clip-path: path('M3 3H12.382C12.7607 3 13.107 3.214 13.2764 3.55279L14 5H20C20.5523 5 21 5.44772 21 6V17C21 17.5523 20.5523 18 20 18H13.618C13.2393 18 12.893 17.786 12.7236 17.4472L12 16H5V22H3V3Z');
 }
 
 /* - Disambiguations */
@@ -95,28 +103,16 @@ body.heimu_toggle_on a.mw-disambig:visited span.heimu,
 span.heimu:hover a.mw-disambig:visited,
 a.mw-disambig:visited:hover span.heimu {color: #AF5A28;}
 
-/* - Disambiguations - mark: A DIRECTION SIGN */
+/* - Disambiguations - mark: A GUIDE */
 a.mw-disambig::after {
-	content: 'r';
-	display: inline-block;
-	font-family: Typicons;
-	font-style: normal;
-	font-variant: super;
-	font-weight: normal;
-	text-transform: none;
-	margin: 0 -.2em;
+	background: #D27138;
+	clip-path: path('M13 8V16C13 17.6569 11.6569 19 10 19H7.82929C7.41746 20.1652 6.30622 21 5 21C3.34315 21 2 19.6569 2 18C2 16.3431 3.34315 15 5 15C6.30622 15 7.41746 15.8348 7.82929 17H10C10.5523 17 11 16.5523 11 16V8C11 6.34315 12.3431 5 14 5H17V2L22 6L17 10V7H14C13.4477 7 13 7.44772 13 8Z');
 }
 
-/* - For links are both redirections and disambiguations, I call them "REDIR-DISAM links" */
+/* - For links are both redirections and disambiguations, I call them "REDIR-DISAM links" - A ROUTE */
 a.mw-redirect.mw-disambig::after {
-	content: 'r{';
-	display: inline-block;
-	font-family: Typicons;
-	font-style: normal;
-	font-variant: super;
-	font-weight: normal;
-	text-transform: none;
-	margin: 0 -.2em;
+	background: #D27138;
+	clip-path: path('M4 15V8.5C4 6.01472 6.01472 4 8.5 4C10.9853 4 13 6.01472 13 8.5V15.5C13 16.8807 14.1193 18 15.5 18C16.8807 18 18 16.8807 18 15.5V8.82929C16.8348 8.41746 16 7.30622 16 6C16 4.34315 17.3431 3 19 3C20.6569 3 22 4.34315 22 6C22 7.30622 21.1652 8.41746 20 8.82929V15.5C20 17.9853 17.9853 20 15.5 20C13.0147 20 11 17.9853 11 15.5V8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5V15H9L5 20L1 15H4Z');
 }
 
 /* - Interwiki links, not Moegirl ones - visited */
@@ -128,14 +124,8 @@ a.extiw:not([href*=".moegirl.org.cn"]):visited:hover span.heimu {color: #00886A;
 
 /* - Interwiki links - mark: A GLOBE */
 a.extiw:not([href*=".moegirl.org.cn"])::after {
-	content: 'a';
-	display: inline-block;
-	font-family: Typicons;
-	font-style: normal;
-	font-variant: super;
-	font-weight: normal;
-	text-transform: none;
-	margin: 0 -.2em;
+	background: #D27138;
+	clip-path: path('M13.0003 20.9998H18.0003V22.9998H6.00032V20.9998H11.0003V19.9505C7.70689 19.6235 4.88351 17.6986 3.31641 14.9621L5.05319 13.9696C6.43208 16.3775 9.02674 17.9998 12.0003 17.9998C16.4186 17.9998 20.0003 14.4181 20.0003 9.99983C20.0003 7.02625 18.378 4.43159 15.9701 3.0527L16.9626 1.31592C19.9724 3.03953 22.0003 6.28285 22.0003 9.99983C22.0003 15.1852 18.0536 19.4487 13.0003 19.9505V20.9998ZM12.0003 16.9998C8.13433 16.9998 5.00032 13.8658 5.00032 9.99983C5.00032 6.13384 8.13433 2.99983 12.0003 2.99983C15.8663 2.99983 19.0003 6.13384 19.0003 9.99983C19.0003 13.8658 15.8663 16.9998 12.0003 16.9998Z');
 }
 
 /* - Moegirl links */
@@ -154,13 +144,8 @@ a.extiw[href*=".moegirl.org.cn"]:visited:hover span.heimu {color: #D79C20;}
 
 /* - Moegirl links - mark: A HEART */
 a.extiw[href*=".moegirl.org.cn"]::after {
-	content: ';';
-	display: inline-block;
-	font-family: Typicons;
-	font-style: normal;
-	font-variant: super;
-	font-weight: normal;
-	margin: 0 -.2em;
+	background: #E7BB5E;
+	clip-path: path('M20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C5.51545 2.99926 8.09315 2.56029 10.2605 3.44044L6.34315 7.35843L7.75736 8.77264L12 4.53L11.9872 4.51617C11.9918 4.52028 11.9964 4.5244 12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736Z');
 }
 
 /* Customized blockquotes */
