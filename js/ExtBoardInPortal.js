@@ -14,21 +14,11 @@ a#n-sidebar-discussionboard-new {
 	transition: background .1s ease-in;
 	width: 15px;
 	height: 15px;
-	overflow: hidden;
-	text-overflow: clip;
-	white-space: nowrap;
 }
 a#n-sidebar-discussionboard-new:hover {
 	background: #1AA7EE;
 	color: #FFF !important;
 	text-decoration: none;
-	width: 4.7em;
-}
-a#n-sidebar-discussionboard-new:hover::before {
-	content: "${wgULS('添加话题', '添加話題')}";
-	display: inline-block;
-	font-size: .8em;
-	margin-right: .5em;
 }
 `);
 var discussionBoard = $('#n-sidebar-discussionboard').clone();
@@ -48,6 +38,7 @@ for (var i = 0; i < discussionBoardNames.length; i++) {
 	var discussionBoardNewBtn = $('<a>').text('+')
 		.attr({
 			'href': '/index.php?title=萌娘百科_talk:讨论版/' + discussionBoardNames[i] + '&action=edit&section=new',
+			'title': '在' + discussionBoardNames[i] + '下' + wgULS('添加话题', '添加話題'),
 			'target': '_blank',
 			'rel': 'noopener noreferrer',
 			'id': 'n-sidebar-discussionboard-new'
