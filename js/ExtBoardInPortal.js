@@ -38,7 +38,7 @@ for (var i = 0; i < discussionBoardNames.length; i++) {
 	var discussionBoardNewBtn = $('<a>').text('+')
 		.attr({
 			'href': '/index.php?title=萌娘百科_talk:讨论版/' + discussionBoardNames[i] + '&action=edit&section=new',
-			'title': '在' + discussionBoardNames[i] + '下' + wgULS('添加话题', '添加話題'),
+			'title': '在' + discussionBoardNames[i] + '版下' + wgULS('添加话题', '添加話題'),
 			'target': '_blank',
 			'rel': 'noopener noreferrer',
 			'id': 'n-sidebar-discussionboard-new'
