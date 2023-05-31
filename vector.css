@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {color: #222;}
 h1 {border-bottom: 2px solid #8ED598 !important;}
 h2 {border-bottom: 1px solid #8ED598 !important;}
 .home-card-header h2 {border-bottom: none !important;}
+.mw-body-content h2 {padding-top: .1em;}
 
 /* Customized buttons, inputs & selects */
 button, input, select {
