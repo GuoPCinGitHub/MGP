@@ -64,6 +64,10 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 	.mobile-edit-button {justify-content: center;}
 }
 
+/* Colored QuickEdit */
+#Wikiplus-Settings-Intro a:hover, 
+#Wikiplus-SR-Intro a:hover {color: var(--theme-accent-link-color);}
+
 /* 赚(huí)钱(běn) */
 body {overflow: initial !important;}
 body div.fc-ab-root {display: none !important;}
