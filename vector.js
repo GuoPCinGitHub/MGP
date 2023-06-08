@@ -25,7 +25,7 @@ window.inspector = {
 };
 
 // UserStatus
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/userStatus.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/userStatus.js&action=raw&ctype=text/javascript');
 
 // PersonalLabel，基于[[U:AnnAngela/js/PersonalLabel.js]]
 $('#pt-watchlist').after(
@@ -40,22 +40,22 @@ if (mw.config.get( 'wgIsArticle' )) {
 		$(mw.util.addPortletLink('p-cactions', '#', 'Inspector', 'bhsd-inspector')).click(function(e) {
 			e.preventDefault();
 			this.remove();
-			mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:Bhsd/js/inspect.js&action=raw&ctype=text/javascript');
+			mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Bhsd/js/inspect.js&action=raw&ctype=text/javascript');
 		});
 	});
 }
 
 // HideToggle
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/HideToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/HideToggle.js&action=raw&ctype=text/javascript');
 
 // RedirectContribsToggle
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&action=raw&ctype=text/javascript');
 
 // RefToggle
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
 
 // AccesskeyVec
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
 
 // ExtBoardInPortal
-mw.loader.load(mw.config.get("wgServer").replace("zh.moegirl", "mzh.moegirl") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
