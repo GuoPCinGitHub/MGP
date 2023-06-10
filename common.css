@@ -388,6 +388,8 @@ table.mw-changeslist-line {background: inherit;}
 	vertical-align: text-bottom;
 }
 .mw-datatable.TablePager {display: table;}
+.ActivityBannerArrow {border-radius: 0 !important;}
+.ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
 .mw-tag-markers {font-size: 90%;}
 .template-ruby-hidden {user-select: none;}
 .textToggleDisplayButtonLabel {
