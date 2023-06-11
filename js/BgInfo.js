@@ -52,7 +52,7 @@ mw.loader.addStyleTag(`
 `);
 
 var timer = setTimeout($(function() {
-	if ($('.sidebar-character > img').length > 0 && $('.sidebar-character').attr('data-displaylogo')) {
+	if ($('.sidebar-character > img').length > 0 && $('.sidebar-character > img').is(':visible') && $('.sidebar-character').attr('data-displaylogo')) {
 		var src = $('.sidebar-character[data-displaylogo] > img').attr('data-src');
 		var txt = '背景：' + src;
 		if (/img.moegirl/g.test(src)) {
