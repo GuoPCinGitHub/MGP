@@ -91,6 +91,9 @@ mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/ind
 // Wordcount
 mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype=text/javascript');
 
+// BgInfo
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/javascript');
+
 // MouseRippleToggle
 mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MouseRippleToggle.js&action=raw&ctype=text/javascript');
 
