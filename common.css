@@ -361,6 +361,8 @@ table.mw-changeslist-line {background: inherit;}
 	margin: .6em 0 !important;
 	box-shadow: 0 -.2em 0 #0002 inset;
 }
+.ActivityBannerArrow {border-radius: 0 !important;}
+.ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
 .common-box, .CtxtMenu_Menu, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
@@ -388,9 +390,32 @@ table.mw-changeslist-line {background: inherit;}
 	vertical-align: text-bottom;
 }
 .mw-datatable.TablePager {display: table;}
-.ActivityBannerArrow {border-radius: 0 !important;}
-.ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
 .mw-tag-markers {font-size: 90%;}
+.soultide-img {
+	border: #3E4556 5px double;
+	height: max-content;
+	margin: .5em 1em;
+}
+.soultide-info {
+	background: #F5F1EF;
+	margin: .5em 1em .5em .5em;
+}
+.soultide-info > div:last-child {position: relative;}
+.soultide-info-title {
+	background: #3E4556 !important;
+	color: #C2A499;
+	padding: .5em !important;
+}
+.soultide-info-content {
+	background: inherit !important;
+	color: #454545;
+	padding: .5em .3em !important;
+}
+.soultide-info .mw-collapsible-toggle {
+	top: .45em;
+	right: .5em !important;
+	-webkit-text-fill-color: #FFF;
+}
 .template-ruby-hidden {user-select: none;}
 .textToggleDisplayButtonLabel {
 	box-shadow: none !important;
