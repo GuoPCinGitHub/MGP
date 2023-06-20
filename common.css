@@ -372,22 +372,6 @@ table.mw-changeslist-line {background: inherit;}
 }
 .hljs-color {line-height: 1.15rem;}
 .infoBox[style*="solid orange"], .infoBox[style*="solid red"] {display: inherit !important;}
-.infoBox[style*="solid orange"] .infoBoxIcon::before, .infoBox[style*="solid red"] .infoBoxIcon::before {
-	content: 'Ｈ';
-	position: absolute;
-	top: 4em;
-	left: .5em;
-	display: inline-block;
-	background: #E7EBF3;
-	border: #5876AA 2px solid;
-	border-radius: 50%;
-	color: #3D5277;
-	font-family: "BIZ UDGothic", sans-serif;
-	font-size: .75em;
-	font-weight: bold;
-	line-height: 1em;
-	padding: 3px;
-}
 .infoBoxContent {
 	background: #FBFBFBBB;
 	border: none;
