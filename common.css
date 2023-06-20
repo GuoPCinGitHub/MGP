@@ -427,3 +427,10 @@ table.mw-changeslist-line {background: inherit;}
 	height: .97rem !important;
 	line-height: .9rem !important;
 }
+.userlink-label {white-space: nowrap;}
+.userlink-menu {
+	border-radius: 2px;
+	border-top-width: inherit !important;
+	padding-top: 0 !important;
+}
+.userlink-item:hover a {text-decoration: none;}
