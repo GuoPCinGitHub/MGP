@@ -435,7 +435,7 @@ table.mw-changeslist-line {background: inherit;}
 .userlink-label {white-space: nowrap;}
 .userlink-menu {
 	border-radius: 2px;
-	border-top-width: inherit !important;
+	border-top-width: 3px !important;
 	padding-top: 0 !important;
 }
 .userlink-item:hover a {text-decoration: none;}
