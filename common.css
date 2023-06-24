@@ -351,6 +351,7 @@ pre {
 	display: flow-root;
 	tab-size: 4;
 }
+span.comment {font-style: oblique 6deg;}
 table.mw-changeslist-line {background: inherit;}
 #moe-draw-float-button {
 	right: 100% !important;
