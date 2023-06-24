@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.css');
+@import url('https://fonts.font.im/css2?family=Noto+Color+Emoji&display=swap');
 
 /* NintendoFont */
 @import url("https://mzh.moegirl.org.cn/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
@@ -19,7 +20,7 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", Lato, Arial, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", sans-serif, NospzGothicMoe !important;}
+body {font-family: "SHSans Full-Width Punctuation", Lato, Arial, "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", sans-serif, NospzGothicMoe !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
