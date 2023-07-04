@@ -41,9 +41,11 @@
 
 /* Siderail */
 .sitenotice-main > div:nth-child(2), 
+.moe-community-artwork, 
 #moe-siderail-sitenotice #moeskin-sitenotice, 
 #moe-sitenotice-container .show-more, 
 #p-sl h3 ~ div > div {display: none;}
+.sitenotice-main > div > :not(h2) {font-size: 1rem;}
 body.skin-moeskin #moe-custom-sidenav-block-list > li#ca-lr-ns2d a {color: #800;}
 body.skin-moeskin #moe-custom-sidenav-block-list > li#ca-okp a {color: #98D;}
 body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #40C040;}
