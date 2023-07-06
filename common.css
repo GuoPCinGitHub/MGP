@@ -20,7 +20,7 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", Lato, Arial, sans-serif, "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe !important;}
+body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
