@@ -53,7 +53,7 @@ $(() => (async () => {
 			padding-right: 4px;
 		}
 		`);
-		let src = $('.sidebar-character[data-displaylogo] > img').attr('data-src');
+		let src = $('.sidebar-character[data-displaylogo] > img[srcset]').attr('data-src');
 		let txt = '背景：' + src;
 		if (/img.moegirl/g.test(src)) {
 			const ls = src.split('/');
