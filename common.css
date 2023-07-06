@@ -253,6 +253,7 @@ code, fieldset, pre,
 /* Customized usergroups */
 .markrights-extendedconfirmed {color: #8D8DAA !important;}
 .markrights-file-maintainer {color: #895737 !important;}
+.markrights-ipblock-exempt {color: #6885d7 !important;}
 .markrights-checkuser::after {content: "核" !important;}
 .markrights-flood::after {content: "洪" !important;}
 .markrights-scripteditor::after {content: "稿" !important;}
