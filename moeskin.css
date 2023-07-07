@@ -63,6 +63,11 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 /* 窄屏 */
 @media (max-width: 768px) {
 	#mw-body {overflow-x: auto;}
+	.mainpage-newsbox .mobileonly {display: none;}
+	.mainpage-newsbox .nomobile {
+		display: block !important;
+		position: inherit;
+	}
 	.mobile-edit-button {justify-content: center;}
 }
 
@@ -79,6 +84,7 @@ body {background: #F7FAFD;}
 kbd, kbd:active {all: revert !important;}
 /* article div[data-v-app], .adsbyezoic, .google-auto-placed, #ezcnxplayer, */
 .desktop-only .n-badge, .mobile-only .n-badge, 
+.namespaces-links-list > li:empty, 
 #moe-global-background, #moe-open-in-app {display: none;}
 /* .adsbygoogle, .moe-card[style*="relative"] {display: none !important;} */
 .keyboard-key {vertical-align: initial;}
