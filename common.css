@@ -250,6 +250,28 @@ code, fieldset, pre,
 	text-shadow: 0 0 #008040;
 }
 
+/* Customized MathJax UI */
+.CtxtMenu_Menu {box-shadow: 0 0 .5rem #0002 !important;}
+.CtxtMenu_Info {
+	background: #F8F9FA !important;
+	border: #A2A9B1 1px solid !important;
+	border-radius: 5px !important;
+	box-shadow: 0 0 .5rem #0002 !important;
+	font-family: Bahnschrift, sans-serif !important;
+}
+.CtxtMenu_InfoContent {
+	border: none !important;
+	padding: 0 !important;
+}
+.CtxtMenu_InfoContent pre {
+	cursor: text;
+	font-family: Jetbrains Mono, monospace !important;
+	font-size: .95em !important;
+	margin: 0;
+	padding: .5em;
+}
+.CtxtMenu_InfoSignature input {font-family: Inter, sans-serif;}
+
 /* Customized usergroups */
 .markrights-extendedconfirmed {color: #8D8DAA !important;}
 .markrights-file-maintainer {color: #895737 !important;}
@@ -382,7 +404,7 @@ table.mw-changeslist-line {background: inherit;}
 }
 .ActivityBannerArrow {border-radius: 0 !important;}
 .ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
-.common-box, .CtxtMenu_Menu, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
+.common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
 .hljs-color {line-height: 1.15rem;}
