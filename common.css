@@ -212,6 +212,9 @@ blockquote::after {
 
 /* Become rounded */
 code, fieldset, pre, 
+.ajaxpoll, .ajaxpoll .ajaxpoll-answer-vote, 
+.ajaxpoll .ajaxpoll-answer-vote div, 
+.ajaxpoll .ajaxpoll-hover-revoke, 
 .bilibili-video-container.exec, 
 .errorbox, .infobox, .infoBox, 
 .mmdPreviewer-hoverbox, 
@@ -404,6 +407,7 @@ table.mw-changeslist-line {background: inherit;}
 }
 .ActivityBannerArrow {border-radius: 0 !important;}
 .ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
+.ajaxpoll input {vertical-align: baseline;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}

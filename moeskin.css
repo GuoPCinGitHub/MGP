@@ -62,6 +62,7 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 
 /* 窄屏 */
 @media (max-width: 768px) {
+	body .ajaxpoll {min-width: fit-content;}
 	#mw-body {overflow-x: auto;}
 	.mainpage-newsbox .mobileonly {display: none;}
 	.mainpage-newsbox .nomobile {
