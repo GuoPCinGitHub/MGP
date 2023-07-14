@@ -15,3 +15,6 @@ mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/ind
 
 // MoeIndicators
 mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MoeIndicators.js&action=raw&ctype=text/javascript');
+
+// MoeMobileFloatToolbar
+mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MoeMobileFloatToolbar.js&action=raw&ctype=text/javascript');
