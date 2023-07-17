@@ -2,7 +2,7 @@ $(function() {
 	mw.loader.addStyleTag(`
 	#moe-mobile-float-toolbar-trigger {
 		position: fixed;
-		left: -16px;
+		left: -12px;
 		top: 50%;
 		background: var(--theme-background-color);
 		border-radius: 50%;
@@ -96,7 +96,7 @@ $(function() {
 		$('#moe-mobile-float-toolbar-trigger').addClass('triggered');
 		$('#moe-mobile-float-toolbar-main').addClass('shown');
 	});
-	$('#moe-mobile-float-toolbar-container').on('click', '#moe-mobile-float-toolbar-backdrop', function() {
+	$('#moe-full-container').on('click', '#moe-mobile-float-toolbar-backdrop, #moe-global-header, #moe-float-toc-trigger', function() {
 		$('#moe-mobile-float-toolbar-back').attr('class', 'uncovered');
 		$('#moe-mobile-float-toolbar-trigger').removeClass('triggered');
 		$('#moe-mobile-float-toolbar-main').removeClass('shown');
