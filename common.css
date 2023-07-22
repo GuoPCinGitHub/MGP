@@ -323,7 +323,13 @@ code, fieldset, pre,
 #moe-homeland-app * {font-family: inherit !important;}
 #moe-homeland-app .site-statistics .extra-buttons > a:last-child, 
 #moe-homeland-app .social-links, .banner-slider-container {display: none;}
+.home-right .n-button:hover {text-decoration: none;}
 .n-popover {max-width: 25em;}
+.n-tabs-nav-scroll-wrapper {border-radius: .5em;}
+.n-tabs .n-tabs-nav-scroll-wrapper.n-tabs-nav-scroll-wrapper--shadow-before::before {box-shadow: inset 10px 0 8px -5px rgba(0, 0, 0, .05) !important;}
+.n-tabs .n-tabs-nav-scroll-wrapper.n-tabs-nav-scroll-wrapper--shadow-after::after {box-shadow: inset -10px 0 8px -5px rgba(0, 0, 0, .05) !important;}
+.simple-card {width: 195px !important;}
+.simple-card .topic-thumb img {width: 75% !important;}
 .topic-list > .capsule-card {
 	position: relative;
 	align-items: flex-start !important;
@@ -342,24 +348,24 @@ code, fieldset, pre,
 	position: absolute;
 	top: calc(100% - 1.8em);
 	z-index: 1;
-	backdrop-filter: blur(2px);
+	backdrop-filter: saturate(5) blur(20px);
 	background: #FFFA;
 	border-radius: .5em;
 	width: 100% !important;
 	height: 100%;
 	transition: all ease-in-out .3s;
 }
-.topic-list > .capsule-card:hover .topic-text {top: 0;}
+.topic-list > .capsule-card:hover .topic-text {top: 4em;}
 .topic-list > .capsule-card .topic-name {
 	font-size: 1.05em;
-	padding: .2em;
+	padding: 0 .2em;
 }
 .topic-list > .capsule-card:hover .topic-name {white-space: normal;}
 .topic-list > .capsule-card .topic-desc {
 	color: #555 !important;
-	-webkit-line-clamp: 5 !important;
 	line-height: 1.5em;
 	padding: .2em;
+	word-break: break-all;
 }
 .topic-list > .capsule-card * {transition: all ease-in-out .2s;}
 .topic-list > .capsule-card img {
