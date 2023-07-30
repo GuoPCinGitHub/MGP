@@ -45,9 +45,11 @@ if ($('.Lyrics-translated > span').attr('lang') == 'zh') {
 }
 
 // Popups小工具自定义，见[[Help:Popups小工具#用户配置]]
+window.popupStructure = 'menus';
 window.popupShortcutKeys = true;
 window.popupFixRedirs = true;
 window.popupFixDabs = true;
+window.popupRedlinkRemoval = true;
 window.popupThumbAction = "sizetoggle";
 
 // 未巡查
