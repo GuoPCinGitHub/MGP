@@ -55,7 +55,9 @@ table[border="1"] span {font-family: inherit !important;}
 a.mw-redirect::after,
 a.mw-disambig::after,
 a.mw-redirect.mw-disambig::after,
-a.extiw::after {
+a.extiw::after,
+a.stub::after,
+a.stub.mw-disambig.mw-disambig::after {
 	content: '';
 	display: inline-block;
 	width: 24px;
@@ -69,7 +71,9 @@ a.extiw::after {
 /* - Preparation: Keep visually hidden under heimus */
 span.heimu a.mw-redirect, span.heimu a.mw-redirect:visited,
 span.heimu a.mw-disambig, span.heimu a.mw-disambig:visited,
-span.heimu a.extiw, span.heimu a.extiw:visited {
+span.heimu a.extiw, span.heimu a.extiw:visited,
+span.heimu a.stub, span.heimu a.stub:visited,
+span.heimu a.stub.mw-disambig, span.heimu a.stub.mw-disambig:visited {
 	transition: color .13s linear;
 	color: #252525;
 	text-shadow: none;
@@ -152,6 +156,46 @@ a.extiw[href*=".moegirl.org.cn"]:visited:hover span.heimu {color: #D79C20;}
 a.extiw[href*=".moegirl.org.cn"]::after {
 	background: #E7BB5E;
 	clip-path: path('M20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C5.51545 2.99926 8.09315 2.56029 10.2605 3.44044L6.34315 7.35843L7.75736 8.77264L12 4.53L11.9872 4.51617C11.9918 4.52028 11.9964 4.5244 12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736Z');
+}
+
+/* - Stubs */
+a.stub,
+body.heimu_toggle_on span.heimu a.stub,
+body.heimu_toggle_on a.stub span.heimu,
+span.heimu:hover a.stub,
+a.stub:hover span.heimu {color: #2293CE;}
+
+/* - Stubs - visited */
+a.stub:visited,
+body.heimu_toggle_on span.heimu a.stub:visited,
+body.heimu_toggle_on a.stub:visited span.heimu,
+span.heimu:hover a.stub:visited,
+a.stub:visited:hover span.heimu {color: #1A73A2;}
+
+/* - Stubs - mark: A LEAF */
+a.stub::after {
+	background: #2293CE;
+	clip-path: path('M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L7.0964 18.9999C7.3079 15.9876 8.24541 14.1648 10.6939 11.9989C11.8979 10.9338 11.7965 10.3189 11.2029 10.6721C7.1193 13.1016 5.09114 16.3862 5.00119 21.6302L4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3Z');
+}
+
+/* - For links are both stubs and disambiguations, I call them "STUB-DISAM links" */
+a.stub.mw-disambig.mw-disambig,
+body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig,
+body.heimu_toggle_on a.stub.mw-disambig.mw-disambig span.heimu,
+span.heimu:hover a.stub.mw-disambig.mw-disambig,
+a.stub.mw-disambig.mw-disambig:hover span.heimu {color: #0699AD;}
+
+/* - STUB-DISAM links - visited */
+a.stub.mw-disambig.mw-disambig:visited,
+body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig:visited,
+body.heimu_toggle_on a.stub.mw-disambig.mw-disambig:visited span.heimu,
+span.heimu:hover a.stub.mw-disambig.mw-disambig:visited,
+a.stub.mw-disambig.mw-disambig:visited:hover span.heimu {color: #046D7C;}
+
+/* - STUB-DISAM links - mark: A SEEDLING */
+a.stub.mw-disambig::after {
+	background: #0699AD;
+	clip-path: path('M21.998 7V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V14L11.0169 13.0007C11.2719 9.64413 14.0762 7 17.498 7H21.998ZM5.99805 3C9.0904 3 11.7144 5.00519 12.6408 7.78626C11.1417 9.06119 10.1516 10.9143 10.0144 13.0004L8.99805 13C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805Z');
 }
 
 /* Customized blockquotes */
