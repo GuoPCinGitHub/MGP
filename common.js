@@ -1,25 +1,11 @@
-// [[User:BearBin/js#svg转回]]
-$(function () {
-	$('img[srcset*=".svg"]').each(function () {
-		$(this).attr("src", $(this).attr("src").replaceAll("thumb/", "").replaceAll(/\.svg\/.*/g, ".svg"));
-		$(this).attr("srcset", $(this).attr("srcset").replaceAll("thumb/", "").replaceAll(/\.svg\/[^ ]*/g, ".svg"));
+// Sharp sign underline, based on [[User:Lihaohong/common.js]] & [[User:BearBin/common.js]]
+if (!["submit", "edit"].includes(mw.config.get("wgAction"))) {
+	$('#content *').each(function () {
+		if ($(this).clone().children().remove().end().text().includes("\u266f")) {
+			$(this).html($(this).html().replace(/(\u266f{2,})/g, '<span style="background:#6640FF27;box-shadow:inset 0 -1.5px 0 #6640FF;color:#6640FF;font-family:Segoe UI;">$1</span>'));
+		}
 	});
-	$("img[data-lazy-src*='.svg']").each(function () {
-		var _a;
-		$(this)
-			.attr("src", $(this).attr("data-lazy-src").replaceAll("thumb/", "").replaceAll(/\.svg\/.*/g, ".svg"))
-			.attr("srcset", (_a = $(this).attr("data-lazy-srcset")) === null || _a === void 0 ? void 0 : _a.replaceAll("thumb/", "").replaceAll(/\.svg\/[^ ]*/g, ".svg"))
-			.removeAttr("data-lazy-state");
-		$(this).replaceWith($(this).clone());
-	});
-});
-
-// Sharp sign underline, based on [[User:Lihaohong/common.js]]
-$('#content *').each(function () {
-	if ($(this).clone().children().remove().end().text().includes("\u266f")) {
-		$(this).html($(this).html().replace(/(\u266f{2,})/g, '<span style="background:#6640FF27;border-radius:2px;box-shadow:inset 0 -1.5px 0 #6640FF;color:#6640FF;font-family:Segoe UI;">$1</span>'));
-	}
-});
+}
 
 // 监视列表时段选项自定义
 if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
