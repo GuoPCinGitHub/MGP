@@ -1,17 +1,24 @@
 $(function() {
 	mw.loader.addStyleTag(`
 	#moe-mobile-float-toolbar-trigger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: fixed;
 		left: -12px;
 		top: 50%;
 		background: var(--theme-background-color);
 		border-radius: 50%;
+		box-shadow: rgba(17, 17, 26, .1) 0 0 10px;
 		font-size: 14px;
 		padding: 5px;
 		transform: scale(1.6) translateY(-50%);
 		transition: all .3s cubic-bezier(.22, .61, .36, 1);
 		opacity: .8;
+		width: 28px;
+		height: 28px;
 		z-index: 721;
+		box-sizing: border-box;
 		cursor: pointer;
 	}
 	#moe-mobile-float-toolbar-trigger:hover {

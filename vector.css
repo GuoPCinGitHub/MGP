@@ -72,9 +72,7 @@ button:focus, input:focus, select:focus {
 }
 
 /* Customized navigation, based on [[U:あめろ/vector.css]] */
-#mw-head-base {
-	margin-bottom: .6em;
-}
+#mw-head-base {margin-bottom: .6em;}
 #left-navigation, #right-navigation, div.vectorTabs ul li.selected {
 	background: #FFFB !important;
 	border-radius: 2px;
@@ -83,22 +81,24 @@ button:focus, input:focus, select:focus {
 	position: relative;
 	z-index: 10;
 }
-div.vectorTabs ul li:not(.selected):hover, div.vectorTabs ul li:not(.selected):focus {
+div.vectorTabs ul li:not(.selected):hover, 
+div.vectorTabs ul li:not(.selected):focus {
 	background: #FFF6 !important;
 	border-radius: 2px;
 	transition: background ease-in .3s;
 }
-div.vectorTabs ul li:not(.selected):hover a, div.vectorTabs ul li:not(.selected) a:focus {
+div.vectorTabs ul li:not(.selected):hover a, 
+div.vectorTabs ul li:not(.selected) a:focus {text-decoration: none;}
+div.vectorTabs ul li:not(.selected) {transition: background ease-out .3s;}
+div.vectorTabs li a, div.vectorMenu h3 span {padding-top: .8em;}
+.vectorTabs #ca-unwatch.icon a, 
+.vectorTabs #ca-watch.icon a {padding-top: 2.8em;}
+.vectorMenu .menu {border-radius: 0 0 2px 2px;}
+div#p-cactions li a, 
+div#p-cactions li a:hover, 
+div#p-cactions li a:focus {
 	text-decoration: none;
-}
-div.vectorTabs ul li:not(.selected) {
 	transition: background ease-out .3s;
-}
-div.vectorTabs li a, div.vectorMenu h3 span {
-	padding-top: .8em;
-}
-.vectorTabs #ca-unwatch.icon a, .vectorTabs #ca-watch.icon a {
-	padding-top: 2.8em;
 }
 #simpleSearch {
 	border: none;

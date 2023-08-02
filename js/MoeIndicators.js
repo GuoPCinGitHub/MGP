@@ -1,25 +1,28 @@
 if (MOE_SKIN_GLOBAL_DATA.indicators) {
 	var indicators = MOE_SKIN_GLOBAL_DATA.indicators;
-	delete indicators["noteTA-0"];
 	if (!$.isEmptyObject(indicators)) {
-		$('h1#firstHeading').append('<div class="moe-indicators"><div class="moe-indicator"></div></div>');
+		$('h1#firstHeading').after('<div class="moe-indicators"></div>');
 		mw.loader.addStyleTag(`
 		.moe-indicators {
-			float: right;
-			line-height: 1.6;
-			font-size: 0.875em;
 			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2em;
+			float: right;
+			margin: 5px 0;
+			height: 42px;
 			z-index: 1;
 		}
-		.moe-indicator {
-			display: inline-block;
+		.moe-indicators > * {
+			display: inline-flex;
+			align-items: center;
 		}
 		@media (max-width: 768px) {
 			.moe-indicators {
 				float: none;
-				font-size: 0.75em;
-				line-height: 1.2em;
-				text-align: center;
+				margin: 0 0 5px 0;
+				height: auto;
 			}
 		}
 		`);
@@ -36,8 +39,43 @@ if (MOE_SKIN_GLOBAL_DATA.indicators) {
 			}
 			`);
 		}
+		if (indicators["noteTA-0"]) {
+			mw.loader.addStyleTag(`
+			.moe-noteTA {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				background: var(--theme-accent-link-color);
+				border-bottom: 4px solid var(--theme-button-color);
+				border-radius: .2rem;
+				font-family: serif;
+				font-size: 18px;
+				font-weight: 900;
+				width: 32px;
+				height: 32px;
+				margin: 0 4px;
+				user-select: none;
+				cursor: pointer;
+			}
+			`);
+			var variants = MOE_SKIN_GLOBAL_DATA.content_navigation.variants;
+			for (var i = 0; i < variants.length; i++) {
+				if (variants[i].class == "selected") {
+					var selectedLang = variants[i].text;
+				}
+			}
+			indicators["noteTA-0"] = '<span title="' + wgULS("本页使用了标题或全文手工转换，现处于", "本頁使用了標題或全文手工轉換，現處於") + selectedLang + '模式"><span class="moe-noteTA">' + wgULS("汉", "漢") + '</span></span>';
+			setTimeout(function() {
+				if ($("#noteTA-vector-menu-tabs").length > 0) {
+					$("#noteTA-vector-menu-tabs").hide();
+					$('.moe-noteTA').on('click', $("#p-languages-group"), function() {
+						$("#noteTA-vector-menu-tabs").click();
+					});
+				}
+			}, 1000);
+		}
 		for (var key in indicators) {
-			$('.moe-indicator').append(indicators[key]);
+			$('.moe-indicators').append(indicators[key]);
 		}
 	}
 }
