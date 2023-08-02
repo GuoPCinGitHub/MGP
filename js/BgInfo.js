@@ -8,17 +8,19 @@ $(() => (async () => {
 				mw.loader.addStyleTag(`
 				.pc-bg-info {
 					display: flex;
+					flex-direction: row-reverse;
 					align-items: center;
 					position: fixed;
-					bottom: 0;
-					right: 0;
+					bottom: .6em;
+					right: .6em;
 					z-index: 21;
 					background: #FFFA;
 					backdrop-filter: blur(5px);
-					border-top-left-radius: 2px;
+					border-radius: 2px;
 					line-height: 24px;
 					width: 24px;
 					height: 24px;
+					cursor: pointer;
 				}
 		
 				.pc-bg-info-icon {
@@ -54,10 +56,10 @@ $(() => (async () => {
 		
 				.pc-bg-info:hover .pc-bg-info-link {
 					width: max-content;
-					padding-right: 4px;
+					padding: 0 2px 0 5px;
 				}
 				`);
-				let src = $(this).children('img[srcset]').attr('data-src');
+				let src = $(this).children('img').attr('data-src');
 				let txt = '背景：' + src;
 				if (/img.moegirl/g.test(src)) {
 					const ls = src.split('/');
