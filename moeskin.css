@@ -70,6 +70,12 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 		position: inherit;
 	}
 	.mobile-edit-button {justify-content: center;}
+	.wikitable[border="0"][style*="right"] {
+		float: none !important;
+		margin: 0 !important;
+		min-width: 100%;
+	}
+	.wikitable[style*="48%"] {min-width: 100%;}
 }
 
 /* Colored QuickEdit */
