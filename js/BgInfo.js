@@ -58,6 +58,11 @@ $(() => (async () => {
 					width: max-content;
 					padding: 0 2px 0 5px;
 				}
+				
+				main.moe-flexible-container .pc-bg-info {
+					bottom: 0;
+					right: 0;
+				}
 				`);
 				let src = $(this).children('img').attr('data-src');
 				let txt = '背景：' + src;
