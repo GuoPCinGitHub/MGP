@@ -46,47 +46,47 @@ if ($.inArray(mw.config.get('wgCanonicalSpecialPageName'), ['Watchlist', 'Recent
 }
 
 // mwPanel
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/mwPanel.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:AnnAngela/js/mwPanel.js&action=raw&ctype=text/javascript');
 
 // watchlist-toggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/watchlist-toggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:AnnAngela/js/watchlist-toggle.js&action=raw&ctype=text/javascript');
 
 // upload-log-toggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/upload-log-toggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:AnnAngela/js/upload-log-toggle.js&action=raw&ctype=text/javascript');
 
 // watchlist-log
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/watchlist-log.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:AnnAngela/js/watchlist-log.js&action=raw&ctype=text/javascript');
 
 // OneKeyPurge
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:BearBin/js/OneKeyPurge.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:BearBin/js/OneKeyPurge.js&action=raw&ctype=text/javascript');
 
 // code-prettify
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.js');
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.css', 'text/css');
 
 // PreLangMark
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Bhsd/js/PreLangMark.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Bhsd/js/PreLangMark.js&action=raw&ctype=text/javascript');
 
 // Wikiplus-replace
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:東東君/js/Wikiplus-replace.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:東東君/js/Wikiplus-replace.js&action=raw&ctype=text/javascript');
 
 // disambigHelper
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');
 
 // MarkAsResolved
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/MarkAsResolved.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Leranjun/js/MarkAsResolved.js&action=raw&ctype=text/javascript');
 
 // Wordcount
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype=text/javascript');
 
 // BgInfo
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/javascript');
 
 // MouseRippleToggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MouseRippleToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/MouseRippleToggle.js&action=raw&ctype=text/javascript');
 
 // WatchlistNoRed
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/WatchlistNoRed.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/WatchlistNoRed.js&action=raw&ctype=text/javascript');
 
 // Yaku Han JP
 mw.loader.load('https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css', 'text/css');

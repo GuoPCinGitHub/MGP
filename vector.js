@@ -25,14 +25,15 @@ window.inspector = {
 };
 
 // UserStatus
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:AnnAngela/js/userStatus.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:AnnAngela/js/userStatus.js&action=raw&ctype=text/javascript');
 
 // PersonalLabel，基于[[U:AnnAngela/js/PersonalLabel.js]]
 $('#pt-watchlist').after(
-	'<li id="pt-overstock"><a href="' + mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/分类:积压工作" title="归类为积压工作的内容[Alt+Shift+o]" accesskey="o">积压工作</a></li>\
-	<li id="pt-datareport"><a href="' + mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/分类:萌娘百科数据报告" title="展示统计报告[Alt+Shift+d]" accesskey="d">数据报告</a></li>\
-	<li id="pt-mysandbox"><a href="' + mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/User:' + mw.config.get("wgUserName") + '/Sandbox" title="您的个人沙盒页面[Alt+Shift+s]" accesskey="s">我的沙盒</a></li>\
-	<li id="pt-mylog"><a href="' + mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/Special:log/' + mw.config.get("wgUserName") + '" title="您执行的所有公开日志[Alt+Shift+g]" accesskey="g">我的日志</a></li>');
+	'<li id="pt-overstock"><a href="' + '/分类:积压工作" title="归类为积压工作的内容[Alt+Shift+o]" accesskey="o">积压工作</a></li>' +
+	'<li id="pt-datareport"><a href="' + '/分类:萌娘百科数据报告" title="展示统计报告[Alt+Shift+d]" accesskey="d">数据报告</a></li>' +
+	'<li id="pt-mysandbox"><a href="' + '/User:' + mw.config.get("wgUserName") + '/Sandbox" title="您的个人沙盒页面[Alt+Shift+s]" accesskey="s">我的沙盒</a></li>' +
+	'<li id="pt-mylog"><a href="' + '/Special:log/' + mw.config.get("wgUserName") + '" title="您执行的所有公开日志[Alt+Shift+g]" accesskey="g">我的日志</a></li>'
+);
 
 // Inspector
 if (mw.config.get( 'wgIsArticle' )) {
@@ -40,22 +41,22 @@ if (mw.config.get( 'wgIsArticle' )) {
 		$(mw.util.addPortletLink('p-cactions', '#', 'Inspector', 'bhsd-inspector')).click(function(e) {
 			e.preventDefault();
 			this.remove();
-			mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Bhsd/js/inspect.js&action=raw&ctype=text/javascript');
+			mw.loader.load('/index.php?title=User:Bhsd/js/inspect.js&action=raw&ctype=text/javascript');
 		});
 	});
 }
 
 // HideToggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/HideToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Leranjun/js/HideToggle.js&action=raw&ctype=text/javascript');
 
 // RedirectContribsToggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&action=raw&ctype=text/javascript');
 
 // RefToggle
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
 
 // AccesskeyVec
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
 
 // ExtBoardInPortal
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');

@@ -23,9 +23,6 @@ h2 .mw-headline {font-family: "SHSerif Full-Width Quotation", "Linux Libertine",
 
 /* Customized headers */
 h1, h2, h3, h4, h5, h6 {color: #222;}
-h1 {border-bottom: 2px solid #8ED598 !important;}
-h2 {border-bottom: 1px solid #8ED598 !important;}
-.home-card-header h2 {border-bottom: none !important;}
 .mw-body-content h2 {padding-top: .1em;}
 
 /* Customized buttons, inputs & selects */
@@ -33,11 +30,6 @@ button, input, select {
 	border: 1px solid #DDD;
 	border-radius: 2px;
 	transition: border .3s;
-}
-button:hover, input:hover, select:hover {border: 1px solid #C7EACC;}
-button:focus, input:focus, select:focus {
-	border: 1px solid transparent;
-	outline: 2px solid #8ED598;
 }
 
 /* Customized personal label */
@@ -66,10 +58,7 @@ button:focus, input:focus, select:focus {
 
 /* Customized panel */
 #mw-panel .portal .body {background-image: none !important;}
-#mw-panel .portal h3 {
-	border-bottom: 1px solid #8ED598;
-	color: #222 !important;
-}
+#mw-panel .portal h3 {color: #222 !important;}
 
 /* Customized navigation, based on [[U:あめろ/vector.css]] */
 #mw-head-base {margin-bottom: .6em;}

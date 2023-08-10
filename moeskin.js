@@ -11,10 +11,10 @@ $('.site-logo-area > a').attr('href', '/User:GuoPC/M');
 $('.site-logo, #footer-copyright-text img').attr('src', $('.site-logo').attr('src').replace('9/95/MoegirlPedia-Title.png', '3/33/MoegirlPedia-Title.svg'));
 
 // CustomSidenavIcon
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/CustomSidenavIcon.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/CustomSidenavIcon.js&action=raw&ctype=text/javascript');
 
 // MoeIndicators
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MoeIndicators.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/MoeIndicators.js&action=raw&ctype=text/javascript');
 
 // MoeMobileFloatToolbar
-mw.loader.load(mw.config.get("wgServer") + mw.config.get("wgScriptPath") + '/index.php?title=User:GuoPC/js/MoeMobileFloatToolbar.js&action=raw&ctype=text/javascript');
+mw.loader.load('/index.php?title=User:GuoPC/js/MoeMobileFloatToolbar.js&action=raw&ctype=text/javascript');
