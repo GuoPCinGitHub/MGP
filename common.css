@@ -239,7 +239,7 @@ blockquote::after {
 
 /* Colored selection */
 ::selection {
-	background: #8ED598;
+	background: #EB8097;
 	color: #FFF;
 }
 .diff-context ::selection {
@@ -423,6 +423,21 @@ code, fieldset, pre,
 	max-width: unset !important;
 }
 .topic-list > .capsule-card:hover img {transform: scale(1.1) !important;}
+
+/* Homepage - legacy */
+.moegirlSister {flex-wrap: wrap;}
+.moegirlSister_container {
+	margin-right: 0 !important;
+	min-width: 15em;
+}
+.moegirlSister_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 70px;
+	padding: 0 !important;
+}
 
 /* Other */
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
