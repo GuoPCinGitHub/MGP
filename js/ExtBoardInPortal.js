@@ -14,6 +14,7 @@ a#n-sidebar-discussionboard-new {
 	transition: background .1s ease-in;
 	width: 15px;
 	height: 15px;
+	user-select: none;
 }
 a#n-sidebar-discussionboard-new:hover {
 	background: #1AA7EE;
