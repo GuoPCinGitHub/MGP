@@ -1,7 +1,7 @@
 if (MOE_SKIN_GLOBAL_DATA.indicators) {
 	var indicators = MOE_SKIN_GLOBAL_DATA.indicators;
 	if (!$.isEmptyObject(indicators)) {
-		$('h1#firstHeading').after('<div class="moe-indicators"></div>');
+		$('#moe-article-header-title').prepend('<div class="moe-indicators"></div>');
 		mw.loader.addStyleTag(`
 		.moe-indicators {
 			position: relative;
@@ -23,6 +23,14 @@ if (MOE_SKIN_GLOBAL_DATA.indicators) {
 				float: none;
 				margin: 0 0 5px 0;
 				height: auto;
+				order: 5;
+			}
+			.header-title-extra {
+				order: 6;
+			}
+			#moe-article-header-title {
+				display: flex;
+				flex-direction: column;
 			}
 		}
 		`);

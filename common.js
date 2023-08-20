@@ -85,6 +85,9 @@ mw.loader.load('/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/j
 // MouseRippleToggle
 mw.loader.load('/index.php?title=User:GuoPC/js/MouseRippleToggle.js&action=raw&ctype=text/javascript');
 
+// TSIndicator
+mw.loader.load('/index.php?title=User:GuoPC/js/TSIndicator.js&action=raw&ctype=text/javascript');
+
 // ULCount
 mw.loader.load('/index.php?title=User:GuoPC/js/ULCount.js&action=raw&ctype=text/javascript');
 

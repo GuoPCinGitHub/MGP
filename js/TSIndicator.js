@@ -84,9 +84,27 @@ $(() => (async () => {
 		if (pos == '0') {
 			mw.loader.addStyleTag(`
 			.pc-templatestyles {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				float: right;
+				height: 42px;
 				margin: 10px 5px 5px 5px;
-				z-index: 1;
+			}
+			@media (max-width: 768px) {
+				.pc-templatestyles {
+					float: none;
+					margin: 0 0 5px 0;
+					height: auto;
+					order: 5;
+				}
+				.header-title-extra {
+					order: 6;
+				}
+				#moe-article-header-title {
+					display: flex;
+					flex-direction: column;
+				}
 			}
 			`);
 			const ELE = $('<div>').addClass('pc-templatestyles').append(TSI.$element);
