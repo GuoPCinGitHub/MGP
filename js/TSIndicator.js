@@ -1,5 +1,5 @@
 $(() => (async () => {
-	if ($('.mw-parser-output style').length > 0) {
+	if (mw.config.get("wgNamespaceNumber") != -1 && $('.mw-parser-output style').length > 0) {
 		await mw.loader.using(["mediawiki.api", "oojs-ui"]);
 
 		let list = $('<ol>').attr('style', 'font-size: 0.9em; margin-left: 2em; list-style: decimal;');
@@ -9,28 +9,36 @@ $(() => (async () => {
 			if (revid) {
 				tsrevs.push(revid.slice(16));
 			}
-
 		});
 
-		const TITLES = await getPageTitleByDiff(tsrevs.join('|'));
+		insertTSI();
 
-		for (let i = 0; i < tsrevs.length; i++) {
-			let line = $('<li>')
-				.append($('<a>').text(TITLES[i]).attr({
-					href: '/' + TITLES[i],
-					target: '_blank',
-					rel: 'noopener noreferrer'
-				}))
-				.append($('<span>').text('，使用的版本为'))
-				.append($('<a>').text(tsrevs[i]).attr({
-					href: '/_?oldid=' + tsrevs[i],
-					target: '_blank',
-					rel: 'noopener noreferrer'
-				}));
-			list.append(line);
-		}
+		$('#pc-templatestyles-button > .oo-ui-buttonElement-button').on('click', async () => {
+			if (list.children().length > 0) {
+				return;
+			} else {
+				const TITLES = await getPageTitleByDiff(tsrevs.join('|'));
 
-		insertTSI(list);
+				for (let i = 0; i < tsrevs.length; i++) {
+					let line = $('<li>')
+						.append($('<a>').text(TITLES[i]).attr({
+							href: '/' + TITLES[i],
+							target: '_blank',
+							rel: 'noopener noreferrer'
+						}))
+						.append($('<span>').text('，使用的版本为'))
+						.append($('<a>').text(tsrevs[i]).attr({
+							href: '/_?oldid=' + tsrevs[i],
+							target: '_blank',
+							rel: 'noopener noreferrer'
+						}));
+					list.append(line);
+				}
+
+				$('#pc-templatestyles-list-loading').hide();
+				$('#pc-templatestyles-list').append(list);
+			}
+		});
 	} else {
 		return;
 	}
@@ -54,8 +62,13 @@ $(() => (async () => {
 	}
 
 	// 构造并插入PopupButton
-	function insertTSI(content) {
-		const TSI = new OO.ui.PopupButtonWidget({
+	function insertTSI() {
+		const TSILoading = new OO.ui.ProgressBarWidget({
+			id: "pc-templatestyles-list-loading",
+			progress: false
+		})
+
+		const TSIMain = new OO.ui.PopupButtonWidget({
 			icon: 'puzzle',
 			iconTitle: wgULS('模板样式表', '模板樣式表'),
 			flags: 'progressive',
@@ -64,9 +77,9 @@ $(() => (async () => {
 			popup: {
 				head: true,
 				label: $(`<strong>${wgULS('此页面使用的模板样式表', '此頁面使用的模板樣式表')}</strong>`),
-				$content: $('<div>').addClass('pc-templatestyles-list').append(content),
+				$content: $('<div>').attr('id', 'pc-templatestyles-list').append(TSILoading.$element),
 				padded: true,
-				align: mw.config.get('skin') == 'moeskin' ? 'backwards' : 'center',
+				align: mw.config.get('skin') == 'moeskin' ? ($(window).width() > 768 ? 'backwards' : 'center') : 'center',
 				autoFlip: false
 			}
 		});
@@ -107,10 +120,10 @@ $(() => (async () => {
 				}
 			}
 			`);
-			const ELE = $('<div>').addClass('pc-templatestyles').append(TSI.$element);
+			const ELE = $('<div>').attr('id', 'pc-templatestyles').append(TSIMain.$element);
 			$('#moe-article-header-title').prepend(ELE);
 		} else {
-			$(pos).append(TSI.$element);
+			$(pos).append(TSIMain.$element);
 		}
 	}
 })());

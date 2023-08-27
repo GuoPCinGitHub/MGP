@@ -30,6 +30,20 @@ if ($('.Lyrics-translated > span').attr('lang') == 'zh') {
 	$('.Lyrics-translated > span').removeAttr('lang');
 }
 
+// Decode free links
+if ($('a.free').length > 0) {
+	$('a.free').each(function() {
+		var text = $(this).text();
+		var decodedText = decodeURIComponent(text);
+		if (decodedText == text) {
+			return;
+		} else {
+			$(this).addClass('decoded');
+			$(this).text(decodedText);
+		}
+	});
+}
+
 // Popups小工具自定义，见[[Help:Popups小工具#用户配置]]
 window.popupStructure = 'menus';
 window.popupShortcutKeys = true;
