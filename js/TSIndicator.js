@@ -1,10 +1,10 @@
 $(() => (async () => {
-	if (mw.config.get("wgNamespaceNumber") != -1 && $('.mw-parser-output style').length > 0) {
+	if (mw.config.get("wgNamespaceNumber") != -1 && $('.mw-parser-output style[data-mw-deduplicate]').length > 0) {
 		await mw.loader.using(["mediawiki.api", "oojs-ui"]);
 
 		let list = $('<ol>').attr('style', 'font-size: 0.9em; margin-left: 2em; list-style: decimal;');
 		let tsrevs = [];
-		$('.mw-parser-output style').each(function () {
+		$('.mw-parser-output style[data-mw-deduplicate]').each(function () {
 			let revid = $(this).attr('data-mw-deduplicate');
 			if (revid) {
 				tsrevs.push(revid.slice(16));
