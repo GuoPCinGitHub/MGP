@@ -96,7 +96,7 @@ $(() => (async () => {
 
 		if (pos == '0') {
 			mw.loader.addStyleTag(`
-			.pc-templatestyles {
+			#pc-templatestyles {
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -105,7 +105,7 @@ $(() => (async () => {
 				margin: 10px 5px 5px 5px;
 			}
 			@media (max-width: 768px) {
-				.pc-templatestyles {
+				#pc-templatestyles {
 					float: none;
 					margin: 0 0 5px 0;
 					height: auto;
