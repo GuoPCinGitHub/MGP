@@ -29,6 +29,7 @@ if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
 if ($('.Lyrics-translated > span').attr('lang') == 'zh') {
 	$('.Lyrics-translated > span').removeAttr('lang');
 }
+$('.Lyrics-column-zh > span').removeAttr('lang');
 
 // Decode free links
 if ($('a.free').length > 0) {

@@ -502,6 +502,41 @@ table.mw-changeslist-line {background: inherit;}
 .ajaxpoll input {vertical-align: baseline;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
+.echart-main {position: relative;}
+.echart-main > div[style*="absolute"] {
+	border: #CCC 1px solid;
+	border-radius: 2px;
+	width: 30em;
+	inset: auto !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translateX(-50%) translateY(-50%);
+}
+.echart-main > div[style*="absolute"] > h4 {
+	background: #F2F2F2;
+	font-size: 1em !important;
+	text-align: left;
+	margin: 0 !important;
+	padding: .5em 1em;
+}
+.echart-main > div[style*="absolute"] > div:nth-child(2) textarea {
+	border: none !important;
+	width: max-content !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.echart-main > div[style*="absolute"] > div:last-child {
+	right: 1em !important;
+	bottom: .5em !important;
+}
+.echart-main > div[style*="absolute"] > div:last-child div {
+	border-radius: 2px !important;
+	transition: all ease-in .2s;
+}
+.echart-main > div[style*="absolute"] > div:last-child div:hover {
+	background: #D35653 !important;
+	transition: all ease-in .2s;
+}
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
 .hljs-color {line-height: 1.15rem;}
 .infoBox[style*="solid orange"], .infoBox[style*="solid red"] {display: inherit !important;}
