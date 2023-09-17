@@ -14,4 +14,4 @@ For scripts in [/js](/js), please see [User:GuoPC/js on MGP](https://zh.moegirl.
     - `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.js` for original version;
     - `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.min.js` for minified version.
   - Note: If you cannot access `cdn.jsdelivr.net`, try `fastly.jsdelivr.net` instead, or load through MGP as follows.
-- Through MGP: `https://zh.moegirl.org.cn/User:GuoPC/<filepath>&action=raw&ctype=text/javascript` for JS, `https://zh.moegirl.org.cn/User:GuoPC/<filepath>&action=raw&ctype=text/css` for CSS.
+- Through MGP: `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<filepath>&action=raw&ctype=text/javascript` for JS, `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<filepath>&action=raw&ctype=text/css` for CSS.
