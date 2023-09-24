@@ -1,4 +1,7 @@
 # MGP
+
+[English](README.md) | [中文](README-zh.md)
+
 A backup for personal CSS and JS files on MGP.
 
 - Personal CSS and JS files for all skins and counterparts, including Vector, MoeSkin and Minerva (removed);
