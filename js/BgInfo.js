@@ -64,7 +64,7 @@ $(() => (async () => {
 					right: 0;
 				}
 				`);
-				let src = $(this).children('img').attr('data-src');
+				let src = $(this).children('img').attr('data-src').replace(/[<>\\\/]/g, '');
 				let txt = '背景：' + src;
 				if (/img.moegirl/g.test(src)) {
 					const ls = src.split('/');
