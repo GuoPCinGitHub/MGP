@@ -28,7 +28,7 @@ $(() => (async () => {
 						}))
 						.append($('<span>').text('，使用的版本为'))
 						.append($('<a>').text(tsrevs[i]).attr({
-							href: '/_?oldid=' + tsrevs[i].replace(/[<>\\\/]/g, ''),
+							href: '/_?oldid=' + tsrevs[i].replace(/[<>\\]/g, ''),
 							target: '_blank',
 							rel: 'noopener noreferrer'
 						}));
