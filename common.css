@@ -1,6 +1,4 @@
 @import url('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.css');
-@import url('https://fonts.font.im/css2?family=Noto+Color+Emoji&display=swap');
-@import url('https://fonts.font.im/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
 
 /* NintendoFont */
 @import url("https://mzh.moegirl.org.cn/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
@@ -21,13 +19,13 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe !important;}
+body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
 span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
-	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", "M PLUS Rounded 1c", NospzGothicMoe, sans-serif !important;
+	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", NospzGothicMoe, sans-serif !important;
 	font-size: 1.05em;
 	font-style: normal !important;
 	margin-right: 0;
