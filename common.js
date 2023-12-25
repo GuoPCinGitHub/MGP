@@ -1,12 +1,3 @@
-// Sharp sign underline, based on [[User:Lihaohong/common.js]] & [[User:BearBin/common.js]]
-if (!["submit", "edit"].includes(mw.config.get("wgAction"))) {
-	$('#content *').each(function () {
-		if ($(this).clone().children().remove().end().text().includes("\u266f")) {
-			$(this).html($(this).html().replace(/(\u266f{2,})/g, '<span style="background:#6640FF27;box-shadow:inset 0 -1.5px 0 #6640FF;color:#6640FF;font-family:Segoe UI;">$1</span>'));
-		}
-	});
-}
-
 // 监视列表时段选项自定义
 if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
 	var days = ['1', '3', '7', '14', '30'];
@@ -87,9 +78,6 @@ mw.loader.load('/index.php?title=User:東東君/js/Wikiplus-replace.js&action=ra
 
 // disambigHelper
 mw.loader.load('/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');
-
-// MarkAsResolved
-mw.loader.load('/index.php?title=User:Leranjun/js/MarkAsResolved.js&action=raw&ctype=text/javascript');
 
 // Wordcount
 mw.loader.load('/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype=text/javascript');
