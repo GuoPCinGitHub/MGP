@@ -1,6 +1,6 @@
 $(function () {
 	if (mw.config.get('wgTitle') == '编辑监视列表' && $('.mw-htmlform').length > 0) {
-		$('#mw-content-text').prepend('<input type="button" value="' + wgULS('移除红链（不包括提案页面）', '移除紅連（不包括提案頁面）') +'" style="margin: 5px 0;" onclick="removeRedLinks()">');
+		$('#mw-content-text').prepend('<input type="button" value="' + wgULS('移除红链（不包括提案页面）', '移除紅連（不包括提案頁面）') +'" id="watchlistNoRed" style="margin: 5px 0;" onclick="removeRedLinks()">');
 	}
 });
 
@@ -21,5 +21,9 @@ function removeRedLinks() {
 		}, 5000);
 	} else {
 		mw.notify(wgULS('列表中无红链！溜了溜了……', '列表中無紅連！溜了溜了……'), {autoHide: true, autoHideSeconds: 10, tag: 'SRL', title: wgULS('移除红链', '移除紅連'), type: 'error'});
+		let removeTimeout = setTimeout(() => {
+			$('input#watchlistNoRed').remove();
+			clearTimeout(removeTimeout);
+		}, 3000);
 	}
 }
