@@ -19,13 +19,13 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe !important;}
-span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif;}
+body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
+span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
 span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
-	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", NospzGothicMoe, sans-serif !important;
+	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
 	font-size: 1.05em;
 	font-style: normal !important;
 	margin-right: 0;
@@ -35,7 +35,7 @@ table[border="1"] span {font-family: inherit !important;}
 .ace_editor, .ace_editor *, pre, code, kbd, samp, tt {font-family: "Sarasa Term SC", monospace !important;}
 .CtxtMenu_MenuArrow {font-family: inherit !important;}
 .diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace;}
-.disambig-box {font-family: Lato, Arial, sans-serif, NospzGothicMoe;}
+.disambig-box {font-family: Lato, Arial, sans-serif;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
@@ -345,6 +345,7 @@ code, fieldset, pre,
 .Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
 .Wikiplus-Edit-EveryWhereBtn {color: #40C040;}
 .AnnTools_MarkAsResolved {color: green;}
+.section-permanent-link {color: #545F6F;}
 
 /* Wikiplus */
 .Wikiplus-InterBox .wikiEditor-ui-clear {margin: 5px;}
