@@ -60,3 +60,6 @@ mw.loader.load('/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=
 
 // ExtBoardInPortal
 mw.loader.load('/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
+
+// MakeItGray
+mw.loader.load('/index.php?title=User:GuoPC/js/MakeItGray.js&action=raw&ctype=text/javascript');

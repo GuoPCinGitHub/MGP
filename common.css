@@ -21,11 +21,12 @@
 /* Customized fonts */
 body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
+span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
 span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
-	font-family: YakuHanRP, "FOT-TsukuBRdGothic Std", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
+	font-family: YakuHanRP, "Rounded Mplus 1c", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
 	font-size: 1.05em;
 	font-style: normal !important;
 	margin-right: 0;
@@ -332,7 +333,8 @@ code, fieldset, pre,
 /* Customized usergroups */
 .markrights-extendedconfirmed {color: #8D8DAA !important;}
 .markrights-file-maintainer {color: #895737 !important;}
-.markrights-ipblock-exempt {color: #6885d7 !important;}
+.markrights-ipblock-exempt {color: #6885D7 !important;}
+.markrights-manually-confirmed {color: #A598A7 !important;}
 .markrights-checkuser::after {content: "核" !important;}
 .markrights-flood::after {content: "洪" !important;}
 .markrights-scripteditor::after {content: "稿" !important;}
