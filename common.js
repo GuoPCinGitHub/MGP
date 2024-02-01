@@ -36,13 +36,14 @@ if ($('a.free').length > 0) {
 	});
 }
 
-// Popups小工具自定义，见[[Help:Popups小工具#用户配置]]
+// Popups小工具
 window.popupStructure = 'menus';
 window.popupShortcutKeys = true;
 window.popupFixRedirs = true;
 window.popupFixDabs = true;
 window.popupRedlinkRemoval = true;
 window.popupThumbAction = "sizetoggle";
+window.popupCategoryMembers = false;
 
 // 未巡查
 if ($.inArray(mw.config.get('wgCanonicalSpecialPageName'), ['Watchlist', 'Recentchanges', 'Recentchangeslinked']) >= 0) {
