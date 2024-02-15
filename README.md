@@ -18,7 +18,7 @@
     - 使用 `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.min.js` 获取压缩版本。
   - 注：如果您无法访问 `cdn.jsdelivr.net`，可尝试使用 `fastly.jsdelivr.net` 替代，或者按下述内容通过萌娘百科使用。
 - 通过萌娘百科获取：对于 JS，使用 `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<文件相对路径>&action=raw&ctype=text/javascript` 获取；对于 CSS，使用 `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<文件相对路径>&action=raw&ctype=text/css` 获取。
-  - 注：`zh.moegirl.org.cn`可视访问状况更换为`mzh.moegirl.org.cn`或`mobile.moegirl.org.cn`。
+  - 注：可视访问状况将 `zh.moegirl.org.cn` 更换为 `mzh.moegirl.org.cn` 或 `mobile.moegirl.org.cn`。
 
 ----
 
