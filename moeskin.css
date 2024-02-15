@@ -34,12 +34,11 @@
 }
 .menu-option-raw img {height: unset !important;}
 .user-avatar-wrapper .avatar-badge {display: none !important;}
-.user-links #vip, .user-page-link > div > a:last-child, #user-actions-vip {display: none;}
-@media (min-width: 768px) {
-	#moe-topbanner-container, 
-	.moe-userdropdown-aboutme .n-menu-item:nth-child(2), 
-	.moe-userdropdown-aboutme .n-menu-item:nth-child(3) {display: none;}
-}
+.links-area > div.flex:last-child, 
+.mobile-grandpa-link, #grandpa-entrance, 
+.user-area > .flex:first-child, .user-links #vip, 
+.user-page-link > div > a:last-child, #user-actions-vip, 
+.v-binder-follower-content[v-placement="bottom-start"] {display: none;}
 
 /* Siderail */
 .sitenotice-main > div:nth-child(2), 
