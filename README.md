@@ -13,11 +13,12 @@
 对于 [/js](/js) 中的脚本，请查看[萌娘百科上的 User:GuoPC/js](https://zh.moegirl.org.cn/User:GuoPC/js) 了解详细信息。
 
 - 通过 jsDelivr 获取：`https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/<文件相对路径>`
-  - 如：对于 [/js/BgInfo.js](/js/BgInfo.js):
+  - 如：对于 [/js/BgInfo.js](/js/BgInfo.js)：
     - 使用 `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.js` 获取原始版本；
     - 使用 `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.min.js` 获取压缩版本。
   - 注：如果您无法访问 `cdn.jsdelivr.net`，可尝试使用 `fastly.jsdelivr.net` 替代，或者按下述内容通过萌娘百科使用。
 - 通过萌娘百科获取：对于 JS，使用 `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<文件相对路径>&action=raw&ctype=text/javascript` 获取；对于 CSS，使用 `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<文件相对路径>&action=raw&ctype=text/css` 获取。
+  - 注：`zh.moegirl.org.cn`可视访问状况更换为`mzh.moegirl.org.cn`或`mobile.moegirl.org.cn`。
 
 ----
 
@@ -38,3 +39,4 @@ For scripts in [/js](/js), please see [User:GuoPC/js on MGP](https://zh.moegirl.
     - `https://cdn.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/BgInfo.min.js` for minified version.
   - Note: If you cannot access `cdn.jsdelivr.net`, try `fastly.jsdelivr.net` instead, or load through MGP as follows.
 - Through MGP: `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<filepath>&action=raw&ctype=text/javascript` for JS, `https://zh.moegirl.org.cn/index.php?title=User:GuoPC/<filepath>&action=raw&ctype=text/css` for CSS.
+  - Note: You can use `mzh.moegirl.org.cn` or `mobile.moegirl.org.cn` instead of `zh.moegirl.org.cn` according your accessibility.
