@@ -19,7 +19,7 @@ $(function () {
                 position: "relative",
                 overflow: "hidden"
             });
-            $("<span />")
+            $("<span>")
                 .css({
                     content: pre_lang,
                     position: "absolute",

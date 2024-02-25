@@ -19,7 +19,7 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", Lato, Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
+body {font-family: "SHSans Full-Width Punctuation", "Clear Sans", Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
@@ -36,12 +36,12 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
 .CtxtMenu_MenuArrow {font-family: inherit !important;}
 .diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace;}
 .diff-lineno, .mw-_addText-preview-loading {font-family: initial;}
-.disambig-box {font-family: Lato, Arial, sans-serif;}
+.disambig-box {font-family: Inter, sans-serif;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
 .kancolle-nav-title {font-family: serif !important;}
-.railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
+.railway_station_name span[lang="ja-Latn"] {font-family: "Clear Sans", Inter, sans-serif !important;}
 .Wikiplus-Banner {font-family: sans-serif !important;}
 
 /* Colored special links and more */
@@ -247,8 +247,8 @@ blockquote::after {
 
 /* Colored selection */
 ::selection {
-	background: #EB8097;
-	color: #FFF;
+	background: #FBE6EA;
+	color: #4A4A4A;
 }
 .diff-context ::selection {
 	background: #6C7A96;
@@ -467,7 +467,12 @@ pre {
 	display: flow-root;
 	tab-size: 4;
 }
-span.comment {font-style: oblique 6deg;}
+span.comment {font-style: oblique 10deg;}
+sup.detailedBlockInfo::before {
+	content: "[封]";
+	color: #161616;
+}
+sup.detailedBlockInfo + sup[class^=markrights-] {margin-left: 2px;}
 table.mw-changeslist-line {background: inherit;}
 #moe-draw-float-button {
 	right: 100% !important;

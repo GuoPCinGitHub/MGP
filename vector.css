@@ -64,6 +64,7 @@ button, input, select {
 	border-image: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE58, #25B49A) 1;
 	color: #222 !important;
 }
+#p-sidebar-categoryindex, #t-prefixindex {display: none;}
 
 /* Customized navigation, based on [[U:あめろ/vector.css]] */
 #mw-head-base {margin-bottom: .6em;}
@@ -112,5 +113,10 @@ html.sidebarHiddenOn #sidebarHidden-logo-link {
 #bhsd-inspector a {color: #FF30A3;}
 
 /* Other */
+body.ns-2 div#catlinks:has(ul) {
+    display: revert !important;
+    background: #FFEBEB;
+    border: #FF7676 1px solid;
+}
 span.popup_contribs > a.popupNavLink {display: block;}
 .mw-body {border: none !important;}
