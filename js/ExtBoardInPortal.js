@@ -1,15 +1,15 @@
 mw.loader.addStyleTag(`
 a#n-sidebar-discussionboard-new {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
 	position: absolute;
 	top: 4px;
 	right: 3px;
 	background: #E2F4FD;
 	border-radius: 2px;
 	color: #0D77AC !important;
+	font-size: 12px;
 	font-weight: bold;
+	line-height: 12px;
+	text-align: center;
 	text-shadow: none;
 	transition: background .1s ease-in;
 	width: 15px;

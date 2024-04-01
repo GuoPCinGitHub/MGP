@@ -340,6 +340,10 @@ code, fieldset, pre,
 .markrights-flood::after {content: "洪" !important;}
 .markrights-scripteditor::after {content: "稿" !important;}
 
+/* CodeMirror */
+.permissions-errors ~ .wikiEditor-ui .wikiEditor-ui-top,
+.permissions-errors ~ .wikiEditor-ui .wikiEditor-ui-bottom .cm-panels-bottom {display: none;}
+
 /* Colored QuickEdit */
 #ca-lr-ns2d a {color: #800;}
 #ca-okp a {color: #98D;}
@@ -448,6 +452,13 @@ code, fieldset, pre,
 	height: 70px;
 	padding: 0 !important;
 }
+
+/* Customized mod, based on [[U:鬼影233/moeskin.css]] */
+li[data-mw-rev-approved="false"] > input[type="radio"] {visibility: unset !important;}
+#pagehistory li.before input[name='oldid'],
+#pagehistory li.after input[name='diff'] {visibility: hidden !important;}
+#pagehistory [data-mw-rev-approved="false"] {opacity: 1 !important;}
+div[style*="PHN2ZyB4bWxucz0iaHR0cDov"] {content: url("");}
 
 /* Other */
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
@@ -566,6 +577,7 @@ table.mw-changeslist-line {background: inherit;}
 	margin: 0 2px;
 	vertical-align: text-bottom;
 }
+.mw-changeslist p {margin: 0 !important;}
 .mw-datatable.TablePager {display: table;}
 .mw-parser-output .fakelink {cursor: not-allowed !important;}
 .mw-parser-output .fakelink::after {
