@@ -3,7 +3,7 @@
    - Single Quotation Marks (2018, 2019)
    - Double Quotation Marks (201C, 201D)
    - Horizontal Ellipsis (2026) */
-   @font-face {
+@font-face {
 	font-family: "SHSerif Full-Width Quotation";
 	src: local("Source Han Serif SC");
 	unicode-range: U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
@@ -114,9 +114,9 @@ html.sidebarHiddenOn #sidebarHidden-logo-link {
 
 /* Other */
 body.ns-2 div#catlinks:has(ul) {
-    display: revert !important;
-    background: #FFEBEB;
-    border: #FF7676 1px solid;
+	display: revert !important;
+	background: #FEF2E7;
+	border: #F7AD64 1px solid;
 }
 span.popup_contribs > a.popupNavLink {display: block;}
 .mw-body {border: none !important;}

@@ -77,6 +77,9 @@ mw.loader.load('/index.php?title=User:Bhsd/js/PreLangMark.js&action=raw&ctype=te
 // Wikiplus-replace
 mw.loader.load('/index.php?title=User:東東君/js/Wikiplus-replace.js&action=raw&ctype=text/javascript');
 
+// sortableTableAnimation
+mw.loader.load('/index.php?title=User:鬼影233/sortableTableAnimation.js&action=raw&ctype=text/javascript');
+
 // disambigHelper
 mw.loader.load('/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');
 

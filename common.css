@@ -19,7 +19,7 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", "Clear Sans", Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
+body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
@@ -32,6 +32,7 @@ html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang
 	margin-right: 0;
 }
 sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", sans-serif;}
+#mw-content-text[lang="en"] {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif;}
 .ace_editor, .ace_editor *, pre, code, kbd, samp, tt {font-family: "Sarasa Term SC", monospace !important;}
 .CtxtMenu_MenuArrow {font-family: inherit !important;}
 .diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace;}
@@ -41,7 +42,7 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
 .kancolle-nav-title {font-family: serif !important;}
-.railway_station_name span[lang="ja-Latn"] {font-family: "Clear Sans", Inter, sans-serif !important;}
+.railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
 .Wikiplus-Banner {font-family: sans-serif !important;}
 
 /* Colored special links and more */
@@ -53,7 +54,7 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
    5. Links contain heimus ([[Link|{{Heimu}}]]) */
 /* For a.decoded, see common.js L33 */
 
-/* Preparation: Common styles for marks */
+/* - Preparation: Common styles for marks */
 a.mw-redirect::after,
 a.mw-disambig::after,
 a.mw-redirect.mw-disambig::after,
@@ -69,7 +70,14 @@ a.decoded::after {
 	transform: scale(50%);
 	transform-origin: top left;
 }
-.mw-unwatch-link::after {display: none !important;}
+
+/* - Preparation: Hide marks for certain links */
+.mw-changeslist-date::after,
+.mw-changeslist-diff::after,
+.mw-changeslist-history::after,
+.mw-history-histlinks a::after,
+.mw-unwatch-link::after,
+.mw-watch-link::after {display: none !important;}
 
 /* - Preparation: Keep visually hidden under heimus */
 span.heimu a.mw-redirect, span.heimu a.mw-redirect:visited,
@@ -207,31 +215,6 @@ a.decoded::after {
 	clip-path: path('M17.5049 21.0029C15.5719 21.0029 14.0049 19.4359 14.0049 17.5029C14.0049 15.5699 15.5719 14.0029 17.5049 14.0029C19.4379 14.0029 21.0049 15.5699 21.0049 17.5029C21.0049 19.4359 19.4379 21.0029 17.5049 21.0029ZM6.50488 10.0029C4.57189 10.0029 3.00488 8.43593 3.00488 6.50293C3.00488 4.56993 4.57189 3.00293 6.50488 3.00293C8.43788 3.00293 10.0049 4.56993 10.0049 6.50293C10.0049 8.43593 8.43788 10.0029 6.50488 10.0029ZM19.076 3.51765L20.4902 4.93186L4.93382 20.4882L3.5196 19.074L19.076 3.51765Z');
 }
 
-/* Customized blockquotes */
-blockquote {
-	display: flow-root;
-	background: #E4F5E688;
-	border-left: 3px #8ED598 solid;
-	padding: 10px 50px !important;
-	position: relative;
-}
-blockquote::before {
-	content: "「" !important;
-	position: absolute;
-	top: 10px;
-	left: 5px;
-	font-size: 1.5rem;
-	color: #D5EFD9;
-}
-blockquote::after {
-	content: "」" !important;
-	position: absolute;
-	bottom: 10px;
-	right: 5px;
-	font-size: 1.5rem;
-	color: #D5EFD9;
-}
-
 /* Customized edit abbrs, for .unpatrolled, see common.js */
 .newpage {color: green;}
 .minoredit {color: gray;}
@@ -341,7 +324,7 @@ code, fieldset, pre,
 .markrights-scripteditor::after {content: "稿" !important;}
 
 /* CodeMirror */
-.permissions-errors ~ .wikiEditor-ui .wikiEditor-ui-top,
+.cm-panels.cm-panels-bottom ul:focus-visible {outline: none;}
 .permissions-errors ~ .wikiEditor-ui .wikiEditor-ui-bottom .cm-panels-bottom {display: none;}
 
 /* Colored QuickEdit */
@@ -351,6 +334,7 @@ code, fieldset, pre,
 #Wikiplus-SR-Intro a, #wphl-settings a, 
 .Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
 .Wikiplus-Edit-EveryWhereBtn {color: #40C040;}
+#ca-quick-edit a, .in-page-edit-article-link-group a {color: #2684FF;}
 .AnnTools_MarkAsResolved {color: green;}
 .section-permanent-link {color: #545F6F;}
 
@@ -459,8 +443,23 @@ li[data-mw-rev-approved="false"] > input[type="radio"] {visibility: unset !impor
 #pagehistory li.after input[name='diff'] {visibility: hidden !important;}
 #pagehistory [data-mw-rev-approved="false"] {opacity: 1 !important;}
 div[style*="PHN2ZyB4bWxucz0iaHR0cDov"] {content: url("");}
+.moderation-notice {display: none;}
+.mw-echo-ui-notificationItemWidget-icon img[src*="approved"] {
+	background: #18B676;
+	clip-path: path("m9 17l-4.59-4.59L5.83 11L9 14.17l8-8V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z");
+	filter: hue-rotate(11.28deg) saturate(123.3%) brightness(93.92%);
+	transform: scale(1.5);
+	transform-origin: top left;
+}
 
 /* Other */
+blockquote {
+	display: flow-root;
+	background: #E4F5E688;
+	border-left: 3px #8ED598 solid;
+	padding: 10px 50px !important;
+	position: relative;
+}
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
 body .ui-dialog {
 	background: #FFF;
@@ -479,20 +478,7 @@ pre {
 	tab-size: 4;
 }
 span.comment {font-style: oblique 10deg;}
-sup.detailedBlockInfo::before {
-	content: "[封]";
-	color: #161616;
-}
-sup.detailedBlockInfo + sup[class^=markrights-] {margin-left: 2px;}
 table.mw-changeslist-line {background: inherit;}
-#moe-draw-float-button {
-	right: 100% !important;
-	transform: rotate(50deg);
-}
-#moe-draw-float-button:hover {
-	right: calc(100% - var(--size) / 1.2) !important;
-	transform: rotate(0);
-}
 #profile {transition: all .2s ease-out;}
 #topicpath {
 	border: none !important;
@@ -518,7 +504,6 @@ table.mw-changeslist-line {background: inherit;}
 .ActivityBannerArrow {border-radius: 0 !important;}
 .ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
 .ajaxpoll input {vertical-align: baseline;}
-.cm-panels.cm-panels-bottom ul:focus-visible {outline: none;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .echart-main {position: relative;}
