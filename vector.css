@@ -3,7 +3,7 @@
    - Single Quotation Marks (2018, 2019)
    - Double Quotation Marks (201C, 201D)
    - Horizontal Ellipsis (2026) */
-@font-face {
+   @font-face {
 	font-family: "SHSerif Full-Width Quotation";
 	src: local("Source Han Serif SC");
 	unicode-range: U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
@@ -49,6 +49,7 @@ button, input, select {
 #pt-avatar a img {width: 20px;}
 #pt-userstatus {margin-top: 12px !important;}
 .pt-userstatus-img {width: 15px !important;}
+.mw-notification-area-floating {top: 4em;}
 
 /* Wiki logo */
 #mw-panel #p-logo {min-height: 300px;}

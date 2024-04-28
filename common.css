@@ -365,6 +365,11 @@ code, fieldset, pre,
 }
 .wphl-lint-count {width: auto !important;}
 
+/* InPageEdit */
+#ipe-edit-toolbox {transform: scale(.8667);}
+#ipe-edit-toolbox .ipe-toolbox-btn,
+#ipe-edit-toolbox .btn-tip-group .btn-tip {box-shadow: none;}
+
 /* Homepage */
 #moe-homeland-app * {font-family: inherit !important;}
 #moe-homeland-app .site-statistics .extra-buttons > a:last-child, 
@@ -563,6 +568,7 @@ table.mw-changeslist-line {background: inherit;}
 	vertical-align: text-bottom;
 }
 .mw-changeslist p {margin: 0 !important;}
+.mw-collapsible.wikitable th .infoBox b {font-weight: bold;}
 .mw-datatable.TablePager {display: table;}
 .mw-parser-output .fakelink {cursor: not-allowed !important;}
 .mw-parser-output .fakelink::after {
