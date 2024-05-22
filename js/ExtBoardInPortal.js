@@ -22,10 +22,11 @@ a#n-sidebar-discussionboard-new:hover {
 	text-decoration: none;
 }
 `);
-var discussionBoard = $('#n-sidebar-discussionboard').clone();
-var discussionBoardNames = [wgULS('技术实现', '技術實現'), wgULS('权限变更', '權限變更'), wgULS('操作申请', '操作申請'), wgULS('方针政策', '方針政策'), wgULS('页面相关', '頁面相關'), wgULS('提问求助', '提問求助'), wgULS('群组信息', '群組資訊')];
-var discussionBoardAbbrs = ['tec', 'rgt', 'act', 'pol', 'pge', 'que', 'grp'];
-var discussionBoardPortalObj = $('<div>').attr({
+const discussionBoard = $('#n-sidebar-discussionboard').clone();
+const discussionBoardNames = [wgULS('技术实现', '技術實現'), wgULS('权限变更', '權限變更'), wgULS('操作申请', '操作申請'), wgULS('方针政策', '方針政策'), wgULS('页面相关', '頁面相關'), wgULS('提问求助', '提問求助'), wgULS('群组信息', '群組資訊')];
+const discussionBoardNamesRaw = ['技术实现', '权限变更', '操作申请', '方针政策', '页面相关', '提问求助', '群组信息'];
+const discussionBoardAbbrs = ['tec', 'rgt', 'act', 'pol', 'pge', 'que', 'grp'];
+const discussionBoardPortalObj = $('<div>').attr({
 		'id': 'p-discussionboard',
 		'class': 'portal',
 		'role': 'navigation',
@@ -35,17 +36,17 @@ var discussionBoardPortalObj = $('<div>').attr({
 	.append($('<div>').addClass('body').append($('<ul>')));
 $('#p-navigation').after(discussionBoardPortalObj);
 $('#n-sidebar-discussionboard').hide();
-for (var i = 0; i < discussionBoardNames.length; i++) {
-	var discussionBoardNewBtn = $('<a>').text('+')
+for (let i = 0; i < discussionBoardNames.length; i++) {
+	const discussionBoardNewBtn = $('<a>').text('+')
 		.attr({
-			'href': '/index.php?title=萌娘百科_talk:讨论版/' + discussionBoardNames[i] + '&action=edit&section=new',
+			'href': '/index.php?title=萌娘百科_talk:讨论版/' + discussionBoardNamesRaw[i] + '&action=edit&section=new',
 			'title': '在' + discussionBoardNames[i] + '版下' + wgULS('添加话题', '添加話題'),
 			'target': '_blank',
 			'rel': 'noopener noreferrer',
 			'id': 'n-sidebar-discussionboard-new'
 		});
-	var discussionBoardLiObj = $('<li>').attr('id', 'n-sidebar-discussionboard' + discussionBoardAbbrs[i])
-		.append($('<a>').attr('href', '/萌娘百科_talk:讨论版/' + discussionBoardNames[i]).text(discussionBoardNames[i]))
+	const discussionBoardLiObj = $('<li>').attr('id', 'n-sidebar-discussionboard' + discussionBoardAbbrs[i])
+		.append($('<a>').attr('href', '/萌娘百科_talk:讨论版/' + discussionBoardNamesRaw[i]).text(discussionBoardNames[i]))
 		.append(discussionBoardNewBtn)
 		.css('position', 'relative');
 	$('#p-discussionboard ul').append(discussionBoardLiObj);

@@ -4,14 +4,6 @@
 	color: var(--theme-text-color);
 }
 
-/* Temp fix: Mobile Wikiplus button */
-#Wikiplus-Edit-TopBtn {
-	background-color: initial !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	width: auto !important;
-}
-
 /* Subtitle alignment */
 #subtitle .xicon {height: 1.2em !important;}
 
@@ -104,21 +96,20 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 		position: inherit;
 	}
 	.mobile-edit-button {justify-content: center;}
-	.mobile-edit-button #Wikiplus-Edit-TopBtn a, #mobile-page-actions .purgecache.n-button {
+	.mobile-edit-button #Wikiplus-Edit-TopBtn {
+		background-color: initial !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		width: auto !important;
+	}
+	.mobile-edit-button #Wikiplus-Edit-TopBtn a {
 		background: var(--theme-button-color) !important;
+		border-radius: inherit !important;
 		color: var(--theme-accent-link-color) !important;
 	}
-	.mobile-edit-button #Wikiplus-Edit-TopBtn a::before {
-		content: '';
-		display: inline-block;
-		background: var(--theme-accent-link-color);
-		clip-path: path('M344.25,451.26a15.992,15.992,0,0,1-20.11-4.74L247.11,342.41l-57.54,92.07A16.015,16.015,0,0,1,176,442h-.33a16.005,16.005,0,0,1-13.57-8.08l-160-281A16,16,0,0,1,16,129h92a16.017,16.017,0,0,1,14.67,9.6l69.28,158.85,58.17-101.41A16,16,0,0,1,264,188a16.851,16.851,0,0,1,1.73.09,16.013,16.013,0,0,1,13.54,11.13l73,233A16.006,16.006,0,0,1,344.25,451.26ZM496,115H449V61a16,16,0,0,0-16-16H408a16,16,0,0,0-16,16v54H340a16,16,0,0,0-16,16v22a16,16,0,0,0,16,16h52v57a16,16,0,0,0,16,16h17a24.006,24.006,0,0,0,24-24V169h47a16,16,0,0,0,16-16V131A16,16,0,0,0,496,115Z'); /* Icon from MSP made by あめろ */
-		transform: scale(.035);
-		width: 512px;
-		height: 512px;
-		transform-origin: center left;
-		margin-left: -2px;
-		margin-right: -491px;
+	#mobile-page-actions .purgecache.n-button {
+		background: var(--theme-button-color) !important;
+		color: var(--theme-accent-link-color) !important;
 	}
 	#mobile-page-actions .purgecache.n-button::before {
 		content: '';
@@ -130,6 +121,18 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 		width: 24px;
 		height: 24px;
 		margin-left: -5px;
+	}
+	.mobile-edit-button #Wikiplus-Edit-TopBtn a:hover,
+	#mobile-page-actions .purgecache.n-button:hover {
+		background-color: var(--theme-button-color--hover) !important;
+		color: var(--theme-accent-link-color) !important;
+	}
+	.mobile-edit-button #Wikiplus-Edit-TopBtn a:active,
+	#mobile-page-actions .purgecache.n-button:active,
+	.mobile-edit-button #Wikiplus-Edit-TopBtn a:focus,
+	#mobile-page-actions .purgecache.n-button:focus {
+		background-color: var(--theme-button-color--active) !important;
+		color: var(--theme-accent-link-color) !important;
 	}
 	.wikitable[border="0"][style*="float"][style*="right"], 
 	.wikitable[style*="270px"]{
@@ -150,6 +153,10 @@ body div.fc-ab-root {display: none !important;}
 
 /* Other */
 body {background: #F7FAFD;}
+body.heimu_toggle_on span.heimu a,
+body.heimu_toggle_on a span.heimu,
+span.heimu:hover a,
+a span.heimu {color: var(--theme-link-color);}
 kbd, kbd:active {all: revert !important;}
 /* article div[data-v-app], .adsbyezoic, .google-auto-placed, #ezcnxplayer, */
 .desktop-only .n-badge, .mobile-only .n-badge, 

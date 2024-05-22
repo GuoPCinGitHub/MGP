@@ -44,7 +44,9 @@ if (mw.config.get("wgNamespaceNumber") != -1
 			return false;
 		}
 	});
-	$('#ca-edit a').attr('href', $('#ca-edit a').attr('href').replace(/&oldid=\d+/g, ''));
+	if (!window.location.search) {
+		$('#ca-edit a').attr('href', $('#ca-edit a').attr('href').replace(/&oldid=\d+/g, ''));
+	}
 }
 
 // Inspector小工具自定义，见[[User:Bhsd/Inspector#偏好设置]]
