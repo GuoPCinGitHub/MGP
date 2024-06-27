@@ -19,7 +19,7 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
+body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
@@ -323,6 +323,20 @@ code, fieldset, pre,
 .markrights-flood::after {content: "洪" !important;}
 .markrights-scripteditor::after {content: "稿" !important;}
 
+/* Discussion */
+.ns-talk dd {
+	border-left-color: #D9DBDF;
+	border-left-style: solid;
+	border-left-width: 2px;
+	margin-bottom: .5em;
+	padding-left: .5em;
+}
+.ns-talk dd dd {border-left-color: #BEBCC8;}
+.ns-talk dd dd dd {border-left-color: #A3A0B1;}
+.ns-talk dd dd dd dd {border-left-color: #88849A;}
+.ns-talk dd dd dd dd dd {border-left-color: #6E6A81;}
+.ns-talk dd dd dd dd dd dd {border-left-color: #565365;}
+
 /* CodeMirror */
 .cm-panels.cm-panels-bottom ul:focus-visible {outline: none;}
 .permissions-errors ~ .wikiEditor-ui .wikiEditor-ui-bottom .cm-panels-bottom {display: none;}
@@ -369,63 +383,6 @@ code, fieldset, pre,
 #ipe-edit-toolbox {transform: scale(.8667);}
 #ipe-edit-toolbox .ipe-toolbox-btn,
 #ipe-edit-toolbox .btn-tip-group .btn-tip {box-shadow: none;}
-
-/* Homepage */
-#moe-homeland-app * {font-family: inherit !important;}
-#moe-homeland-app .site-statistics .extra-buttons > a:last-child, 
-#moe-homeland-app .social-links, .banner-slider-container {display: none;}
-.home-right .n-button:hover {text-decoration: none;}
-.n-popover {max-width: 25em;}
-.n-tabs-nav-scroll-wrapper {border-radius: .5em;}
-.n-tabs .n-tabs-nav-scroll-wrapper.n-tabs-nav-scroll-wrapper--shadow-before::before {box-shadow: inset 10px 0 8px -5px rgba(0, 0, 0, .05) !important;}
-.n-tabs .n-tabs-nav-scroll-wrapper.n-tabs-nav-scroll-wrapper--shadow-after::after {box-shadow: inset -10px 0 8px -5px rgba(0, 0, 0, .05) !important;}
-.simple-card {width: 195px !important;}
-.simple-card .topic-thumb img {width: 75% !important;}
-.topic-list > .capsule-card {
-	position: relative;
-	align-items: flex-start !important;
-	max-width: 7rem !important;
-	height: 10rem !important;
-}
-.topic-list > .capsule-card .topic-thumb {
-	z-index: 0;
-	display: flex;
-	justify-content: center;
-	border-radius: 0 !important;
-	width: 100% !important;
-	height: 100% !important;
-}
-.topic-list > .capsule-card .topic-text {
-	position: absolute;
-	top: calc(100% - 1.8em);
-	z-index: 1;
-	backdrop-filter: saturate(5) blur(20px);
-	background: #FFFA;
-	border-radius: .5em;
-	width: 100% !important;
-	height: 100%;
-	transition: all ease-in-out .3s;
-}
-.topic-list > .capsule-card:hover .topic-text {top: 4em;}
-.topic-list > .capsule-card .topic-name {
-	font-size: 1.05em;
-	padding: 0 .2em;
-}
-.topic-list > .capsule-card:hover .topic-name {white-space: normal;}
-.topic-list > .capsule-card .topic-desc {
-	color: #555 !important;
-	line-height: 1.5em;
-	padding: .2em;
-	word-break: break-all;
-}
-.topic-list > .capsule-card * {transition: all ease-in-out .2s;}
-.topic-list > .capsule-card img {
-	position: unset !important;
-	transform: none !important;
-	width: unset !important;
-	max-width: unset !important;
-}
-.topic-list > .capsule-card:hover img {transform: scale(1.1) !important;}
 
 /* Homepage - legacy */
 .moegirlSister {flex-wrap: wrap;}
@@ -517,6 +474,7 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 .ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
 .ajaxpoll input {vertical-align: baseline;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
+.citation-comment {display: inline !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
 .echart-main {position: relative;}
 .echart-main > div[style*="absolute"] {
@@ -626,6 +584,10 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	margin: 0 4px;
 	height: .97rem !important;
 	line-height: .9rem !important;
+}
+.UFC-hover {
+	border-radius: .2rem;
+	padding-inline: .2rem;
 }
 .userlink-label {white-space: nowrap;}
 .userlink-menu {
