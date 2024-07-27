@@ -164,6 +164,12 @@ kbd, kbd:active {all: revert !important;}
 /* .adsbygoogle, .moe-card[style*="relative"] {display: none !important;} */
 .keyboard-key {vertical-align: initial;}
 .navbox {border-collapse: separate;}
+.popupPreview h2 {
+	color: var(--home-text-secondary-color);
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: .2em 0;
+}
 #firstHeading {font-weight: 300 !important;}
 #moe-float-toc-trigger {
 	box-shadow: 0 0 .5rem #0002 !important;

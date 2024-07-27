@@ -39,9 +39,10 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
 .diff-lineno, .mw-_addText-preview-loading {font-family: initial;}
 .disambig-box {font-family: Inter, sans-serif;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
+.kancolle-nav-title {font-family: serif !important;}
+.MoeNotification-notice span {font-family: Inter, "LXGW Neo XiHei", sans-serif;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
-.kancolle-nav-title {font-family: serif !important;}
 .railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
 .Wikiplus-Banner {font-family: sans-serif !important;}
 
@@ -194,18 +195,18 @@ a.stub.mw-disambig.mw-disambig,
 body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig,
 body.heimu_toggle_on a.stub.mw-disambig.mw-disambig span.heimu,
 span.heimu:hover a.stub.mw-disambig.mw-disambig,
-a.stub.mw-disambig.mw-disambig:hover span.heimu {color: #0699AD;}
+a.stub.mw-disambig.mw-disambig:hover span.heimu {color: #EE4A3F;}
 
 /* - STUB-DISAM links - visited */
 a.stub.mw-disambig.mw-disambig:visited,
 body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig:visited,
 body.heimu_toggle_on a.stub.mw-disambig.mw-disambig:visited span.heimu,
 span.heimu:hover a.stub.mw-disambig.mw-disambig:visited,
-a.stub.mw-disambig.mw-disambig:visited:hover span.heimu {color: #046D7C;}
+a.stub.mw-disambig.mw-disambig:visited:hover span.heimu {color: #CF2823;}
 
 /* - STUB-DISAM links - mark: A SEEDLING */
 a.stub.mw-disambig::after {
-	background: #0699AD;
+	background: #EE4A3F;
 	clip-path: path('M21.998 7V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V14L11.0169 13.0007C11.2719 9.64413 14.0762 7 17.498 7H21.998ZM5.99805 3C9.0904 3 11.7144 5.00519 12.6408 7.78626C11.1417 9.06119 10.1516 10.9143 10.0144 13.0004L8.99805 13C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805Z');
 }
 
@@ -322,20 +323,6 @@ code, fieldset, pre,
 .markrights-checkuser::after {content: "核" !important;}
 .markrights-flood::after {content: "洪" !important;}
 .markrights-scripteditor::after {content: "稿" !important;}
-
-/* Discussion */
-.ns-talk dd {
-	border-left-color: #D9DBDF;
-	border-left-style: solid;
-	border-left-width: 2px;
-	margin-bottom: .5em;
-	padding-left: .5em;
-}
-.ns-talk dd dd {border-left-color: #BEBCC8;}
-.ns-talk dd dd dd {border-left-color: #A3A0B1;}
-.ns-talk dd dd dd dd {border-left-color: #88849A;}
-.ns-talk dd dd dd dd dd {border-left-color: #6E6A81;}
-.ns-talk dd dd dd dd dd dd {border-left-color: #565365;}
 
 /* CodeMirror */
 .cm-panels.cm-panels-bottom ul:focus-visible {outline: none;}
@@ -513,7 +500,6 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 }
 .oo-ui-labelElement-label, .mw-editTools {font-size: 0.9em;}
 .hljs-color {line-height: 1.15rem;}
-.infoBox[style*="solid orange"], .infoBox[style*="solid red"] {display: inherit !important;}
 .infoBoxContent {
 	background: #FBFBFBBB;
 	border: none;
