@@ -12,11 +12,7 @@
 .catlinks#catlinks > div > ul#not-listed-articles-list > li:hover a {color: var(--color);}
 
 /* Header */
-#moe-full-container #moe-global-header, #moe-user-dropdown-body, .sidenav-inner {
-	backdrop-filter: blur(3px);
-	background: #FFFD;
-}
-#moe-user-dropdown {padding: 1px;}
+#moe-user-dropdown {padding: 2px;}
 .user-contrib-stats {background: transparent !important;}
 .n-tab-pane.sitenotice #moeskin-sitenotice ul.scrollDiv li {font-size: .9em;}
 .n-tab-pane.sitenotice #moeskin-sitenotice ul {
@@ -109,6 +105,7 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 	#mobile-page-actions .purgecache.n-button {
 		background: var(--theme-button-color) !important;
 		color: var(--theme-accent-link-color) !important;
+		--n-border-radius: 0.5rem !important;
 	}
 	#mobile-page-actions .purgecache.n-button::before {
 		content: '';
@@ -151,7 +148,7 @@ body {overflow: initial !important;}
 body div.fc-ab-root {display: none !important;}
 
 /* Other */
-body {background: #F7FAFD;}
+/* body {background: #F7FAFD;} */
 body.heimu_toggle_on span.heimu a,
 body.heimu_toggle_on a span.heimu,
 span.heimu:hover a,
@@ -160,7 +157,9 @@ kbd, kbd:active {all: revert !important;}
 /* article div[data-v-app], .adsbyezoic, .google-auto-placed, #ezcnxplayer, */
 .desktop-only .n-badge, .mobile-only .n-badge, 
 .namespaces-links-list > li:empty, 
-#moe-global-background, #moe-open-in-app {display: none;}
+.user-avatar-container .avatar-frame, 
+.user-avatar-wrapper .avatar-frame, 
+#moe-open-in-app {display: none;}
 /* .adsbygoogle, .moe-card[style*="relative"] {display: none !important;} */
 .keyboard-key {vertical-align: initial;}
 .navbox {border-collapse: separate;}

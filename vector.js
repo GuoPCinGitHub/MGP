@@ -90,11 +90,5 @@ mw.loader.load('/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&acti
 // RefToggle
 mw.loader.load('/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
 
-// AccesskeyVec
-mw.loader.load('/index.php?title=User:GuoPC/js/AccesskeyVec.js&action=raw&ctype=text/javascript');
-
 // ExtBoardInPortal
 mw.loader.load('/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
-
-// MakeItGray
-mw.loader.load('/index.php?title=User:GuoPC/js/MakeItGray.js&action=raw&ctype=text/javascript');

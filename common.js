@@ -22,20 +22,6 @@ if ($('.Lyrics-translated > span').attr('lang') == 'zh') {
 }
 $('.Lyrics-column-zh > span').removeAttr('lang');
 
-// Decode free links
-if ($('a.free').length > 0) {
-	$('a.free').each(function() {
-		var text = $(this).text();
-		var decodedText = decodeURIComponent(text);
-		if (decodedText == text) {
-			return;
-		} else {
-			$(this).addClass('decoded');
-			$(this).text(decodedText);
-		}
-	});
-}
-
 // Popups小工具
 window.popupStructure = 'menus';
 window.popupShortcutKeys = true;
@@ -88,9 +74,6 @@ mw.loader.load('/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype
 
 // BgInfo
 mw.loader.load('/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/javascript');
-
-// MouseRippleToggle
-mw.loader.load('/index.php?title=User:GuoPC/js/MouseRippleToggle.js&action=raw&ctype=text/javascript');
 
 // TSIndicator
 mw.loader.load('/index.php?title=User:GuoPC/js/TSIndicator.js&action=raw&ctype=text/javascript');

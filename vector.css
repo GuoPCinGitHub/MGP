@@ -26,13 +26,6 @@ h1, h2, h3, h4, h5, h6 {color: #222;}
 h1, h2 {border-image: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE58, #25B49A) 1;}
 .mw-body-content h2 {padding-top: .1em;}
 
-/* Customized buttons, inputs & selects */
-button, input, select {
-	border: 1px solid #DDD;
-	border-radius: 2px;
-	transition: border .3s;
-}
-
 /* Customized personal label */
 #p-personal {
 	display: flex;
@@ -120,4 +113,10 @@ body.ns-2 div#catlinks:has(ul) {
 	border: #F7AD64 1px solid;
 }
 span.popup_contribs > a.popupNavLink {display: block;}
+#topicpath {
+	border: none !important;
+	background: #FFFA !important;
+	margin: .6em 0 !important;
+	box-shadow: 0 -.2em 0 #0002 inset;
+}
 .mw-body {border: none !important;}

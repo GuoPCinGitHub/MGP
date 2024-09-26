@@ -1,11 +1,9 @@
-@import url('https://cdn.jsdelivr.net/gh/MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/Navigation_popups/MediaWiki:Gadget-popups.css');
-
 /* NintendoFont */
-@import url("https://mzh.moegirl.org.cn/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
+@import url("/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
 /* MoeSkinPlus - for MoeSkin */
-@import url("https://mzh.moegirl.org.cn/index.php?title=User:鬼影233/moeskinplus.css&action=raw&ctype=text/css");
+@import url("/index.php?title=User:鬼影233/moeskinplus.css&action=raw&ctype=text/css");
 /* MoeLatte - for MoeSkin */
-@import url("https://mzh.moegirl.org.cn/index.php?title=User:GuoPC/MoeLatte.css&action=raw&ctype=text/css");
+@import url("/index.php?title=User:GuoPC/MoeLatte.css&action=raw&ctype=text/css");
 
 /* Specific font for certain characters:
    - Em Dash (2014)
@@ -19,12 +17,12 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;}
+body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
-span[lang="el"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
+span[lang="el"], span[lang="grc"], span[lang="ru"] {font-family: "Open Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
 	font-family: YakuHanRP, "Rounded Mplus 1c", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
 	font-size: 1.05em;
@@ -34,13 +32,15 @@ html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang
 sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", sans-serif;}
 #mw-content-text[lang="en"] {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif;}
 .ace_editor, .ace_editor *, pre, code, kbd, samp, tt {font-family: "Sarasa Term SC", monospace !important;}
+.bilibili-video-container.exec {font-family: "Pingfang SC", sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "MiSans L3";}
 .CtxtMenu_MenuArrow {font-family: inherit !important;}
-.diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace;}
+.diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace, NospzGothicMoe, "MiSans L3";}
 .diff-lineno, .mw-_addText-preview-loading {font-family: initial;}
 .disambig-box {font-family: Inter, sans-serif;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
 .kancolle-nav-title {font-family: serif !important;}
 .MoeNotification-notice span {font-family: Inter, "LXGW Neo XiHei", sans-serif;}
+.mw-_addText-preview-loading {font-family: inherit !important;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
 .railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
@@ -252,6 +252,7 @@ code, fieldset, pre,
 .ajaxpoll, .ajaxpoll .ajaxpoll-answer-vote, 
 .ajaxpoll .ajaxpoll-answer-vote div, 
 .ajaxpoll .ajaxpoll-hover-revoke, 
+.ajaxpoll .ajaxpoll-hover-vote, 
 .bilibili-video-container.exec, 
 .errorbox, .infobox, .infoBox, 
 .mmdPreviewer-hoverbox, 
@@ -436,12 +437,6 @@ table.mw-changeslist-line {background: inherit;}
 td.mw-changeslist-line-inner {width: 100%;}
 td.mw-enhanced-rc-nested > p {display: inline-block;}
 #profile {transition: all .2s ease-out;}
-#topicpath {
-	border: none !important;
-	background: #FFFA !important;
-	margin: .6em 0 !important;
-	box-shadow: 0 -.2em 0 #0002 inset;
-}
 #wikiPreview .annotation {position: relative;}
 .annotation > .annotation-content {display: none;}
 .annotation > span:first-child:hover ~ .annotation-content {
@@ -457,9 +452,31 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	width: 11em;
 	padding: .6em;
 }
-.ActivityBannerArrow {border-radius: 0 !important;}
-.ActivityBannerContainer:hover .ActivityBannerArrow {background-color: #0001 !important;}
-.ajaxpoll input {vertical-align: baseline;}
+.ActivityBannerArrow {
+	border-radius: 0 !important;
+	transition: color ease-in-out .2s !important;
+}
+.ActivityBannerArrow:hover {
+	color: #2870E9 !important;
+	transition: color ease-in-out .2s;
+}
+.ActivityBannerContainer:hover .ActivityBannerArrow {background-color: inherit !important;}
+.ActivityBannerSwitcher > .ActivityBannerHoverable,
+.ActivityBannerSwitcherItem {transition: background-color ease-in-out .2s;}
+.ActivityBannerSwitcher > .ActivityBannerHoverable:hover {
+	background-color: #2870E9 !important;
+	transition: background-color ease-in-out .2s;
+}
+.ActivityBannerSwitcherItem:hover {
+	background-color: #E6E6E6 !important;
+	transition: background-color ease-in-out .2s;
+}
+.ajaxpoll {display: flow-root;}
+.ajaxpoll label {
+	transition: background ease-in .2s;
+	padding: .1em .3em;
+}
+.ajaxpoll .ajaxpoll-hover-vote {color: #FFF;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .citation-comment {display: inline !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
@@ -521,6 +538,8 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 .mw-changeslist p {margin: 0 !important;}
 .mw-collapsible.wikitable th .infoBox b {font-weight: bold;}
 .mw-datatable.TablePager {display: table;}
+.mw-datatable tr td,
+.mw-datatable tr:hover td {transition: background-color .1s ease-in;}
 .mw-parser-output .fakelink {cursor: not-allowed !important;}
 .mw-parser-output .fakelink::after {
 	content: '';
@@ -533,6 +552,17 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	clip-path: path('M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM7 11V13H17V11H7Z');
 	background: #0645AD;
 }
+.mw-parser-output .提案删, .mw-parser-output .prop-del,
+.mw-parser-output .prop-delete {
+	background-color: #FFEDEE !important;
+	text-decoration: line-through #8B0007 dashed !important;
+}
+.mw-parser-output .提案增, .mw-parser-output .prop-add {
+	background-color: #DAFBED !important;
+	text-decoration: underline #108C57 dashed !important;
+}
+.mw-parser-output .提案疑, .mw-parser-output .prop-q,
+.mw-parser-output .prop-question {background-color: #FFF4AA !important;}
 .mw-tag-markers {font-size: 90%;}
 .need-comma a::after {content: none !important;}
 .need-comma > span::after {content: "、";}
