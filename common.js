@@ -60,8 +60,8 @@ mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadg
 // PreLangMark
 mw.loader.load('/index.php?title=User:Bhsd/js/PreLangMark.js&action=raw&ctype=text/javascript');
 
-// Wikiplus-replace
-mw.loader.load('/index.php?title=User:東東君/js/Wikiplus-replace.js&action=raw&ctype=text/javascript');
+// WikiplusSP
+mw.loader.load('/index.php?title=User:Dreammu/WikiplusSP.js&action=raw&ctype=text/javascript');
 
 // sortableTableAnimation
 mw.loader.load('/index.php?title=User:鬼影233/sortableTableAnimation.js&action=raw&ctype=text/javascript');
@@ -74,6 +74,9 @@ mw.loader.load('/index.php?title=User:星海子/js/Wordcount.js&action=raw&ctype
 
 // BgInfo
 mw.loader.load('/index.php?title=User:GuoPC/js/BgInfo.js&action=raw&ctype=text/javascript');
+
+// ModIcon
+mw.loader.load('/index.php?title=User:GuoPC/js/ModIcon.js&action=raw&ctype=text/javascript');
 
 // TSIndicator
 mw.loader.load('/index.php?title=User:GuoPC/js/TSIndicator.js&action=raw&ctype=text/javascript');
