@@ -1,15 +1,8 @@
 // Mainpage
 $('.mw-wiki-logo, #n-mainpage-description a').attr('href', '/User:GuoPC/M');
 
-// 侧边栏添加“萌娘百科论述”“以MoeSkin查看”
+// 侧边栏与右侧导航区域下拉框
 $('#n-sidebar-policy').after('<li id="n-sidebar-essay"><a href="/Category:萌娘百科论述">萌娘百科论述</a></li>');
-if (window.location.search) {
-	$('#p-tb .body ul').append('<li id="pc-usemoeskin"><a target="_blank" href="/index.php' + window.location.search + '&useskin=moeskin">以MoeSkin查看</a></li>');
-} else {
-	$('#p-tb .body ul').append('<li id="pc-usemoeskin"><a target="_blank" href="/index.php?title=' + mw.config.get('wgPageName') + '&useskin=moeskin">以MoeSkin查看</a></li>');
-}
-
-// 右侧导航区域下拉框添加“清除缓存”
 if (mw.config.get('wgNamespaceNumber') != -1) {
 	$('#right-navigation .menu ul').append('<li id="pc-purge"><a href="/index.php?title=' + mw.config.get('wgPageName') + '&action=purge" style="color: #D4A039;">清除缓存</a></li>');
 }

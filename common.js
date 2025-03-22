@@ -12,8 +12,57 @@ if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
 		limitLinks += '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=' + limits[j] + '" title="Special:监视列表" data-params="{&quot;limit&quot;:' + limits[j] + '}" data-keys="limit">' + limits[j] + '</a>';
 		limitLinks += j == limits.length - 1 ? '个更改' : ' | ';
 	}
-	$('.wlinfo').after('<br><span class="wllinks">显示过去' + dayLinks + limitLinks +  '</span>');
+	$('.wlinfo').after('<br><span class="wllinks">显示过去' + dayLinks + limitLinks + '</span>');
 	$('.cldays.cloption').hide();
+}
+
+// [[User:GuoPC/js#ModIconPrep]]
+if ($('.mw-collapsible.mw-enhanced-rc').length > 0) {
+	mw.loader.addStyleTag('.pc-mip-count{position:absolute;bottom:-.4em;right:-.4em;display:inline-block;backdrop-filter:blur(5px);background:#FFF5;border:#AAA 1px dashed;border-radius:50%;color:#222;font-size:9px;font-style:normal;line-height:1.2em;text-align:center;width:1.2em;height:1.2em;user-select:none;}');
+	var epath = '.mw-collapsible.mw-enhanced-rc.mw-changeslist-edit .mw-changeslist-line-inner';
+	var lpath = '.mw-collapsible.mw-enhanced-rc.mw-changeslist-log .mw-changeslist-line-inner';
+	var sflag = false;
+	if ($('.mw-collapsible.mw-enhanced-rc .mw-changeslist-line-inner > p').length > 0) {
+		sflag = true;
+		epath += '> p';
+		lpath += '> p';
+	}
+	$('.mw-collapsible.mw-enhanced-rc').each(function() {
+		var ico = $(this).find('i.mod-status-icon').first().clone();
+		var num = $(this).find('i.mod-status-icon').length - 1;
+		ico.css('position', 'relative');
+		ico.append($('<span>').text(num).addClass('pc-mip-count'));
+		$(this).find('td.mw-changeslist-line-inner').first().prepend(ico);
+	});
+	$(epath).each(function() {
+		var con = $(this).contents();
+		var ico = con.filter('span.mw-title ~ i.mod-status-icon');
+		var pos = con.index(ico);
+		if (con.filter('span.mw-title').has('a.new').length > 0) {
+			con.eq(pos - 1).get(0).replaceWith(con.eq(pos - 1).get(0).textContent.replace('历史 | ', '历史'));
+		} else {
+			con.eq(pos - 1).remove();
+		}
+		con.eq(pos).remove();
+		if (sflag) {
+			$(this).css('display', 'contents');
+			$('.mw-enhanced-rc-nested p').css('display', 'contents');
+		}
+	});
+	$(lpath).each(function() {
+		var con = $(this).contents();
+		var ico = con.filter('span.mw-rc-unwatched ~ i.mod-status-icon');
+		if (ico.length > 0) {
+			var pos = con.index(ico);
+			con.eq(pos - 1).remove();
+			con.eq(pos).remove();
+			con.eq(pos + 1).remove();
+		}
+		if (sflag) {
+			$(this).css('display', 'contents');
+			$('.mw-enhanced-rc-nested p').css('display', 'contents');
+		}
+	});
 }
 
 // No lang="zh" for translation in LyricsKai
@@ -50,9 +99,6 @@ mw.loader.load('/index.php?title=User:AnnAngela/js/upload-log-toggle.js&action=r
 // watchlist-log
 mw.loader.load('/index.php?title=User:AnnAngela/js/watchlist-log.js&action=raw&ctype=text/javascript');
 
-// OneKeyPurge
-mw.loader.load('/index.php?title=User:BearBin/js/OneKeyPurge.js&action=raw&ctype=text/javascript');
-
 // code-prettify
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.js');
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.css', 'text/css');
@@ -62,9 +108,6 @@ mw.loader.load('/index.php?title=User:Bhsd/js/PreLangMark.js&action=raw&ctype=te
 
 // WikiplusSP
 mw.loader.load('/index.php?title=User:Dreammu/WikiplusSP.js&action=raw&ctype=text/javascript');
-
-// sortableTableAnimation
-mw.loader.load('/index.php?title=User:鬼影233/sortableTableAnimation.js&action=raw&ctype=text/javascript');
 
 // disambigHelper
 mw.loader.load('/index.php?title=User:Iehcni/js/disambigHelper.js&action=raw&ctype=text/javascript');

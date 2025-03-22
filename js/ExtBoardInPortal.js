@@ -11,14 +11,27 @@ a#n-sidebar-discussionboard-new {
 	line-height: 12px;
 	text-align: center;
 	text-shadow: none;
-	transition: background .1s ease-in;
+	transition: all .1s ease-in;
 	width: 15px;
 	height: 15px;
+	overflow: hidden;
 	user-select: none;
 }
 a#n-sidebar-discussionboard-new:hover {
 	background: #1AA7EE;
 	color: #FFF !important;
+	text-decoration: none;
+	transition: all .1s ease-in;
+	width: 5.5em;
+}
+a#n-sidebar-discussionboard-new:hover::before {
+	content: '${wgULS('添加话题', '添加話題')}';
+	font-weight: normal;
+	font-size: 0.85em;
+	margin: 0 .65em 0 .25em;
+	vertical-align: middle;
+}
+a#n-sidebar-discussionboard-new:focus {
 	text-decoration: none;
 }
 `);

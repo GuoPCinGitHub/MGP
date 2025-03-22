@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* NintendoFont */
 @import url("/index.php?title=User:Xzonn/NintendoFont.css&action=raw&ctype=text/css");
 /* MoeSkinPlus - for MoeSkin */
@@ -19,13 +20,12 @@
 /* Customized fonts */
 body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
-span[lang="ko"] {font-family: "Gowun Dodum", HGSGothicM, sans-serif;}
+span[lang="ko"] {font-family: Rubik, Hahmlet, HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
 span[lang="el"], span[lang="grc"], span[lang="ru"] {font-family: "Fira Sans", sans-serif;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
-	font-family: YakuHanRP, "Rounded Mplus 1c", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
-	font-size: 1.05em;
+	font-family: YakuHanRP, "UD Digi Kyokasho N-R", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
 	font-style: normal !important;
 	margin-right: 0;
 }
@@ -39,12 +39,11 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
 .disambig-box {font-family: Inter, sans-serif;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
 .kancolle-nav-title {font-family: serif !important;}
-.MoeNotification-notice span {font-family: Inter, "LXGW Neo XiHei", sans-serif;}
+.MoeNotification-notice * {font-family: Inter, "LXGW Neo XiHei", sans-serif;}
 .mw-_addText-preview-loading {font-family: inherit !important;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
 .railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
-.Wikiplus-Banner {font-family: sans-serif !important;}
 
 /* Colored special links and more */
 /* There are 5 situations as follows:
@@ -251,26 +250,28 @@ a.decoded::after {
 }
 
 /* Become rounded */
-code, fieldset, pre, 
-.ajaxpoll, .ajaxpoll .ajaxpoll-answer-vote, 
-.ajaxpoll .ajaxpoll-answer-vote div, 
-.ajaxpoll .ajaxpoll-hover-revoke, 
-.ajaxpoll .ajaxpoll-hover-vote, 
-.bilibili-video-container.exec, 
-.errorbox, .infobox, .infoBox, 
-.mmdPreviewer-hoverbox, 
-.mw-body, .mw-changeslist-legend, 
-.mw-revslider-container, 
-.mw-warning-with-logexcerpt, 
-.navbox, .navpopup, .saveNotice, 
-.Tabs .TabContent, .Tabs .TabLabelText, 
-.template-documentation, .thumb, .thumbinner, 
-.toccolours, .tocfloatlabel, .tracklist, 
-.vertical-navbox, .ztdh, 
-#archivebox, #catlinks, #mw-rev-deleted-no-diff,
+code, fieldset, pre,
+.ajaxpoll,
+.ajaxpoll .ajaxpoll-answer-vote,
+.ajaxpoll .ajaxpoll-answer-vote div,
+.ajaxpoll .ajaxpoll-hover-revoke,
+.ajaxpoll .ajaxpoll-hover-vote,
+.bilibili-video-container.exec,
+.errorbox, .infobox, .infoBox,
+.mmdPreviewer-hoverbox,
+.mw-body, .mw-changeslist-legend,
+.mw-revslider-container,
+.mw-warning-with-logexcerpt,
+.navbox, .navpopup, .notice, .saveNotice,
+.Tabs .TabContent, .Tabs .TabLabelText,
+.template-documentation, .thumb, .thumbinner,
+.toccolours, .tocfloatlabel, .tracklist,
+.vertical-navbox, .ztdh,
+#archivebox, #catlinks,
+#mw-rev-deleted-no-diff,
 #p-personal, #talkPageTop_saves, #toc,
-#userboxes, #bottomRightCorner div, 
-.comment-avatar img, .oldTalkPageSave div, 
+#userboxes, #bottomRightCorner div,
+.comment-avatar img, .oldTalkPageSave div,
 .my-buttons a {border-radius: 2px;}
 .editOptions {border-radius: 0 0 2px 2px;}
 
@@ -350,6 +351,7 @@ code, fieldset, pre,
 .section-permanent-link {color: #545F6F;}
 
 /* Wikiplus */
+.Wikiplus-Banner {font-family: sans-serif !important;}
 .Wikiplus-InterBox .wikiEditor-ui-clear {margin: 5px;}
 #Wikiplus-Quickedit-Summary-Input {font-family: inherit;}
 #Wikiplus-Quickedit-Preview-Submit, #Wikiplus-Quickedit-Submit {
@@ -397,10 +399,10 @@ code, fieldset, pre,
 }
 
 /* Customized mod, based on [[U:鬼影233/moeskin.css]] */
-li[data-mw-rev-approved="false"] > input[type="radio"] {visibility: unset !important;}
+li.mw-moderation-line:not(.mw-moderation-approved) input[type="radio"] {visibility: unset !important;}
 #pagehistory li.before input[name='oldid'],
 #pagehistory li.after input[name='diff'] {visibility: hidden !important;}
-#pagehistory [data-mw-rev-approved="false"] {opacity: 1 !important;}
+li.mw-moderation-line:not(.mw-moderation-approved) {opacity: 1 !important;}
 div[style*="PHN2ZyB4bWxucz0iaHR0cDov"] {content: url("");}
 .moderation-notice {display: none;}
 .mw-echo-ui-notificationItemWidget-icon img[src*="approved"] {
@@ -419,13 +421,6 @@ div[style*="PHN2ZyB4bWxucz0iaHR0cDov"] {content: url("");}
 }
 
 /* Other */
-blockquote {
-	display: flow-root;
-	background: #E4F5E688;
-	border-left: 3px #8ED598 solid;
-	padding: 10px 50px !important;
-	position: relative;
-}
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
 body .ui-dialog {
 	background: #FFF;
@@ -449,7 +444,7 @@ span[style$="#F0FFB3"]:has(+ sup.annotation) {
 	text-decoration: underline wavy #AFDA00;
 	text-underline-offset: .2em;
 }
-span.comment {font-style: oblique 10deg;}
+span.comment {font-style: oblique 9deg;}
 table.mw-changeslist-line {background: inherit;}
 td.mw-changeslist-line-inner {width: 100%;}
 td.mw-enhanced-rc-nested > p {display: inline-block;}
@@ -552,6 +547,11 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	margin: 0 2px;
 	vertical-align: text-bottom;
 }
+.mod-status-icon {
+	width: 1.2em !important;
+	height: 1.2em !important;
+	vertical-align: text-bottom !important;
+}
 .mw-changeslist p {margin: 0 !important;}
 .mw-collapsible.wikitable th .infoBox b {font-weight: bold;}
 .mw-datatable.TablePager {display: table;}
@@ -569,6 +569,14 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	clip-path: path('M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM7 11V13H17V11H7Z');
 	background: #0645AD;
 }
+.mw-parser-output .famed-color::before {
+	content: attr(title);
+	color: #FFF;
+	font-family: ChillRoundM, sans-serif;
+	font-size: 12px;
+	margin-inline-start: .5em;
+	vertical-align: text-bottom;
+}
 .mw-parser-output .提案删, .mw-parser-output .prop-del,
 .mw-parser-output .prop-delete {
 	background-color: #FFEDEE !important;
@@ -580,9 +588,18 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 }
 .mw-parser-output .提案疑, .mw-parser-output .prop-q,
 .mw-parser-output .prop-question {background-color: #FFF4AA !important;}
+.mw-parser-output .userlink .userlink-label {display: inline-block !important;}
+.mw-parser-output .userlink .userlink-menu {
+	border-radius: 2px;
+	border-top-width: 3px !important;
+	padding-top: 0 !important;
+}
+.mw-parser-output .userlink .userlink-item:hover a {text-decoration: none;}
+.mw-special-Watchlist .mw-changeslist-line-prefix {min-width: 1.25em;}
 .mw-tag-markers {font-size: 90%;}
 .need-comma a::after {content: none !important;}
 .need-comma > span::after {content: "、";}
+.report-article-footer {display: none;}
 .soultide-img {
 	border: #3E4556 5px double;
 	height: max-content;
@@ -623,10 +640,3 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	border-radius: .2rem;
 	padding-inline: .2rem;
 }
-.userlink-label {white-space: nowrap;}
-.userlink-menu {
-	border-radius: 2px;
-	border-top-width: 3px !important;
-	padding-top: 0 !important;
-}
-.userlink-item:hover a {text-decoration: none;}
