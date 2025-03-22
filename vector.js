@@ -49,4 +49,4 @@ mw.loader.load('/index.php?title=User:Leranjun/js/RedirectContribsToggle.js&acti
 mw.loader.load('/index.php?title=User:Leranjun/js/RefToggle.js&action=raw&ctype=text/javascript');
 
 // ExtBoardInPortal
-mw.loader.load('/index.php?title=User:GuoPC/js/ExtBoardInPortal.js&action=raw&ctype=text/javascript');
+mw.loader.load('//fastly.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/ExtBoardInPortal.min.js');
