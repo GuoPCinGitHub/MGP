@@ -1,5 +1,5 @@
 $(function() {
-	if (!["submit", "edit"].includes(mw.config.get("wgAction")) && $('#mw-content-text ul').length > 0) {
+	if (!["submit", "edit"].includes(mw.config.get("wgAction")) && $('#mw-content-text ul:not(.redirectText)').length > 0) {
 		mw.loader.addStyleTag(`
 		.pc-list-count {
 			position: relative;
@@ -44,7 +44,7 @@ $(function() {
 		}
 		`);
 		
-		$('#mw-content-text ul').each(function() {
+		$('#mw-content-text ul:not(.redirectText)').each(function() {
 			var n = $(this).children('li').length;
 			$(this).prepend($('<div>').addClass('pc-list-count').append($('<div>').addClass('pc-list-count-main').text(n)));
 		});
