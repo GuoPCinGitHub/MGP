@@ -1,6 +1,6 @@
 const iconSet = (ele, name, paths) => $(ele).prev().children().children().attr('class', 'tabler-icon tabler-icon-' + name).html(paths);
 
-$('#moe-full-container').on('click', '.sidenav-toggler button, .n-menu-item-content', function () {
+$('#moe-full-container').on('click touchend', '.sidenav-toggler button, .n-menu-item-content', function () {
 	if ($('#moe-global-header-sidenav.is-show').length > 0) {
 		$('.n-menu-item-content-header').each(function () {
 			switch ($(this).text()) {
