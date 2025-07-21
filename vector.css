@@ -3,7 +3,7 @@
    - Single Quotation Marks (2018, 2019)
    - Double Quotation Marks (201C, 201D)
    - Horizontal Ellipsis (2026) */
-   @font-face {
+@font-face {
 	font-family: "SHSerif Full-Width Quotation";
 	src: local("Source Han Serif SC");
 	unicode-range: U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
@@ -20,6 +20,7 @@ h2 .mw-headline {font-family: "SHSerif Full-Width Quotation", "Linux Libertine",
 #firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
 #firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
 #firstHeading {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
+#footer-info-copyright {font-family: inherit;}
 
 /* Customized headers */
 h1, h2, h3, h4, h5, h6 {color: #222;}
@@ -28,8 +29,6 @@ h1, h2 {border-image: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE
 
 /* Customized personal label */
 #p-personal {
-	display: flex;
-	justify-content: center;
 	backdrop-filter: blur(5px);
 	box-shadow: 0 0 .5rem #0002 !important;
 	font-weight: 500;

@@ -237,15 +237,15 @@ a.decoded::after {
 	color: #4A4A4A;
 }
 .diff-context ::selection {
-	background: #6C7A96;
+	background: #B3BAC9;
 	color: #FFF;
 }
 .diff-deletedline ::selection {
-	background: #FFBF13;
+	background: #FC3;
 	color: #FFF;
 }
 .diff-addedline ::selection {
-	background: #0688FF;
+	background: #AFB6E9;
 	color: #FFF;
 }
 
@@ -257,7 +257,9 @@ code, fieldset, pre,
 .ajaxpoll .ajaxpoll-hover-revoke,
 .ajaxpoll .ajaxpoll-hover-vote,
 .bilibili-video-container.exec,
-.errorbox, .infobox, .infoBox,
+.cdx-message,
+.cm-tooltip, .errorbox,
+.infobox, .infoBox,
 .mmdPreviewer-hoverbox,
 .mw-body, .mw-changeslist-legend,
 .mw-revslider-container,
@@ -403,8 +405,11 @@ li.mw-moderation-line:not(.mw-moderation-approved) input[type="radio"] {visibili
 #pagehistory li.before input[name='oldid'],
 #pagehistory li.after input[name='diff'] {visibility: hidden !important;}
 li.mw-moderation-line:not(.mw-moderation-approved) {opacity: 1 !important;}
-div[style*="PHN2ZyB4bWxucz0iaHR0cDov"] {content: url("");}
-.moderation-notice {display: none;}
+:not(.mw-parser-output) > .moderation-notice {display: none;}
+div[style*="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48Zm9yZWlnbk9iamVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCI+PGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJ3aWR0aDogMzAwcHg7IGhlaWdodDogMzAwcHg7Ij48aGVhZD48L2hlYWQ+PGJvZHkgc3R5bGU9IndpZHRoOiAzMDBweDsgaGVpZ2h0OiAzMDBweDsgbWFyZ2luOiAwcHg7Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMTAwJSAhaW1wb3J0YW50OyBoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDsgb3BhY2l0eTogLjEgIWltcG9ydGFudDsgZm9udC1zaXplOiAyNHB4ICFpbXBvcnRhbnQ7IHBvc2l0aW9uOiByZWxhdGl2ZSAhaW1wb3J0YW50OyBjb2xvcjogYmxhY2sgIWltcG9ydGFudDsiPjxkaXYgc3R5bGU9InRyYW5zZm9ybTogcm90YXRlKC0xNWRlZykgdHJhbnNsYXRlWCgtNTAlKSB0cmFuc2xhdGVZKC01MCUpICFpbXBvcnRhbnQ7IHdvcmQtYnJlYWs6IGJyZWFrLWFsbCAhaW1wb3J0YW50OyB0b3A6IDM2JSAhaW1wb3J0YW50OyBsZWZ0OiA1MCUgIWltcG9ydGFudDsgcG9zaXRpb246IGFic29sdXRlICFpbXBvcnRhbnQ7IHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7IHRleHQtYWxpZ246IGNlbnRlciAhaW1wb3J0YW50OyI+54mI5pys5a6h5qC45Lit77yM6Z2e5q2j5byP5YaF5a65PGJyLz7kuI3ku6PooajokIzlqJjnmb7np5Hnq4vlnLo8L2Rpdj48L2Rpdj48L2JvZHk+PC9odG1sPjwvZm9yZWlnbk9iamVjdD48L3N2Zz4="],
+div[style*="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48Zm9yZWlnbk9iamVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCI+PGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJ3aWR0aDogMzAwcHg7IGhlaWdodDogMzAwcHg7Ij48aGVhZD48L2hlYWQ+PGJvZHkgc3R5bGU9IndpZHRoOiAzMDBweDsgaGVpZ2h0OiAzMDBweDsgbWFyZ2luOiAwcHg7Ij48ZGl2IHN0eWxlPSJ3aWR0aDogMTAwJSAhaW1wb3J0YW50OyBoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDsgb3BhY2l0eTogLjE3ICFpbXBvcnRhbnQ7IGZvbnQtc2l6ZTogMjRweCAhaW1wb3J0YW50OyBwb3NpdGlvbjogcmVsYXRpdmUgIWltcG9ydGFudDsgY29sb3I6IGJsYWNrICFpbXBvcnRhbnQ7Ij48ZGl2IHN0eWxlPSJ0cmFuc2Zvcm06IHJvdGF0ZSgtMTVkZWcpIHRyYW5zbGF0ZVgoLTUwJSkgdHJhbnNsYXRlWSgtNTAlKSAhaW1wb3J0YW50OyB3b3JkLWJyZWFrOiBicmVhay1hbGwgIWltcG9ydGFudDsgdG9wOiAzNiUgIWltcG9ydGFudDsgbGVmdDogNTAlICFpbXBvcnRhbnQ7IHBvc2l0aW9uOiBhYnNvbHV0ZSAhaW1wb3J0YW50OyB3aWR0aDogMTAwJSAhaW1wb3J0YW50OyB0ZXh0LWFsaWduOiBjZW50ZXIgIWltcG9ydGFudDsiPuWOhuWPsueJiOacrO+8jOmdnuacgOaWsOWGheWuuTxici8+5LiN5Luj6KGo6JCM5aiY55m+56eR56uL5Zy6PC9kaXY+PC9kaXY+PC9ib2R5PjwvaHRtbD48L2ZvcmVpZ25PYmplY3Q+PC9zdmc+"] {
+	content: url("");
+}
 .mw-echo-ui-notificationItemWidget-icon img[src*="approved"] {
 	background: #18B676;
 	clip-path: path("m9 17l-4.59-4.59L5.83 11L9 14.17l8-8V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z");
@@ -444,7 +449,6 @@ span[style$="#F0FFB3"]:has(+ sup.annotation) {
 	text-decoration: underline wavy #AFDA00;
 	text-underline-offset: .2em;
 }
-span.comment {font-style: oblique 9deg;}
 table.mw-changeslist-line {background: inherit;}
 td.mw-changeslist-line-inner {width: 100%;}
 td.mw-enhanced-rc-nested > p {display: inline-block;}
@@ -454,9 +458,10 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 .annotation > span:first-child:hover ~ .annotation-content {
 	display: block;
 	position: absolute;
-	background: #333C;
 	backdrop-filter: blur(5px);
+	background: #FFFA;
 	border-radius: 2px;
+	color: #333;
 	font-weight: normal;
 	line-height: 1.4em;
 	word-break: break-all;

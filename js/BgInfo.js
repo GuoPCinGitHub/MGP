@@ -64,13 +64,13 @@ $(() => (async () => {
 					right: 0;
 				}
 				`);
-				let src = $(this).children('img').attr('data-src').replace(/[<>\\]/g, '');
+				let src = $(this).children('img').attr('src').replace(/[<>\\]/g, '');
 				let txt = '背景：' + src;
 				if (/img.moegirl/g.test(src)) {
 					const ls = src.split('/');
 					const file = ls[ls.length - 1];
 					src = mw.config.get("wgServer") + '/cm:File:' + file;
-					txt = '背景：萌娘共享上的File:' + decodeURIComponent(file);
+					txt = '背景：萌娘共享上的File:' + window['decodeURIComponent'](file);
 				}
 				const pos = $('#mw-navigation').length > 0 ? '#mw-navigation' : 'main.moe-flexible-container';
 				$(pos).append($('<div>').addClass('pc-bg-info'));

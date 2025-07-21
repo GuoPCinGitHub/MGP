@@ -1,4 +1,4 @@
-if ($('.mw-collapsible.mw-enhanced-rc').length > 0) {
+if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 	mw.loader.addStyleTag(`
 	.pc-mip-count {
 		position: absolute;
@@ -19,19 +19,12 @@ if ($('.mw-collapsible.mw-enhanced-rc').length > 0) {
 		user-select: none;
 	}
 	`);
-	let epath = '.mw-collapsible.mw-enhanced-rc.mw-changeslist-edit .mw-changeslist-line-inner';
-	let lpath = '.mw-collapsible.mw-enhanced-rc.mw-changeslist-log .mw-changeslist-line-inner';
-	let sflag = false;
-	// 处理页面被嵌入的情形
-	if ($('.mw-collapsible.mw-enhanced-rc .mw-changeslist-line-inner > p').length > 0) {
-		sflag = true;
-		epath += '> p';
-		lpath += '> p';
-	}
+	let epath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-edit .mw-changeslist-line-inner';
+	let lpath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-log .mw-changeslist-line-inner';
 	// 在合并更改前方添加图标
-	$('.mw-collapsible.mw-enhanced-rc').each(function() {
-		const ico = $(this).find('i.mod-status-icon').first().clone();
-		const num = $(this).find('i.mod-status-icon').length - 1;
+	$('.mw-rcfilters-ui-highlights-enhanced-toplevel').each(function() {
+		const ico = $(this).next().find('i.mod-status-icon').first().clone();
+		const num = $(this).nextAll().find('i.mod-status-icon').length;
 		ico.css('position', 'relative');
 		ico.append($('<span>').text(num).addClass('pc-mip-count'));
 		$(this).find('td.mw-changeslist-line-inner').first().prepend(ico);
@@ -39,32 +32,23 @@ if ($('.mw-collapsible.mw-enhanced-rc').length > 0) {
 	// 隐藏合并编辑的后置图标
 	$(epath).each(function() {
 		let con = $(this).contents();
-		const ico = con.filter('span.mw-title ~ i.mod-status-icon');
-		const pos = con.index(ico);
+		const ico = con.filter('span.mw-changeslist-links').find('i.mod-status-icon');
+		const prevNode = ico[0].previousSibling;
 		if (con.filter('span.mw-title').has('a.new').length > 0) {
-			con.eq(pos - 1).get(0).replaceWith(con.eq(pos - 1).get(0).textContent.replace('历史 | ', '历史'));
+			prevNode.textContent.replace('历史 ', '历史');
 		} else {
-			con.eq(pos - 1).remove();
+			prevNode.remove();
 		}
-		con.eq(pos).remove();
-		if (sflag) {
-			$(this).css('display', 'contents');
-			$('.mw-enhanced-rc-nested p').css('display', 'contents');
-		}
+		ico.remove();
 	});
 	// 隐藏合并日志的后置图标
 	$(lpath).each(function() {
 		let con = $(this).contents();
-		const ico = con.filter('span.mw-rc-unwatched ~ i.mod-status-icon');
+		const ico = con.filter('span.mw-changeslist-links').find('i.mod-status-icon');
+		const prevNode = ico.parent()[0].previousSibling;
 		if (ico.length > 0) {
-			const pos = con.index(ico);
-			con.eq(pos - 1).remove();
-			con.eq(pos).remove();
-			con.eq(pos + 1).remove();
-		}
-		if (sflag) {
-			$(this).css('display', 'contents');
-			$('.mw-enhanced-rc-nested p').css('display', 'contents');
+			prevNode.remove();
+			ico.parent().remove();
 		}
 	});
 }

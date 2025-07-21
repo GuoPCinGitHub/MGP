@@ -4,9 +4,6 @@
 	color: var(--theme-text-color);
 }
 
-/* Subtitle alignment */
-#subtitle .xicon {height: 1.2em !important;}
-
 /* Catlinks: Not listed articles list */
 .catlinks#catlinks > div > ul#not-listed-articles-list > li:hover {background: yellow;}
 .catlinks#catlinks > div > ul#not-listed-articles-list > li:hover a {color: var(--color);}
@@ -78,6 +75,7 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 	height: 24px;
 	margin: -10px -6px;
 }
+#ca-wikiplus {cursor: pointer;}
 
 /* Footer */
 #moe-global-footer {
@@ -170,8 +168,9 @@ table.navbox > tbody > tr > td > table.mw-collapsed > tbody > tr > th.navbox-tit
 .user-avatar-wrapper .avatar-frame, 
 #moe-open-in-app {display: none;}
 /* .adsbygoogle, .moe-card[style*="relative"] {display: none !important;} */
+.comment-actions.relative > .absolute > .rounded-full {scale: .75;}
 .comment-actions.relative > .absolute > .rounded-full svg {
-	transform: scale(.6);
+	scale: .6;
 	transform-origin: top left;
 }
 .comment-children .comment-item > .absolute > .absolute[left--23px=""] {left: -22px;}
@@ -191,3 +190,4 @@ table.navbox > tbody > tr > td > table.mw-collapsed > tbody > tr > th.navbox-tit
 	margin: .2em 0;
 }
 #firstHeading {font-weight: 300 !important;}
+#mw-content-subtitle, #contentSub2 {margin: 0 !important;}
