@@ -50,7 +50,7 @@ $(() => (async () => {
 		}).then((res) => {
 			for (const PAGE of Object.values(res.query.pages)) {
 				revtitles.push(PAGE.title);
-			};
+			}
 			return revtitles;
 		});
 	}
@@ -84,6 +84,7 @@ $(() => (async () => {
 				pos = $('.moe-indicators').length > 0 ? '.moe-indicators' : '0';
 				break;
 			case 'vector':
+			case 'vector-2022':
 			default:
 				pos = $('.mw-indicators');
 		}
@@ -117,6 +118,11 @@ $(() => (async () => {
 			const ELE = $('<div>').attr('id', 'pc-templatestyles').append(TSIMain.$element);
 			$('#moe-article-header-title').prepend(ELE);
 		} else {
+			mw.loader.addStyleTag(`
+			.vector-body-before-content {
+				overflow: visible !important;
+			}
+			`);
 			$(pos).append(TSIMain.$element);
 		}
 	}
