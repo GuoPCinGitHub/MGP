@@ -34,11 +34,7 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		let con = $(this).contents();
 		const ico = con.filter('span.mw-changeslist-links').find('i.mod-status-icon');
 		const prevNode = ico[0].previousSibling;
-		if (con.filter('span.mw-title').has('a.new').length > 0) {
-			prevNode.textContent.replace('历史 ', '历史');
-		} else {
-			prevNode.remove();
-		}
+		prevNode.remove();
 		ico.remove();
 	});
 	// 隐藏合并日志的后置图标
