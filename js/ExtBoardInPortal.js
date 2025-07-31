@@ -27,6 +27,13 @@ a#n-sidebar-discussionboard-new:hover::before {
 	margin: 0 .65em 0 .25em;
 	vertical-align: middle;
 }
+a#n-sidebar-discussionboard-new:hover {
+	background: #1AA7EE;
+	color: #FFF !important;
+	text-decoration: none;
+	transition: all .1s ease-in;
+	width: 5.5em;
+}
 a#n-sidebar-discussionboard-new:focus {
 	text-decoration: none;
 }
