@@ -1,0 +1,244 @@
+/* Temp fix */
+@media screen and (min-width: 768px) {
+	.mobileonly {display: none !important;}
+}
+@media screen and (max-width: 768px) {
+	.nomobile {display: none !important;}
+}
+.mw-logo-icon {
+	object-fit: contain;
+	width: fit-content !important;
+}
+
+/* Specific font for certain characters:
+   - Em Dash (2014)
+   - Single Quotation Marks (2018, 2019)
+   - Double Quotation Marks (201C, 201D)
+   - Horizontal Ellipsis (2026) */
+@font-face {
+	font-family: "SHSerif Full-Width Quotation";
+	src: local("Source Han Serif SC");
+	unicode-range: U+2014, U+2018, U+2019, U+201C, U+201D, U+2026;
+}
+
+/* Customized fonts */
+h1#firstHeading span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
+h1#firstHeading span[lang="ko"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
+h1#firstHeading span[lang="ru"] {font-family: "Source Serif 4", serif !important;}
+h1#firstHeading[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
+h1#firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
+h1#firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
+h1#firstHeading {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
+.mw-body-content h2 {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
+.mw-body-content h2 span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
+.mw-body-content h2 span[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section.mw-heading2 h2,
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section h2,
+.vector-sticky-header-context-bar-primary {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
+
+/* Customized headers */
+h2 {font-weight: 600 !important;}
+.mw-body .mw-heading2 {
+	border-image: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE58, #25B49A) 1;
+	padding-bottom: 0;
+}
+.vector-page-titlebar::after {background: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE58, #25B49A);}
+
+/* Customized panel */
+#mw-panel #vector-main-menu #vector-main-menu,
+#mw-panel #vector-main-menu .vector-main-menu-action-opt-out:has(a[href$="mw-prefsection-rendering-skin"]),
+#p-sidebar-categoryindex {display: none;}
+#n-log a {
+	display: flex;
+	align-items: center;
+	padding: 6px 0;
+}
+.vector-toc .vector-toc-toggle {margin-top: .5em;}
+
+/* Customized navigation */
+#ca-quick-edit, #ca-editTopSection {
+	margin: 0 8px;
+	float: left;
+}
+#ca-quick-edit > span, #ca-editTopSection > span {
+	display: inline-flex;
+	padding: 12px 0 7px;
+	margin-bottom: -1px;
+}
+#ca-quick-edit > span:hover {border-bottom: 2px solid #2684FF;}
+#ca-editTopSection > span:hover {
+	border-bottom: 2px solid;
+	border-image: linear-gradient(to right, var(--color-progressive--hover) 4em, transparent 4em, calc(100% - 6em), #40C040 calc(100% - 6em)) 1;
+}
+#ca-quick-edit > span:hover > a,
+#ca-editTopSection > span:hover > a {text-decoration: none;}
+#ca-editTopSection > span > span:has(a) {margin-left: 16px;}
+#ca-editTopSection > span > span.mw-editsection-bracket {margin: 0;}
+#right-navigation.no-need-to-edit-whole-page ul.vector-menu-content-list {display: revert;}
+#t-expandtemplates a, #t-pagelog a, #t-Prefixindex a {
+	display: flex;
+	align-items: center;
+	padding: 6px 0;
+}
+#t-prefixindex {display: none;}
+.vector-menu-tabs .vector-menu-content-list a.cdx-button {margin-top: 7px;}
+.vector-toc-list-item:has(.ext-discussiontools-init-sidebar-meta) {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.vector-toc-list-item:has(.ext-discussiontools-init-sidebar-meta) .vector-toc-link {flex-grow: 1;}
+.vector-toc-list-item .ext-discussiontools-init-sidebar-meta {margin-left: auto;}
+
+/* Customized header */
+#p-user-menu-logout {margin: 1em 0 0.2em 0;}
+#pt-avatar {
+	position: absolute;
+	top: -4em;
+	left: calc(50% + 10px);
+	border: var(--background-color-progressive) 2px solid;
+	border-radius: 50%;
+	box-shadow: 0 2px 6px -1px rgba(0,0,0,0.2);
+	transform: scale(1.5) translateX(-50%);
+}
+#pt-avatar-sticky-header {text-align: center;}
+#pt-avatar-sticky-header img {
+	border-radius: 50%;
+	border: var(--background-color-progressive) 2px solid;
+	box-shadow: 0 2px 6px -1px rgba(0,0,0,0.2);
+	width: 52.5px;
+}
+.vector-header, .vector-sticky-header {box-shadow: 0 .3em .5em rgba(0, 0, 0, .05);}
+.vector-pinned-container {background: none;}
+.vector-user-menu .vector-dropdown-content {overflow: visible !important;}
+.vector-user-menu .vector-dropdown-content .vector-menu-content-list {position: relative;}
+
+/* Customized footer */
+#footer-info-copyright ul {
+	display: table-cell;
+	font-size: 1rem;
+	width: 25vw;
+	padding-bottom: 1em;
+}
+
+/* Customized Heimu */
+.heimu, .heimu rt, .colormu, .colormu rt {
+	border-radius: .2rem;
+	padding-inline: .2rem;
+}
+
+/* Colored QuickEdit */
+#bhsd-inspector a {color: #FF30A3;}
+#Wikiplus-Edit-TopBtn a {color: #40C040;}
+.Wikiplus-Edit-SectionBtn:hover {
+	color: #40C040;
+	text-decoration: none;
+}
+
+/* Customized QuickEdit */
+.in-page-edit:not(.notify) .ssi-modalTitle,
+.in-page-edit .ssi-modalWindow,
+.in-page-edit .ssi-overflow,
+.in-page-edit .ssi-overflow::before,
+.in-page-edit .ssi-overflow::after {
+	background: var(--background-color-base);
+	border-color: var(--border-color-muted);
+	color: var(--color-base);
+	scrollbar-color: var(--color-base) var(--background-color-base);
+}
+@media (prefers-color-scheme: dark) {
+	.in-page-edit.ipe-editor .wikiEditor-ui-toolbar,
+	.Wikiplus-InterBox .wikiEditor-ui-toolbar {
+		background: var(--color-base);
+	}
+	.in-page-edit.ipe-editor .ssi-buttons,
+	.Wikiplus-InterBox .ssi-buttons,
+	.Wikiplus-InterBox #Wikiplus-Quickedit-Preview-Submit,
+	.Wikiplus-InterBox #Wikiplus-Quickedit-Submit {
+		background: var(--background-color-base);
+		color: var(--color-base)
+	}
+}
+
+/* 窄屏 */
+/* - Infobox */
+@media (max-width: 576px) {
+	#mw-content-text .infoBox {width: 100% !important;}
+	#mw-content-text .infotemplatebox,
+	#mw-content-text table.infobox,
+	#mw-content-text table.infoboxSpecial {
+		width: 100% !important;
+		max-width: unset !important;
+		float: none !important;
+		margin: 1rem 0 !important;
+	}
+}
+/* - Navbox */
+@media (max-width: 768px) {
+	.navbox-group, .navbox-list, .navbox-title {
+		display: block;
+		width: 100% !important;
+		box-sizing: border-box;
+	}
+	.navbox-group + .navbox-list > .navbox-subgroup {
+		border-left: 0.75em solid transparent;
+	}
+	.navbox-group + * {
+		border-left: 0 !important;
+		border-top: 2px solid #fdfdfd;
+	}
+}
+
+/* Other */
+body.ns-2 div#catlinks:has(ul) {
+	display: revert !important;
+	background: #FEF2E7;
+	border: #F7AD64 1px solid;
+}
+body.overlay-scrollbars #bodyContent {padding-right: 0;}
+img.userlink-avatar-small {
+	background: var(--background-color-neutral);
+	color: transparent;
+}
+#siteSub {display: inline-flex;}
+#topicpath {
+	border: none !important;
+	background: #FFFA !important;
+	margin: .6em 0 !important;
+	box-shadow: 0 -.2em 0 #0002 inset;
+}
+@media (prefers-color-scheme: dark) {
+	.diff-addedline, .diff-deletedline {
+		background: var(--background-color-base);
+		color: var(--color-base);
+	}
+}
+.ext-discussiontools-init-section .oo-ui-image-progressive.oo-ui-icon-bell {
+	background: var(--background-color-progressive);
+	clip-path: path('M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3');
+	margin-top: .3em;
+}
+.ext-discussiontools-init-section .oo-ui-image-progressive.oo-ui-icon-bellOutline {
+	background: var(--background-color-progressive);
+	clip-path: path('M11.5 2.19C14.09 2.86 16 5.2 16 8v6l2 2v1H2v-1l2-2V8c0-2.8 1.91-5.14 4.5-5.81V1.5C8.5.67 9.17 0 10 0s1.5.67 1.5 1.5zM10 4C7.79 4 6 5.79 6 8v7h8V8c0-2.21-1.79-4-4-4M8 18h4c0 1.1-.9 2-2 2s-2-.9-2-2');
+	margin-top: .3em;
+}
+.mw-changeslist h4 {background: none !important;}
+.mw-page-container {
+	background-image: linear-gradient(#FFFA, #FFF min(50vh, 50vw)), url(https://app.moegirl.org.cn/background/2023Anniversary/1920x1080.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 0 -2vh;
+}
+@media (prefers-color-scheme: dark) {
+	.mw-page-container {
+		background-image: linear-gradient(#101418AA, #101418 min(50vh, 50vw)), url(https://app.moegirl.org.cn/background/2023Anniversary/1920x1080.png);
+	}
+}
+.navbox-title > div {display: -webkit-inline-box;}
+.oo-ui-image-progressive.oo-ui-icon-language, .mw-ui-icon-language-progressive {
+	background: var(--background-color-progressive);
+	clip-path: path('M20 18h-1.44a.6.6 0 0 1-.4-.12.8.8 0 0 1-.23-.31L17 15h-5l-1 2.54a.8.8 0 0 1-.22.3.6.6 0 0 1-.4.14H9l4.55-11.47h1.89zm-3.53-4.31L14.89 9.5a12 12 0 0 1-.39-1.24q-.09.37-.19.69l-.19.56-1.58 4.19zm-6.3-1.58a13.4 13.4 0 0 1-2.91-1.41 11.46 11.46 0 0 0 2.81-5.37H12V4H7.31a4 4 0 0 0-.2-.56C6.87 2.79 6.6 2 6.6 2l-1.47.5s.4.89.6 1.5H0v1.33h2.15A11.23 11.23 0 0 0 5 10.7a17.2 17.2 0 0 1-5 2.1q.56.82.87 1.38a23.3 23.3 0 0 0 5.22-2.51 15.6 15.6 0 0 0 3.56 1.77zM3.63 5.33h4.91a8.1 8.1 0 0 1-2.45 4.45 9.1 9.1 0 0 1-2.46-4.45');
+	mask: none !important;
+}

@@ -4,9 +4,21 @@
 	color: var(--theme-text-color);
 }
 
-/* Catlinks: Not listed articles list */
-.catlinks#catlinks > div > ul#not-listed-articles-list > li:hover {background: yellow;}
-.catlinks#catlinks > div > ul#not-listed-articles-list > li:hover a {color: var(--color);}
+/* Temp fix */
+.mw-highlight {
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: .5em;
+	overflow: hidden;
+}
+.mw-highlight pre {
+	border: none !important;
+	border-radius: 0 !important;
+	margin: 0 !important;
+	padding: .5em 0 .5em 3.5em !important;
+}
+
+/* Customized fonts */
+.mw-body-content h1, .mw-body-content h2 {font-family: inherit;}
 
 /* Header */
 #moe-user-dropdown {padding: 2px;}
@@ -52,7 +64,16 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 	height: 24px;
 	margin: -10px -6px;
 }
-#ca-move > span svg {display: none;}
+#ca-dt-page-subscribe > span {
+	background: var(--theme-button-color);
+	clip-path: path('M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z');
+	transform: scale(.5);
+	width: 24px;
+	height: 24px;
+	margin: -10px -6px;
+}
+#ca-move > span svg,
+#ca-dt-page-subscribe > span svg {display: none;}
 #ca-more-actions #Wikiplus-SR-Intro a::before {
 	content: '';
 	display: inline-block;
@@ -76,6 +97,11 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 	margin: -10px -6px;
 }
 #ca-wikiplus {cursor: pointer;}
+.tools-extra .page-tool-link .icon.icon-tabler-alert-triangle {
+	margin-left: 0;
+	opacity: 1;
+}
+#moe-page-tools > .content-actions > #Wikiplus-Edit-TopBtn {display: none;}
 
 /* Footer */
 #moe-global-footer {
@@ -91,6 +117,17 @@ body.skin-moeskin #moe-custom-sidenav-block-list > li#wphl-settings a {color: #4
 @media (max-width: 768px) {
 	body .ajaxpoll {min-width: fit-content;}
 	#mw-body {overflow-x: auto;}
+	#t-uploader {
+		display: inline-block;
+		border-left: 1px solid rgb(162 169 177);
+		margin-top: .25rem;
+		margin-bottom: .25rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+	#t-uploader a {
+		color: var(--theme-accent-color) !important;
+	}
 	.mainpage-newsbox .mobileonly {display: none;}
 	.mainpage-newsbox .nomobile {
 		display: block !important;
@@ -158,14 +195,16 @@ body.heimu_toggle_on span.heimu a,
 body.heimu_toggle_on a span.heimu,
 span.heimu:hover a,
 a span.heimu {color: var(--theme-link-color);}
+a.selflink {
+	color: var(--theme-text-color);
+	font-weight: bold;
+}
 kbd, kbd:active {all: revert !important;}
-table.diff.difftable {border-collapse: separate;}
-table.navbox > tbody > tr > td > table.mw-collapsed > tbody > tr > th.navbox-title {border-radius: 0.375rem;}
 /* article div[data-v-app], .adsbyezoic, .google-auto-placed, #ezcnxplayer, */
-.desktop-only .n-badge, .mobile-only .n-badge, 
-.namespaces-links-list > li:empty, 
-.user-avatar-container .avatar-frame, 
-.user-avatar-wrapper .avatar-frame, 
+.desktop-only .n-badge, .mobile-only .n-badge,
+.namespaces-links-list > li:empty,
+.user-avatar-container .avatar-frame,
+.user-avatar-wrapper .avatar-frame,
 #moe-open-in-app {display: none;}
 /* .adsbygoogle, .moe-card[style*="relative"] {display: none !important;} */
 .comment-actions.relative > .absolute > .rounded-full {scale: .75;}
@@ -176,13 +215,15 @@ table.navbox > tbody > tr > td > table.mw-collapsed > tbody > tr > th.navbox-tit
 .comment-children .comment-item > .absolute > .absolute[left--23px=""] {left: -22px;}
 .comment-header .comment-expression-to-article svg,
 .wiki-page-reactions svg {stroke-width: 0;}
+.diff.difftable {border-collapse: separate;}
+.ext-discussiontools-init-section-subscribeButton.oo-ui-buttonElement-frameless.oo-ui-iconElement > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {top: .35em;}
 .keyboard-key {vertical-align: initial;}
 .moe-float-button {
 	display: flex;
 	cursor: pointer;
 }
-.mw-collapsible.mw-enhanced-rc .mw-enhanced-rc {margin-left: 2.05em;}
-.navbox {border-collapse: separate;}
+.mw-rcfilters-ui-highlights-enhanced-nested {padding-left: 1em !important;}
+.mw-rcfilters-ui-highlights-enhanced-toplevel:has(.mw-unwatch-link) ~ .mw-rcfilters-ui-highlights-enhanced-nested {padding-left: 2.3em !important;}
 .popupPreview h2 {
 	color: var(--home-text-secondary-color);
 	font-size: 1.2em;
@@ -191,3 +232,7 @@ table.navbox > tbody > tr > td > table.mw-collapsed > tbody > tr > th.navbox-tit
 }
 #firstHeading {font-weight: 300 !important;}
 #mw-content-subtitle, #contentSub2 {margin: 0 !important;}
+#not-listed-articles {
+	opacity: .8;
+	font-size: 12px;
+}

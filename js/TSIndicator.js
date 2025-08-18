@@ -122,6 +122,9 @@ $(() => (async () => {
 			.vector-body-before-content {
 				overflow: visible !important;
 			}
+			#mw-indicator-mw-helplink {
+				display: inline-flex;
+			}
 			`);
 			$(pos).append(TSIMain.$element);
 		}

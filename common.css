@@ -18,12 +18,13 @@
 }
 
 /* Customized fonts */
-body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "MiSans L3" !important;}
+body {font-family: "SHSans Full-Width Punctuation", "IBM Plex Sans", Inter, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Unicode", NospzGothicMoe, "MiSans L3" !important;}
 span[lang="ja"] {font-family: YakuHanJP, "Kozuka Gothic Pro", sans-serif, "Sukima Gothic", "MiSans L3";}
 span[lang="ko"] {font-family: Rubik, Hahmlet, HGSGothicM, sans-serif;}
 span[lang="zh-Hant"], span[lang="zh-TW"] {font-family: "Taipei Sans TC Beta", sans-serif;}
 span[lang="zh-HK"] {font-family: "Chiron Sans HK Pro VF", sans-serif;}
 span[lang="el"], span[lang="grc"], span[lang="ru"] {font-family: "Fira Sans", sans-serif;}
+h1#firstHeading {font-family: inherit;}
 html i span[lang="ja"], html span[lang="ja"] i, html [style*="italic"] span[lang="ja"], html span[lang="ja"] [style*="italic"], html span[lang="ja"][style*="italic"] {
 	font-family: YakuHanRP, "UD Digi Kyokasho N-R", sans-serif, NospzGothicMoe, "Sukima Gothic", "MiSans L3" !important;
 	font-style: normal !important;
@@ -35,12 +36,14 @@ sup[class^="markrights"], sup.detailedBlockInfo {font-family: "LXGW WenKai", san
 .bilibili-video-container.exec {font-family: "Pingfang SC", sans-serif, "Noto Unicode", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", NospzGothicMoe, "MiSans L3";}
 .CtxtMenu_MenuArrow {font-family: inherit !important;}
 .diff-context div, .diff-addedline div, .diff-deletedline div, .diffchange, .mw-charinsert-item {font-family: monospace, NospzGothicMoe, "MiSans L3";}
-.diff-lineno, .mw-_addText-preview-loading {font-family: initial;}
-.disambig-box {font-family: Inter, sans-serif;}
+.diff-lineno {font-family: initial;}
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section.mw-heading2,
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section,
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section.mw-heading2 h2,
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section h2 {font-family: inherit !important;}
 .fans-medal-item {font-family: "HarmonyOS Sans SC", sans-serif !important;}
 .kancolle-nav-title {font-family: serif !important;}
 .MoeNotification-notice * {font-family: Inter, "LXGW Neo XiHei", sans-serif;}
-.mw-_addText-preview-loading {font-family: inherit !important;}
 .mw-parser-output .chem {font-family: "Cambria Math", serif !important;}
 .mw-parser-output .ztdh .ztdh-title {font-family: sans-serif !important;}
 .railway_station_name span[lang="ja-Latn"] {font-family: Inter, sans-serif !important;}
@@ -236,18 +239,9 @@ a.decoded::after {
 	background: #FBE6EA;
 	color: #4A4A4A;
 }
-.diff-context ::selection {
-	background: #B3BAC9;
-	color: #FFF;
-}
-.diff-deletedline ::selection {
-	background: #FC3;
-	color: #FFF;
-}
-.diff-addedline ::selection {
-	background: #AFB6E9;
-	color: #FFF;
-}
+.diff-context ::selection {background: #E1E4EA;}
+.diff-deletedline ::selection {background: #FFEEBD;}
+.diff-addedline ::selection {background: #EBECFA;}
 
 /* Become rounded */
 code, fieldset, pre,
@@ -263,6 +257,8 @@ code, fieldset, pre,
 .mmdPreviewer-hoverbox,
 .mw-body, .mw-changeslist-legend,
 .mw-revslider-container,
+.mw-specialCiteThisPage-bibliographic,
+.mw-ui-button,
 .mw-warning-with-logexcerpt,
 .navbox, .navpopup, .notice, .saveNotice,
 .Tabs .TabContent, .Tabs .TabLabelText,
@@ -274,6 +270,7 @@ code, fieldset, pre,
 #p-personal, #talkPageTop_saves, #toc,
 #userboxes, #bottomRightCorner div,
 .comment-avatar img, .oldTalkPageSave div,
+.ext-WikiEditor-ResizingDragBar span,
 .my-buttons a {border-radius: 2px;}
 .editOptions {border-radius: 0 0 2px 2px;}
 
@@ -425,6 +422,14 @@ div[style*="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMj
 	transform-origin: top left;
 }
 
+/* 窄屏 */
+@media (max-width: 768px) {
+	.mw-changeslist-legend {
+		float: none;
+		margin-left: 0;
+	}
+}
+
 /* Other */
 body > div[style*="-99999"], body > pre[style*="-99999"] {display: none;}
 body .ui-dialog {
@@ -449,9 +454,6 @@ span[style$="#F0FFB3"]:has(+ sup.annotation) {
 	text-decoration: underline wavy #AFDA00;
 	text-underline-offset: .2em;
 }
-table.mw-changeslist-line {background: inherit;}
-td.mw-changeslist-line-inner {width: 100%;}
-td.mw-enhanced-rc-nested > p {display: inline-block;}
 #profile {transition: all .2s ease-out;}
 #wikiPreview .annotation {position: relative;}
 .annotation > .annotation-content {display: none;}
@@ -497,6 +499,7 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 .common-box, .mw-notification, .navpopup {box-shadow: 0 0 .5rem #0002 !important;}
 .citation-comment {display: inline !important;}
 .diff-addedline, .diff-deletedline, .diff-context {vertical-align: middle;}
+.disambig-box {all: initial;}
 .echart-main {position: relative;}
 .echart-main > div[style*="absolute"] {
 	border: #CCC 1px solid;
@@ -562,6 +565,7 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 .mw-datatable.TablePager {display: table;}
 .mw-datatable tr td,
 .mw-datatable tr:hover td {transition: background-color .1s ease-in;}
+.mw-enhanced-rc-nested .mw-enhanced-rc-time {margin-right: .5em;}
 .mw-parser-output .fakelink {cursor: not-allowed !important;}
 .mw-parser-output .fakelink::after {
 	content: '';
@@ -600,6 +604,8 @@ td.mw-enhanced-rc-nested > p {display: inline-block;}
 	padding-top: 0 !important;
 }
 .mw-parser-output .userlink .userlink-item:hover a {text-decoration: none;}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-savedQueryTitle {vertical-align: text-bottom;}
+.mw-rcfilters-ui-highlights {display: none !important;}
 .mw-special-Watchlist .mw-changeslist-line-prefix {min-width: 1.25em;}
 .mw-tag-markers {font-size: 90%;}
 .need-comma a::after {content: none !important;}

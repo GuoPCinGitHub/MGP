@@ -13,8 +13,12 @@ $(() => {
 			padding: 0 5px;
 			vertical-align: middle;
 		}
+
+		#mw-indicator-mw-helplink {
+			display: inline-flex;
+		}
 		`);
-		
+
 		const MOD_TEXT = $('.moderation-notice').text();
 		const MOD_SITU_LIST = {
 			'self': '自己的编辑',

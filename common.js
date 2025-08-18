@@ -1,21 +1,3 @@
-// 监视列表时段选项自定义
-if (mw.config.get('wgCanonicalSpecialPageName') == 'Watchlist') {
-	var days = ['1', '3', '7', '14', '30'];
-	var limits = ['50', '100', '250', '500'];
-	var dayLinks = '';
-	var limitLinks = '';
-	for (var i = 0; i < days.length; i++) {
-		dayLinks += '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;days=' + days[i] + '&amp;from=" title="Special:监视列表" data-params="{&quot;days&quot;:' + days[i] + ',&quot;from&quot;:&quot;&quot;}" data-keys="days,from">' + days[i] + '</a>';
-		dayLinks += i == days.length - 1 ? '天的最后' : ' | ';
-	}
-	for (var j = 0; j < limits.length; j++) {
-		limitLinks += '<a href="/index.php?title=Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&amp;limit=' + limits[j] + '" title="Special:监视列表" data-params="{&quot;limit&quot;:' + limits[j] + '}" data-keys="limit">' + limits[j] + '</a>';
-		limitLinks += j == limits.length - 1 ? '个更改' : ' | ';
-	}
-	$('.wlinfo').after('<br><span class="wllinks">显示过去' + dayLinks + limitLinks + '</span>');
-	$('.cldays.cloption').hide();
-}
-
 // No lang="zh" for translation in LyricsKai
 if ($('.Lyrics-translated > span').attr('lang') == 'zh') {
 	$('.Lyrics-translated > span').removeAttr('lang');
@@ -49,6 +31,10 @@ mw.loader.load('/index.php?title=User:AnnAngela/js/upload-log-toggle.js&action=r
 
 // watchlist-log
 mw.loader.load('/index.php?title=User:AnnAngela/js/watchlist-log.js&action=raw&ctype=text/javascript');
+
+// JSONViewer
+window.jsonViewTheme = "atom";
+mw.loader.load("/index.php?title=User:BearBin/js/JSONViewer.js&action=raw&ctype=text/javascript");
 
 // code-prettify
 mw.loader.load('https://cdn.jsdelivr.net/gh/bhsd-harry/LLWiki@2.5/otherwiki/gadget-code-prettify.min.js');
