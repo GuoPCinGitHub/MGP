@@ -5,8 +5,7 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		bottom: -.4em;
 		right: -.4em;
 		display: inline-block;
-		backdrop-filter: blur(5px);
-		background: #FFF5;
+		background: #FFFD;
 		border: #AAA 1px dashed;
 		border-radius: 50%;
 		color: #222;
@@ -25,7 +24,7 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 	$('.mw-rcfilters-ui-highlights-enhanced-toplevel').each(function() {
 		const ico = $(this).next().find('i.mod-status-icon').first().clone();
 		const num = $(this).nextAll().find('i.mod-status-icon').length;
-		ico.css('position', 'relative');
+		ico.css({'position': 'relative', 'contain': 'none'});
 		ico.append($('<span>').text(num).addClass('pc-mip-count'));
 		$(this).find('td.mw-changeslist-line-inner').first().prepend(ico);
 	});
@@ -48,3 +47,4 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		}
 	});
 }
+
