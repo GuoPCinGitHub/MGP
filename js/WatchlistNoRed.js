@@ -1,5 +1,5 @@
 $(function () {
-	if (mw.config.get('wgCanonicalSpecialPageName') == 'EditWatchlist' && $('.mw-htmlform').length > 0) {
+	if (mw.config.get('wgCanonicalSpecialPageName') == 'EditWatchlist' && mw.config.get('wgPageName').indexOf('/') == -1 && $('.mw-htmlform').length > 0) {
 		$('#mw-content-text').prepend('<input type="button" value="' + wgULS('移除红链（不包括提案页面）', '移除紅連（不包括提案頁面）') +'" id="watchlistNoRed" class="cdx-button" style="margin: 5px 0;" on' + 'click="removeRedLinks()">');
 	}
 });
@@ -26,4 +26,5 @@ function removeRedLinks() {
 			window['clearTimeout'](removeTimeout);
 		}, 3000);
 	}
+
 }
