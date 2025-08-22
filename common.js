@@ -61,6 +61,17 @@ mw.loader.load('//fastly.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/ModIcon.min
 // ModIconPrep
 mw.loader.load('//fastly.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/ModIconPrep.min.js');
 
+// NavboxNotLinked
+if (mw.config.get("wgNamespaceNumber") == 10 && $(".navbox:not(.template-documentation .navbox)").length > 0) {
+	mw.loader.using('mediawiki.util').then(function() {
+		$(mw.util.addPortletLink('p-cactions', '#', '未嵌入链入', 'pc-navbox-not-linked')).click(function(e) {
+			e.preventDefault();
+			this.remove();
+			mw.loader.load('//fastly.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/NavboxNotLinked.min.js');
+		});
+	});
+}
+
 // TSIndicator
 mw.loader.load('//fastly.jsdelivr.net/gh/GuoPCinGitHub/MGP@master/js/TSIndicator.min.js');
 

@@ -232,7 +232,7 @@ kbd, kbd:active {all: revert !important;}
 }
 #firstHeading {font-weight: 300 !important;}
 #mw-content-subtitle, #contentSub2 {margin: 0 !important;}
-#not-listed-articles {
+#not-linked-articles, #not-listed-articles {
 	opacity: .8;
 	font-size: 12px;
 }

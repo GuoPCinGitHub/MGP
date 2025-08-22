@@ -5,6 +5,8 @@
 @import url("/index.php?title=User:鬼影233/moeskinplus.css&action=raw&ctype=text/css");
 /* MoeLatte - for MoeSkin */
 @import url("/index.php?title=User:GuoPC/MoeLatte.css&action=raw&ctype=text/css");
+/* NavboxNotLinked - for MoeSkin */
+@import url('/index.php?title=User:GuoPC/NavboxNotLinked.css&action=raw&ctype=text/css');
 
 /* Specific font for certain characters:
    - Em Dash (2014)
@@ -346,6 +348,7 @@ code, fieldset, pre,
 .Wikiplus-Edit-SectionBtn,div.vectorTabs li a.Wikiplus-Edit-SectionBtn,
 .Wikiplus-Edit-EveryWhereBtn {color: #40C040;}
 #ca-quick-edit a, .in-page-edit-article-link-group a {color: #2684FF;}
+#pc-navbox-not-linked a {color: #D4A039;}
 .AnnTools_MarkAsResolved {color: green;}
 .section-permanent-link {color: #545F6F;}
 

@@ -1,5 +1,5 @@
 // Mainpage
-$('.mw-logo').attr('href', '/User:GuoPC/M');
+$('.mw-logo, #n-mainpage-description a').attr('href', '/User:GuoPC/M');
 
 // 侧边栏与右侧导航区域下拉框
 $('#n-sidebar-policy').after('<li id="n-sidebar-essay" class="mw-list-item"><a href="/Category:萌娘百科论述">萌娘百科论述</a></li>');
@@ -32,8 +32,11 @@ for (let i = 0; i < IDS.length; i++) {
 	menu_items += menu_item;
 	dropdown_items += dropdown_item;
 }
-$('#p-vector-user-menu-notifications .vector-menu-content-list').prepend(menu_items).attr('style', 'flex-wrap:wrap;height:44px;overflow-y:auto;');
+$('#p-vector-user-menu-notifications .vector-menu-content-list').prepend(menu_items).attr('style', 'flex-wrap:wrap;height:32px;overflow-y:auto;');
 $('#vector-user-links-dropdown #p-personal .vector-menu-content-list').append(dropdown_items);
+
+// UserStatus
+mw.loader.load('/index.php?title=User:AnnAngela/js/userStatus.js&action=raw&ctype=text/javascript');
 
 // Inspector小工具自定义，见[[User:Bhsd/Inspector#偏好设置]]
 window.inspector = {

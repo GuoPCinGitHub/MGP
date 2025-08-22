@@ -45,35 +45,18 @@ h2 {font-weight: 600 !important;}
 .vector-page-titlebar::after {background: linear-gradient(to right, #EB8097, #E88849, #BF9D24, #7CAE58, #25B49A);}
 
 /* Customized panel */
-#mw-panel #vector-main-menu #vector-main-menu,
-#mw-panel #vector-main-menu .vector-main-menu-action-opt-out:has(a[href$="mw-prefsection-rendering-skin"]),
-#p-sidebar-categoryindex {display: none;}
 #n-log a {
 	display: flex;
 	align-items: center;
 	padding: 6px 0;
 }
+#p-sidebar-categoryindex,
+#vector-main-menu #vector-main-menu,
+#vector-main-menu .vector-main-menu-action-opt-out:has(a[href$="mw-prefsection-rendering-skin"]) {display: none;}
 .vector-toc .vector-toc-toggle {margin-top: .5em;}
 
 /* Customized navigation */
-#ca-quick-edit, #ca-editTopSection {
-	margin: 0 8px;
-	float: left;
-}
-#ca-quick-edit > span, #ca-editTopSection > span {
-	display: inline-flex;
-	padding: 12px 0 7px;
-	margin-bottom: -1px;
-}
-#ca-quick-edit > span:hover {border-bottom: 2px solid #2684FF;}
-#ca-editTopSection > span:hover {
-	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, var(--color-progressive--hover) 4em, transparent 4em, calc(100% - 6em), #40C040 calc(100% - 6em)) 1;
-}
-#ca-quick-edit > span:hover > a,
-#ca-editTopSection > span:hover > a {text-decoration: none;}
-#ca-editTopSection > span > span:has(a) {margin-left: 16px;}
-#ca-editTopSection > span > span.mw-editsection-bracket {margin: 0;}
+#noteTA-vector-menu-tabs a {padding: 12px 0 5px 0;}
 #right-navigation.no-need-to-edit-whole-page ul.vector-menu-content-list {display: revert;}
 #t-expandtemplates a, #t-pagelog a, #t-Prefixindex a {
 	display: flex;
@@ -173,6 +156,8 @@ h2 {font-weight: 600 !important;}
 		float: none !important;
 		margin: 1rem 0 !important;
 	}
+	.client-js .mw-changeslist ul,
+	.client-js .mw-changeslist table.mw-enhanced-rc {margin-left: 0;}
 }
 /* - Navbox */
 @media (max-width: 768px) {
@@ -215,14 +200,10 @@ img.userlink-avatar-small {
 	}
 }
 .ext-discussiontools-init-section .oo-ui-image-progressive.oo-ui-icon-bell {
-	background: var(--background-color-progressive);
-	clip-path: path('M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3');
-	margin-top: .3em;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3E bell %3C/title%3E%3Cg fill=%22%2336c%22%3E%3Cpath d=%22M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3%22/%3E%3C/g%3E%3C/svg%3E");
 }
 .ext-discussiontools-init-section .oo-ui-image-progressive.oo-ui-icon-bellOutline {
-	background: var(--background-color-progressive);
-	clip-path: path('M11.5 2.19C14.09 2.86 16 5.2 16 8v6l2 2v1H2v-1l2-2V8c0-2.8 1.91-5.14 4.5-5.81V1.5C8.5.67 9.17 0 10 0s1.5.67 1.5 1.5zM10 4C7.79 4 6 5.79 6 8v7h8V8c0-2.21-1.79-4-4-4M8 18h4c0 1.1-.9 2-2 2s-2-.9-2-2');
-	margin-top: .3em;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3E bell %3C/title%3E%3Cg fill=%22%2336c%22%3E%3Cpath d=%22M11.5 2.19C14.09 2.86 16 5.2 16 8v6l2 2v1H2v-1l2-2V8c0-2.8 1.91-5.14 4.5-5.81V1.5C8.5.67 9.17 0 10 0s1.5.67 1.5 1.5zM10 4C7.79 4 6 5.79 6 8v7h8V8c0-2.21-1.79-4-4-4M8 18h4c0 1.1-.9 2-2 2s-2-.9-2-2%22/%3E%3C/g%3E%3C/svg%3E");
 }
 .mw-changeslist h4 {background: none !important;}
 .mw-page-container {
@@ -237,8 +218,3 @@ img.userlink-avatar-small {
 	}
 }
 .navbox-title > div {display: -webkit-inline-box;}
-.oo-ui-image-progressive.oo-ui-icon-language, .mw-ui-icon-language-progressive {
-	background: var(--background-color-progressive);
-	clip-path: path('M20 18h-1.44a.6.6 0 0 1-.4-.12.8.8 0 0 1-.23-.31L17 15h-5l-1 2.54a.8.8 0 0 1-.22.3.6.6 0 0 1-.4.14H9l4.55-11.47h1.89zm-3.53-4.31L14.89 9.5a12 12 0 0 1-.39-1.24q-.09.37-.19.69l-.19.56-1.58 4.19zm-6.3-1.58a13.4 13.4 0 0 1-2.91-1.41 11.46 11.46 0 0 0 2.81-5.37H12V4H7.31a4 4 0 0 0-.2-.56C6.87 2.79 6.6 2 6.6 2l-1.47.5s.4.89.6 1.5H0v1.33h2.15A11.23 11.23 0 0 0 5 10.7a17.2 17.2 0 0 1-5 2.1q.56.82.87 1.38a23.3 23.3 0 0 0 5.22-2.51 15.6 15.6 0 0 0 3.56 1.77zM3.63 5.33h4.91a8.1 8.1 0 0 1-2.45 4.45 9.1 9.1 0 0 1-2.46-4.45');
-	mask: none !important;
-}
