@@ -13,7 +13,7 @@ a#n-sidebar-discussionboard-new {
 	text-align: center;
 	text-shadow: none;
 	transition: all .1s ease-in;
-	transform: translateY(-50%);
+	transform: translateY(calc(-50% + 0.1em));
 	width: 15px;
 	height: 15px;
 	padding: 0;
@@ -79,4 +79,5 @@ for (let i = 0; i < discussionBoardNames.length; i++) {
 		.css('position', 'relative');
 	$('#p-discussionboard ul').append(discussionBoardLiObj);
 }
+
 $('#p-discussionboard ul').prepend(discussionBoard);
