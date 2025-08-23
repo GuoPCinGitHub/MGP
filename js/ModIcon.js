@@ -37,7 +37,7 @@ $(() => {
 		};
 
 		// 构造并插入ModIcon
-		let setModIcon = (title, d) => '<span class="pc-mod-icon" title="' + title + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--theme-warn-color,green)"><path d="' + d + '"></path></svg></span>';
+		let setModIcon = (title, d) => '<span class="pc-mod-icon" title="' + title + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--theme-warn-color,var(--color-warning,goldenrod))"><path d="' + d + '"></path></svg></span>';
 
 		let pos = '';
 		switch (mw.config.get('skin')) {
@@ -94,4 +94,5 @@ $(() => {
 			$('#ca-edit a').attr('href', $('#ca-edit a').attr('href').replace(/&oldid=\d+/g, ''));
 		}
 	}
+
 });
