@@ -40,11 +40,8 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 	$(lpath).each(function() {
 		let con = $(this).contents();
 		const ico = con.filter('span.mw-changeslist-links').find('i.mod-status-icon');
-		const prevNode = ico.parent()[0].previousSibling;
 		if (ico.length > 0) {
-			prevNode.remove();
-			ico.parent().remove();
+			ico.parent()[0].remove();
 		}
 	});
 }
-
