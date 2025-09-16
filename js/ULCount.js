@@ -44,7 +44,7 @@ $(function() {
 		}
 		`);
 		
-		$('#mw-content-text ul:not(.redirectText)').each(function() {
+		$('#mw-content-text ul:not(.redirectText):not(.ActivityBannerSwitcher)').each(function() {
 			var n = $(this).children('li').length;
 			$(this).prepend($('<div>').addClass('pc-list-count').append($('<div>').addClass('pc-list-count-main').text(n)));
 		});
