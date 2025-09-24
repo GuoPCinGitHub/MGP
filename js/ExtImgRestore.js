@@ -8,14 +8,15 @@ $(() => {
 			background: var(--background-color-disabled-subtle, rgb(var(--theme-card-background-color--rgb)));
 			border-radius: .2em;
 			box-shadow: 0 0 .15em rgba(0, 0, 0, .2);
+			width: fit-content;
 			height: auto;
 			margin: .3em 0;
 			padding: .3em;
+			max-width: 95%;
 		}
 
 		.pc-img-restored > img {
 			object-fit: contain;
-			width: 100%;
 			height: 100%;
 		}
 
@@ -39,18 +40,19 @@ $(() => {
 		`);
 
 		$('.moe-img-error').each(function() {
-			$(this).parent().css('width', 'min(500px, 95%)');
 			const src = $(this).attr('data-src-input');
 			const img = new Image();
+			let width = 500;
 
 			img.onload = function() {
-				let width = this.naturalWidth;
-				if (width < 500) {
-					$(this).parent().css('width', 'min(' + width + 'px, 95%)');
+				const nwidth = this.naturalWidth;
+				if (nwidth < width) {
+					width = nwidth;
 				}
 			};
 			img.src = src;
 			img.alt = src;
+			img.style = `width: min(${width}, 100%);`;
 
 			$(this).after($('<div>').addClass('pc-img-restored').append(img));
 		});
