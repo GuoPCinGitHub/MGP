@@ -12,12 +12,13 @@ $(() => {
 			height: auto;
 			margin: .3em 0;
 			padding: .3em;
-			max-width: 95%;
+			max-width: min(500px, 95%);
 		}
 
 		.pc-img-restored > img {
-			object-fit: contain;
-			height: 100%;
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
 		}
 
 		span.error.moe-img-error {
@@ -41,20 +42,20 @@ $(() => {
 
 		$('.moe-img-error').each(function() {
 			const src = $(this).attr('data-src-input');
+			const $this = $(this);
 			const img = new Image();
-			let width = 500;
 
 			img.onload = function() {
 				const nwidth = this.naturalWidth;
-				if (nwidth < width) {
-					width = nwidth;
+				let container = $('<div>').addClass('pc-img-restored');
+				if (nwidth < 500) {
+					container.css('width', 'min(' + nwidth + 'px, 95%);');
 				}
+				container.append(this);
+				$this.after(container);
 			};
 			img.src = src;
 			img.alt = src;
-			img.style = `width: min(${width}, 100%);`;
-
-			$(this).after($('<div>').addClass('pc-img-restored').append(img));
 		});
 	}
 });
