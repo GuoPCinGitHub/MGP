@@ -46,11 +46,7 @@ $(() => {
 			const img = new Image();
 
 			img.onload = function() {
-				const nwidth = this.naturalWidth;
 				let container = $('<div>').addClass('pc-img-restored');
-				if (nwidth < 500) {
-					container.css('width', 'min(' + nwidth + 'px, 95%);');
-				}
 				container.append(this);
 				$this.after(container);
 			};
