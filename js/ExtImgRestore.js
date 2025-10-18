@@ -9,7 +9,7 @@ $(() => {
 			border-radius: .2em;
 			box-shadow: 0 0 .15em rgba(0, 0, 0, .2);
 			width: fit-content;
-			height: auto;
+			height: fit-content;
 			margin: .3em 0;
 			padding: .3em;
 			max-width: min(500px, 95%);
