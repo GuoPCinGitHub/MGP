@@ -121,6 +121,7 @@ $(() => (async () => {
 			mw.loader.addStyleTag(`
 			.vector-body-before-content {
 				overflow: visible !important;
+				min-height: 40px;
 			}
 			#mw-indicator-mw-helplink {
 				display: inline-flex;
@@ -129,4 +130,5 @@ $(() => (async () => {
 			$(pos).append(TSIMain.$element);
 		}
 	}
+
 })());
