@@ -57,6 +57,14 @@ $(() => (async () => {
 
 	// 构造并插入PopupButton
 	function insertTSI() {
+		mw.loader.addStyleTag(`
+		.mw-indicators,
+		#pc-templatestyles-button,
+		#pc-templatestyles-button > .oo-ui-popupWidget {
+			z-index: 3;
+		}
+		`)
+
 		const TSILoading = new OO.ui.ProgressBarWidget({
 			id: "pc-templatestyles-list-loading",
 			progress: false
@@ -132,3 +140,4 @@ $(() => (async () => {
 	}
 
 })());
+
