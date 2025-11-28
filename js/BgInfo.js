@@ -22,7 +22,7 @@ $(() => (async () => {
 					height: 24px;
 					cursor: pointer;
 				}
-		
+
 				.pc-bg-info-icon {
 					display: inline-block;
 					background: #1A2947;
@@ -32,33 +32,33 @@ $(() => (async () => {
 					transform: scale(.6);
 					transform-origin: center;
 				}
-		
+
 				.pc-bg-info-link {
 					font-family: Roboto, Arial, sans-serif;
 					font-size: 12px;
 					width: 0;
 					overflow-x: hidden;
 				}
-		
+
 				.pc-bg-info-link a {
 					display: inline-block;
 					color: #525252;
 					width: max-content;
 				}
-		
+
 				.pc-bg-info-link a:hover {
 					text-decoration: none;
 				}
-		
+
 				.pc-bg-info:hover {
 					width: max-content;
 				}
-		
+
 				.pc-bg-info:hover .pc-bg-info-link {
 					width: max-content;
 					padding: 0 2px 0 5px;
 				}
-				
+
 				main.moe-flexible-container .pc-bg-info {
 					bottom: 0;
 					right: 0;
@@ -66,7 +66,7 @@ $(() => (async () => {
 				`);
 				let src = $(this).children('img').attr('src').replace(/[<>\\]/g, '');
 				let txt = '背景：' + src;
-				if (/img.moegirl/g.test(src)) {
+				if (/img.moegirl/g.test(src) || /storage.moegirl/g.test(src)) {
 					const ls = src.split('/');
 					const file = ls[ls.length - 1];
 					src = mw.config.get("wgServer") + '/cm:File:' + file;
