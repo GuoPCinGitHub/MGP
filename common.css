@@ -64,8 +64,6 @@ a.mw-redirect::after,
 a.mw-disambig::after,
 a.mw-redirect.mw-disambig::after,
 a.extiw::after,
-a.stub::after,
-a.stub.mw-disambig.mw-disambig::after,
 a.decoded::after {
 	content: '';
 	display: inline-block;
@@ -90,9 +88,7 @@ a.decoded::after {
 /* - Preparation: Keep visually hidden under heimus */
 span.heimu a.mw-redirect, span.heimu a.mw-redirect:visited,
 span.heimu a.mw-disambig, span.heimu a.mw-disambig:visited,
-span.heimu a.extiw, span.heimu a.extiw:visited,
-span.heimu a.stub, span.heimu a.stub:visited,
-span.heimu a.stub.mw-disambig, span.heimu a.stub.mw-disambig:visited {
+span.heimu a.extiw, span.heimu a.extiw:visited {
 	transition: color .13s linear;
 	color: #252525;
 	text-shadow: none;
@@ -177,46 +173,6 @@ a.extiw[href*=".moegirl.org.cn"]::after {
 	clip-path: path('M20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C5.51545 2.99926 8.09315 2.56029 10.2605 3.44044L6.34315 7.35843L7.75736 8.77264L12 4.53L11.9872 4.51617C11.9918 4.52028 11.9964 4.5244 12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736Z');
 }
 
-/* - Stubs */
-a.stub,
-body.heimu_toggle_on span.heimu a.stub,
-body.heimu_toggle_on a.stub span.heimu,
-span.heimu:hover a.stub,
-a.stub:hover span.heimu {color: #2293CE;}
-
-/* - Stubs - visited */
-a.stub:visited,
-body.heimu_toggle_on span.heimu a.stub:visited,
-body.heimu_toggle_on a.stub:visited span.heimu,
-span.heimu:hover a.stub:visited,
-a.stub:visited:hover span.heimu {color: #1A73A2;}
-
-/* - Stubs - mark: A LEAF */
-a.stub::after {
-	background: #2293CE;
-	clip-path: path('M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L7.0964 18.9999C7.3079 15.9876 8.24541 14.1648 10.6939 11.9989C11.8979 10.9338 11.7965 10.3189 11.2029 10.6721C7.1193 13.1016 5.09114 16.3862 5.00119 21.6302L4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3Z');
-}
-
-/* - For links are both stubs and disambiguations, I call them "STUB-DISAM links" */
-a.stub.mw-disambig.mw-disambig,
-body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig,
-body.heimu_toggle_on a.stub.mw-disambig.mw-disambig span.heimu,
-span.heimu:hover a.stub.mw-disambig.mw-disambig,
-a.stub.mw-disambig.mw-disambig:hover span.heimu {color: #EE4A3F;}
-
-/* - STUB-DISAM links - visited */
-a.stub.mw-disambig.mw-disambig:visited,
-body.heimu_toggle_on span.heimu a.stub.mw-disambig.mw-disambig:visited,
-body.heimu_toggle_on a.stub.mw-disambig.mw-disambig:visited span.heimu,
-span.heimu:hover a.stub.mw-disambig.mw-disambig:visited,
-a.stub.mw-disambig.mw-disambig:visited:hover span.heimu {color: #CF2823;}
-
-/* - STUB-DISAM links - mark: A SEEDLING */
-a.stub.mw-disambig::after {
-	background: #EE4A3F;
-	clip-path: path('M21.998 7V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V14L11.0169 13.0007C11.2719 9.64413 14.0762 7 17.498 7H21.998ZM5.99805 3C9.0904 3 11.7144 5.00519 12.6408 7.78626C11.1417 9.06119 10.1516 10.9143 10.0144 13.0004L8.99805 13C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805Z');
-}
-
 /* - Decoded links - mark: A PERCENT */
 a.decoded::after {
 	background: #5D636F;
@@ -246,7 +202,7 @@ a.decoded::after {
 .diff-addedline ::selection {background: #EBECFA;}
 
 /* Become rounded */
-code, fieldset, pre,
+code, fieldset, pre, textarea,
 .ajaxpoll,
 .ajaxpoll .ajaxpoll-answer-vote,
 .ajaxpoll .ajaxpoll-answer-vote div,
@@ -255,16 +211,19 @@ code, fieldset, pre,
 .bilibili-video-container.exec,
 .cdx-message,
 .cm-tooltip, .errorbox,
-.infobox, .infoBox,
+.infobox, .infoBox, .infobox3,
 .mmdPreviewer-hoverbox,
 .mw-body, .mw-changeslist-legend,
 .mw-revslider-container,
 .mw-specialCiteThisPage-bibliographic,
 .mw-ui-button,
 .mw-warning-with-logexcerpt,
-.navbox, .navpopup, .notice, .saveNotice,
+.navbox, .navpopup, .notice,
+.ombox, .saveNotice,
 .Tabs .TabContent, .Tabs .TabLabelText,
-.template-documentation, .thumb, .thumbinner,
+.template-documentation,
+.template-external,
+.thumb, .thumbinner,
 .toccolours, .tocfloatlabel, .tracklist,
 .vertical-navbox, .ztdh,
 #archivebox, #catlinks,
@@ -275,6 +234,10 @@ code, fieldset, pre,
 .ext-WikiEditor-ResizingDragBar span,
 .my-buttons a {border-radius: 2px;}
 .editOptions {border-radius: 0 0 2px 2px;}
+.mw-tmh-player {
+	border-radius: 2px;
+	overflow: hidden;
+}
 
 /* Customized hovering and unhovering lyrics */
 .mw-parser-output .bg_hover {
@@ -379,11 +342,20 @@ code, fieldset, pre,
 	align-items: center;
 }
 .wphl-lint-count {width: auto !important;}
+.navbar .Wikiplus-Edit-EveryWhereBtn {margin-left: 4px;}
 
 /* InPageEdit */
 #ipe-edit-toolbox {transform: scale(.8667);}
 #ipe-edit-toolbox .ipe-toolbox-btn,
 #ipe-edit-toolbox .btn-tip-group .btn-tip {box-shadow: none;}
+.ipe-editor .showEditNotice .icon {
+	background: none;
+	opacity: 1;
+	transform: scale(.8);
+	margin-right: -4px;
+	vertical-align: -7px;
+}
+.navbar .in-page-edit-article-link-group {position: unset;}
 
 /* Homepage - legacy */
 .moegirlSister {flex-wrap: wrap;}
@@ -426,7 +398,17 @@ div[style*="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMj
 }
 
 /* 窄屏 */
+@media (max-width: 576px) {
+	/* - Infobox */
+	#mw-content-text .infobox3 {
+		width: 100% !important;
+		max-width: unset !important;
+		float: none !important;
+		margin: 1rem 0 !important;
+	}
+}
 @media (max-width: 768px) {
+	/* - Other */
 	.mw-changeslist-legend {
 		float: none;
 		margin-left: 0;
@@ -611,6 +593,7 @@ span[style$="#F0FFB3"]:has(+ sup.annotation) {
 .mw-rcfilters-ui-highlights {display: none !important;}
 .mw-special-Watchlist .mw-changeslist-line-prefix {min-width: 1.25em;}
 .mw-tag-markers {font-size: 90%;}
+.navbar {white-space: nowrap;}
 .need-comma a::after {content: none !important;}
 .need-comma > span::after {content: "、";}
 .report-article-footer {display: none;}

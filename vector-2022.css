@@ -1,13 +1,10 @@
-/* Temp fix */
-@media screen and (min-width: 768px) {
-	.mobileonly {display: none !important;}
+:root {
+	--theme-header-height: 0;
 }
-@media screen and (max-width: 768px) {
-	.nomobile {display: none !important;}
-}
-.mw-logo-icon {
-	object-fit: contain;
-	width: fit-content !important;
+@media (min-width: 1120px) {
+	:root {
+		--theme-header-height: 50px;
+	}
 }
 
 /* Specific font for certain characters:
@@ -24,7 +21,7 @@
 /* Customized fonts */
 h1#firstHeading span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
 h1#firstHeading span[lang="ko"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
-h1#firstHeading span[lang="ru"] {font-family: "Source Serif 4", serif !important;}
+h1#firstHeading span[lang="ru"], h1#firstHeading span[lang="el"] {font-family: "Source Serif 4", serif !important;}
 h1#firstHeading[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
 h1#firstHeading[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
 h1#firstHeading[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
@@ -33,7 +30,14 @@ h1#firstHeading {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", 
 .mw-body-content h2 span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
 .mw-body-content h2 span[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
 .ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section.mw-heading2 h2,
-.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section h2,
+.ext-discussiontools-visualenhancements-enabled .ext-discussiontools-init-section h2 {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
+.vector-sticky-header-context-bar-primary span[lang="ja"] {font-family: YakuHanMP, "Source Serif 4", "Kozuka Mincho Pro", "Source Han Serif", serif !important;}
+.vector-sticky-header-context-bar-primary span[lang="ko"] {font-family: "Source Serif 4", "Source Han Serif", serif !important;}
+.vector-sticky-header-context-bar-primary span[lang="ru"],
+.vector-sticky-header-context-bar-primary span[lang="el"] {font-family: "Source Serif 4", serif !important;}
+.vector-sticky-header-context-bar-primary[lang="zh-TW"] {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", "Source Han Serif", serif !important;}
+.vector-sticky-header-context-bar-primary[lang="zh-HK"] {font-family: "Chiron Sung HK VF", serif !important;}
+.vector-sticky-header-context-bar-primary[lang="en"] {font-family: "Source Serif 4", "Source Han Serif SC", serif !important;}
 .vector-sticky-header-context-bar-primary {font-family: "SHSerif Full-Width Quotation", "Source Serif 4", serif !important;}
 
 /* Customized headers */
@@ -57,6 +61,7 @@ h2 {font-weight: 600 !important;}
 
 /* Customized navigation */
 #noteTA-vector-menu-tabs a {padding: 12px 0 5px 0;}
+#noteTA-vector-menu-tabs a img {height: auto !important;}
 #right-navigation.no-need-to-edit-whole-page ul.vector-menu-content-list {display: revert;}
 #t-expandtemplates a, #t-pagelog a, #t-Prefixindex a {
 	display: flex;
@@ -75,27 +80,10 @@ h2 {font-weight: 600 !important;}
 .vector-toc-list-item .ext-discussiontools-init-sidebar-meta {margin-left: auto;}
 
 /* Customized header */
-#p-user-menu-logout {margin: 1em 0 0.2em 0;}
-#pt-avatar {
-	position: absolute;
-	top: -4em;
-	left: calc(50% + 10px);
-	border: var(--background-color-progressive) 2px solid;
-	border-radius: 50%;
-	box-shadow: 0 2px 6px -1px rgba(0,0,0,0.2);
-	transform: scale(1.5) translateX(-50%);
-}
-#pt-avatar-sticky-header {text-align: center;}
-#pt-avatar-sticky-header img {
-	border-radius: 50%;
-	border: var(--background-color-progressive) 2px solid;
-	box-shadow: 0 2px 6px -1px rgba(0,0,0,0.2);
-	width: 52.5px;
-}
+#ca-addsection {min-width: fit-content;}
+#mw-indicator-mw-helplink {white-space: nowrap;}
 .vector-header, .vector-sticky-header {box-shadow: 0 .3em .5em rgba(0, 0, 0, .05);}
 .vector-pinned-container {background: none;}
-.vector-user-menu .vector-dropdown-content {overflow: visible !important;}
-.vector-user-menu .vector-dropdown-content .vector-menu-content-list {position: relative;}
 
 /* Customized footer */
 #footer-info-copyright ul {
@@ -104,6 +92,9 @@ h2 {font-weight: 600 !important;}
 	width: 25vw;
 	padding-bottom: 1em;
 }
+
+/* Become rounded */
+.vector-dropdown-content {border-radius: 2px;}
 
 /* Customized Heimu */
 .heimu, .heimu rt, .colormu, .colormu rt {
@@ -145,26 +136,28 @@ h2 {font-weight: 600 !important;}
 }
 
 /* 窄屏 */
-/* - Infobox */
 @media (max-width: 576px) {
+	/* - Infobox */
 	#mw-content-text .infoBox {width: 100% !important;}
 	#mw-content-text .infotemplatebox,
 	#mw-content-text table.infobox,
-	#mw-content-text table.infoboxSpecial {
+	#mw-content-text table.infoboxSpecial,
+	#mw-content-text .moe-infobox {
 		width: 100% !important;
 		max-width: unset !important;
 		float: none !important;
 		margin: 1rem 0 !important;
 	}
+	/* - Other */
 	.client-js .mw-changeslist ul,
 	.client-js .mw-changeslist table.mw-enhanced-rc {margin-left: 0;}
 }
-/* - Navbox */
 @media (max-width: 768px) {
+	/* - Navbox */
 	.navbox-group, .navbox-list, .navbox-title {
 		display: block;
 		width: 100% !important;
-		box-sizing: border-box;
+		box-sizing: border-box !important;
 	}
 	.navbox-group + .navbox-list > .navbox-subgroup {
 		border-left: 0.75em solid transparent;
@@ -182,10 +175,7 @@ body.ns-2 div#catlinks:has(ul) {
 	border: #F7AD64 1px solid;
 }
 body.overlay-scrollbars #bodyContent {padding-right: 0;}
-img.userlink-avatar-small {
-	background: var(--background-color-neutral);
-	color: transparent;
-}
+img.userlink-avatar-small {color: transparent;}
 #siteSub {display: inline-flex;}
 #topicpath {
 	border: none !important;
@@ -193,6 +183,7 @@ img.userlink-avatar-small {
 	margin: .6em 0 !important;
 	box-shadow: 0 -.2em 0 #0002 inset;
 }
+
 @media (prefers-color-scheme: dark) {
 	.diff-addedline, .diff-deletedline {
 		background: var(--background-color-base);
@@ -205,6 +196,8 @@ img.userlink-avatar-small {
 .ext-discussiontools-init-section .oo-ui-image-progressive.oo-ui-icon-bellOutline {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3E bell %3C/title%3E%3Cg fill=%22%2336c%22%3E%3Cpath d=%22M11.5 2.19C14.09 2.86 16 5.2 16 8v6l2 2v1H2v-1l2-2V8c0-2.8 1.91-5.14 4.5-5.81V1.5C8.5.67 9.17 0 10 0s1.5.67 1.5 1.5zM10 4C7.79 4 6 5.79 6 8v7h8V8c0-2.21-1.79-4-4-4M8 18h4c0 1.1-.9 2-2 2s-2-.9-2-2%22/%3E%3C/g%3E%3C/svg%3E");
 }
+.infoboxSpecial, .navbox {color: var(--color-fixed);}
+.mw-body a.external:visited {color: revert;}
 .mw-changeslist h4 {background: none !important;}
 .mw-page-container {
 	background-image: linear-gradient(#FFFA, #FFF min(50vh, 50vw)), url(https://app.moegirl.org.cn/background/2023Anniversary/1920x1080.png);
@@ -218,3 +211,20 @@ img.userlink-avatar-small {
 	}
 }
 .navbox-title > div {display: -webkit-inline-box;}
+.userlink-avatar-small {transition: all ease-out .3s;}
+.userlink-avatar-small:hover {
+	background: #FFF;
+	box-shadow: 0 0 .2em lightblue;
+	transform: scale(5);
+	transition: all ease-in .3s;
+}
+.vector-icon.mw-ui-icon-wikimedia-language-progressive {
+	--svg: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3E language %3C/title%3E%3Cg fill=%22%2336c%22%3E%3Cpath d=%22M20 18h-1.44a.6.6 0 0 1-.4-.12.8.8 0 0 1-.23-.31L17 15h-5l-1 2.54a.8.8 0 0 1-.22.3.6.6 0 0 1-.4.14H9l4.55-11.47h1.89zm-3.53-4.31L14.89 9.5a12 12 0 0 1-.39-1.24q-.09.37-.19.69l-.19.56-1.58 4.19zm-6.3-1.58a13.4 13.4 0 0 1-2.91-1.41 11.46 11.46 0 0 0 2.81-5.37H12V4H7.31a4 4 0 0 0-.2-.56C6.87 2.79 6.6 2 6.6 2l-1.47.5s.4.89.6 1.5H0v1.33h2.15A11.23 11.23 0 0 0 5 10.7a17.2 17.2 0 0 1-5 2.1q.56.82.87 1.38a23.3 23.3 0 0 0 5.22-2.51 15.6 15.6 0 0 0 3.56 1.77zM3.63 5.33h4.91a8.1 8.1 0 0 1-2.45 4.45 9.1 9.1 0 0 1-2.46-4.45%22/%3E%3C/g%3E%3C/svg%3E");
+	-webkit-mask-image: var(--svg);
+	mask-image: var(--svg);
+}
+.vector-icon.mw-ui-icon-wikimedia-speechBubbleAdd-progressive {
+	--svg: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3E add speech bubble %3C/title%3E%3Cg fill=%22%2336c%22%3E%3Cpath d=%22M3 1a2 2 0 0 0-2 2v16l4-4h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 8h-4v4H9V9H5V7h4V3h2v4h4z%22/%3E%3C/g%3E%3C/svg%3E");
+	-webkit-mask-image: var(--svg);
+	mask-image: var(--svg);
+}

@@ -7,11 +7,13 @@ $(() => {
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			width: 21px;
 			height: 31px;
-			margin-right: .5em;
 			padding: 0 5px;
 			vertical-align: middle;
+		}
+
+		.pc-mod-icon svg {
+			min-width: 21px;
 		}
 
 		#mw-indicator-mw-helplink {
@@ -63,6 +65,7 @@ $(() => {
 						margin: 10px 5px 5px 5px;
 					}
 					.pc-mod-icon {
+						margin-right: .5em;
 						padding: 0 !important;
 					}
 					@media (max-width: 768px) {
@@ -94,5 +97,4 @@ $(() => {
 			$('#ca-edit a').attr('href', $('#ca-edit a').attr('href').replace(/&oldid=\d+/g, ''));
 		}
 	}
-
 });

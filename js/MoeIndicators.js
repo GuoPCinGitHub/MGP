@@ -1,6 +1,5 @@
 if (MOE_SKIN_GLOBAL_DATA.indicators) {
-	var indicators = MOE_SKIN_GLOBAL_DATA.indicators;
-	delete indicators["noteTA-0"];
+	let indicators = Object.fromEntries(Object.entries(MOE_SKIN_GLOBAL_DATA.indicators).filter(([k, ]) => !/noteTA-.+/g.test(k)));
 	if (!$.isEmptyObject(indicators)) {
 		$('#moe-article-header-title').prepend('<div class="moe-indicators"></div>');
 		mw.loader.addStyleTag(`
@@ -11,6 +10,7 @@ if (MOE_SKIN_GLOBAL_DATA.indicators) {
 			justify-content: center;
 			font-size: 1.2em;
 			float: right;
+			grid-gap: .5em;
 			margin: 5px 0 0 0;
 			height: 42px;
 			z-index: 1;
@@ -83,7 +83,7 @@ if (MOE_SKIN_GLOBAL_DATA.indicators) {
 		// 		}
 		// 	}, 1000);
 		// }
-		for (var key in indicators) {
+		for (let key in indicators) {
 			$('.moe-indicators').append(indicators[key]);
 		}
 	}

@@ -224,12 +224,14 @@ kbd, kbd:active {all: revert !important;}
 }
 .mw-rcfilters-ui-highlights-enhanced-nested {padding-left: 1em !important;}
 .mw-rcfilters-ui-highlights-enhanced-toplevel:has(.mw-unwatch-link) ~ .mw-rcfilters-ui-highlights-enhanced-nested {padding-left: 2.3em !important;}
+.mw-userlink {max-width: revert !important;}
 .popupPreview h2 {
 	color: var(--home-text-secondary-color);
 	font-size: 1.2em;
 	font-weight: bold;
 	margin: .2em 0;
 }
+.v-binder-follower-content {--v-target-width: 10em !important;}
 #firstHeading {font-weight: 300 !important;}
 #mw-content-subtitle, #contentSub2 {margin: 0 !important;}
 #not-linked-articles, #not-listed-articles {
