@@ -66,7 +66,7 @@ $(() => (async () => {
 				`);
 				let src = $(this).children('img').attr('src').replace(/[<>\\]/g, '');
 				let txt = '背景：' + src;
-				if (/img.moegirl/g.test(src)) {
+				if (/img.moegirl/g.test(src) || /storage.moegirl.org.cn\/moegirl\/commons/g.test(src)) {
 					const ls = src.split('/');
 					const file = ls[ls.length - 1];
 					src = mw.config.get("wgServer") + '/cm:File:' + file;
