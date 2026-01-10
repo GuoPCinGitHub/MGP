@@ -1,15 +1,14 @@
 $(function() {
-	if (!["submit", "edit"].includes(mw.config.get("wgAction")) && $('#mw-content-text ul:not(.redirectText)').length > 0) {
+	if (!["submit", "edit"].includes(mw.config.get("wgAction")) && $('#mw-content-text ul:not(.redirectText):not(.ActivityBannerSwitcher)').length > 0) {
 		mw.loader.addStyleTag(`
 		.pc-list-count {
-			position: relative;
+			position: absolute;
+			top: -1.6em;
+			left: 0;
 			height: 0;
 		}
 		.pc-list-count-main {
 			display: none;
-			position: absolute;
-			top: -1.6em;
-			left: 0;
 			border-radius: 2px;
 			background: #D4DFF6;
 			color: #2B5FC6;
@@ -25,6 +24,9 @@ $(function() {
 		.pc-list-count-main:after {
 			content: "${wgULS('个无序列表条目元素', '個無序列表條目元素')}";
 		}
+		#mw-content-text ul {
+			position: relative;
+		}
 		#mw-content-text ul ul > .pc-list-count .pc-list-count-main {
 			background: #F6EBD4;
 			color: #C8952A;
@@ -39,11 +41,12 @@ $(function() {
 		#mw-content-text ul:hover > .pc-list-count .pc-list-count-main:hover {
 			display: none;
 		}
-		#mw-content-text #toc ul:hover > .pc-list-count .pc-list-count-main {
+		#mw-content-text #toc ul:hover > .pc-list-count .pc-list-count-main,
+		#mw-content-text ul.mw-contributions-list:hover > .pc-list-count .pc-list-count-main {
 			display: none;
 		}
 		`);
-		
+
 		$('#mw-content-text ul:not(.redirectText):not(.ActivityBannerSwitcher)').each(function() {
 			var n = $(this).children('li').length;
 			$(this).prepend($('<div>').addClass('pc-list-count').append($('<div>').addClass('pc-list-count-main').text(n)));
