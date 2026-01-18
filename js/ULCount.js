@@ -25,6 +25,7 @@ $(function() {
 			content: "${wgULS('个无序列表条目元素', '個無序列表條目元素')}";
 		}
 		#mw-content-text ul {
+			display: flow-root;
 			position: relative;
 		}
 		#mw-content-text ul ul > .pc-list-count .pc-list-count-main {
