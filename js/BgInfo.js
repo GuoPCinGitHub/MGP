@@ -72,7 +72,17 @@ $(() => (async () => {
 					src = mw.config.get("wgServer") + '/cm:File:' + file;
 					txt = '背景：萌娘共享上的File:' + window['decodeURIComponent'](file);
 				}
-				const pos = $('.mw-page-container').length > 0 ? '.mw-page-container' : 'main.moe-flexible-container';
+				let pos = '';
+				switch (mw.config.get('skin')) {
+					case 'moeskin':
+						pos = 'main.moe-flexible-container';
+						break;
+					case 'vector-2022':
+						pos = '.mw-page-container';
+						break;
+					default:
+						pos = '#mw-navigation';
+				}
 				$(pos).append($('<div>').addClass('pc-bg-info'));
 				$('.pc-bg-info').append($('<span>').addClass('pc-bg-info-icon')).append($('<span>').addClass('pc-bg-info-link'));
 				$('.pc-bg-info-link').append($('<a>').text(txt).attr({
