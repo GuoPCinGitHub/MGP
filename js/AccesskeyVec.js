@@ -41,7 +41,7 @@ mw.loader.addStyleTag(`
 
 $(function() {
 	const NEW_SKIN = mw.config.get('skin') == 'vector-2022' ? true : false;
-	const PORTAL_ELE = NEW_SKIN ? '#vector-main-menu li' : '.portal li';
+	const PORTAL_ELE = NEW_SKIN ? '.vector-pinned-container li, .vector-dropdown-content li' : '.portal li';
 	const PERSONAL_ELE = NEW_SKIN ? '.vector-user-links-main li' : '#p-personal li';
 	const STICKY_ELE = NEW_SKIN ? '.vector-sticky-header-icons a' : 'body';
 	if ($(PORTAL_ELE).length > 0 && $(PERSONAL_ELE).length > 0 && $(STICKY_ELE).length > 0) {
@@ -61,4 +61,5 @@ $(function() {
 			}
 		});
 	}
+
 });
