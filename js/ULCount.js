@@ -3,12 +3,12 @@ $(function() {
 		mw.loader.addStyleTag(`
 		.pc-list-count {
 			position: absolute;
-			top: -1.6em;
-			left: 0;
 			height: 0;
 		}
 		.pc-list-count-main {
 			display: none;
+			top: -1.6em;
+			left: 0;
 			border-radius: 2px;
 			background: #D4DFF6;
 			color: #2B5FC6;
@@ -23,10 +23,6 @@ $(function() {
 		}
 		.pc-list-count-main:after {
 			content: "${wgULS('个无序列表条目元素', '個無序列表條目元素')}";
-		}
-		#mw-content-text ul {
-			display: flow-root;
-			position: relative;
 		}
 		#mw-content-text ul ul > .pc-list-count .pc-list-count-main {
 			background: #F6EBD4;
