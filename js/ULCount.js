@@ -2,11 +2,12 @@ $(function() {
 	if (!["submit", "edit"].includes(mw.config.get("wgAction")) && $('#mw-content-text ul:not(.redirectText):not(.ActivityBannerSwitcher)').length > 0) {
 		mw.loader.addStyleTag(`
 		.pc-list-count {
-			position: absolute;
+			position: relative;
 			height: 0;
 		}
 		.pc-list-count-main {
 			display: none;
+			position: absolute;
 			top: -1.6em;
 			left: 0;
 			border-radius: 2px;
