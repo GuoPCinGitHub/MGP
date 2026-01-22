@@ -13,7 +13,7 @@ $(() => (async () => {
 					position: fixed;
 					bottom: .6em;
 					right: .6em;
-					z-index: 21;
+					z-index: 101;
 					background: #FFFA;
 					backdrop-filter: blur(5px);
 					border-radius: 2px;
