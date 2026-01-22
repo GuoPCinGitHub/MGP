@@ -25,4 +25,14 @@ body:not(.skin-vector) #not-linked-articles-list > li > a {
 	color: var(--theme-accent-color);
 	line-height: 2;
 	transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+body:not(.skin-vector) #not-linked-articles-list > li > a:hover {
+	background-color: var(--theme-button-color) !important;
+	color: var(--theme-accent-link-color);
+}
+
+body:not(.skin-vector) #not-linked-articles-list > li > a:active {
+	background-color: var(--theme-button-color--active) !important;
 }
