@@ -2,7 +2,7 @@ mw.loader.addStyleTag(`
 #hitokoto {
 	display: flex;
 	justify-content: center;
-	align-item: center;
+	gap: 5px;
 	margin-bottom: 0.9em;
 }
 
@@ -12,7 +12,6 @@ mw.loader.addStyleTag(`
 
 #hitokoto_logo {
 	color: #8921FF;
-	margin: 0 5px;
 	user-select: none;
 }
 
