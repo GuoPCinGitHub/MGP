@@ -48,7 +48,7 @@ mw.loader.addStyleTag(`
 $(() => {
 	let pos = '';
 	if (mw.config.get('skin') == 'moeskin') {
-		pos = $(window).width() <= 768 ? '#moe-article-header-title' : '#moe-sitenotice-container';
+		pos = '#moe-article-header-title';
 	} else {
 		pos = '#siteNotice';
 	}
