@@ -20,26 +20,21 @@ mw.loader.addStyleTag(`
 }
 `);
 
-$(function () {
-	var pos = '';
+$(() => {
+	let pos = '';
 	if (mw.config.get('skin') == 'moeskin') {
-		if ($(window).width() <= 768) {
-			pos = '#moe-article-header-title';
-		} else {
-			pos = '#moe-sitenotice-container';
-		}
+		pos = $(window).width() <= 768 ? '#moe-article-header-title' : '#moe-sitenotice-container';
 	} else {
 		pos = '#siteNotice';
 	}
-	$(pos)
-		.append($('<div id="hitokoto"><a id="hitokoto_text">正在获取一言……</a></div>'));
-	$('#hitokoto_text')
-		.attr('target', '_blank')
-		.before($('<a id="hitokoto_logo"></a>'));
-	$('#hitokoto_logo')
-		.attr({href: 'https://hitokoto.cn', target: '_blank'})
-		.text('㋪');
-	
+
+	let container = $('<div>').attr('id', 'hitokoto').append(
+		$('<a>').attr({id: 'hitokoto_logo', target: '_blank', href: 'https://hitokoto.cn'}).text('㋪'),
+		$('<a>').attr({id: 'hitokoto_text', target: '_blank'}).text('正在获取一言……')
+	);
+
+	$(pos).append(container);
+
 	// https://developer.hitokoto.cn/sentence/demo/
 	fetch('https://v1.hitokoto.cn')
 		.then(response => response.json())
