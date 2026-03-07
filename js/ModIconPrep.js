@@ -19,6 +19,7 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 	}
 	`);
 	let epath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-edit .mw-changeslist-line-inner';
+	let npath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-new .mw-changeslist-line-inner';
 	let lpath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-log .mw-changeslist-line-inner';
 	// 在合并更改前方添加图标
 	$('.mw-rcfilters-ui-highlights-enhanced-toplevel').each(function() {
@@ -29,7 +30,7 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		$(this).find('td.mw-changeslist-line-inner').first().prepend(ico);
 	});
 	// 隐藏合并编辑的后置图标
-	$(epath).each(function() {
+	$(`${epath}, ${npath}`).each(function() {
 		let con = $(this).contents();
 		const ico = con.filter('span.mw-changeslist-links').find('i.mod-status-icon');
 		const prevNode = ico[0].previousSibling;
