@@ -17,6 +17,9 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		height: 1.2em;
 		user-select: none;
 	}
+	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon)) {
+		padding-left: 19.5px;
+	}
 	`);
 	let epath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-edit .mw-changeslist-line-inner';
 	let npath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-new .mw-changeslist-line-inner';
