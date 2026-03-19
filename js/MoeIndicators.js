@@ -16,7 +16,7 @@ $(() => (async () => {
 				font-size: 1.2em;
 				float: right;
 				grid-gap: .5em;
-				margin: 10px 0 0 0;
+				margin: 5px 0 0 0;
 				height: 42px;
 				z-index: 1;
 			}
