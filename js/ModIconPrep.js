@@ -17,7 +17,8 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		height: 1.2em;
 		user-select: none;
 	}
-	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon)) {
+	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon)),
+	td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator {
 		padding-left: 19.5px;
 	}
 	`);
