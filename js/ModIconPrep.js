@@ -23,7 +23,8 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 	}
 	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon))::before,
 	td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator::before {
-		content: "\\200B\\0020";
+		content: "\\0020";
+		white-space: pre;
 	}
 	`);
 	let epath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-edit .mw-changeslist-line-inner';
