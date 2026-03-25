@@ -17,19 +17,23 @@ if ($('.mw-rcfilters-ui-highlights-enhanced-toplevel').length > 0) {
 		height: 1.2em;
 		user-select: none;
 	}
-	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon)),
-	td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator {
-		text-indent: .84em;
-	}
-	td.mw-changeslist-line-inner:not(:has(i.mod-status-icon))::before {
-		content: " ";
-		white-space: pre;
-	}
-	td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator::before {
-		content: " . .";
-		white-space: pre;
-	}
 	`);
+	if (window.modIconPrepAlignBlank) {
+		mw.loader.addStyleTag(`
+		td.mw-changeslist-line-inner:not(:has(i.mod-status-icon)),
+		td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator {
+			text-indent: .84em;
+		}
+		td.mw-changeslist-line-inner:not(:has(i.mod-status-icon))::before {
+			content: " ";
+			white-space: pre;
+		}
+		td.mw-enhanced-rc-nested:not(:has(i.mod-status-icon)) > .mw-changeslist-separator::before {
+			content: " . .";
+			white-space: pre;
+		}
+		`);
+	}
 	let epath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-edit .mw-changeslist-line-inner';
 	let npath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-new .mw-changeslist-line-inner';
 	let lpath = '.mw-rcfilters-ui-highlights-enhanced-toplevel.mw-changeslist-src-mw-log .mw-changeslist-line-inner';
