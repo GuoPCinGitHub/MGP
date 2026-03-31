@@ -25,7 +25,18 @@ $(() => (async () => {
 							href: '/' + TITLES[i],
 							target: '_blank',
 							rel: 'noopener noreferrer'
-						}));
+						})).append('（')
+						.append($('<a>').text(wgULS('编', '編')).attr({
+							href: `/index.php?title=${TITLES[i]}&action=edit`,
+							target: '_blank',
+							rel: 'noopener noreferrer'
+						})).append(' • ')
+						.append($('<a>').text(wgULS('历', '歷')).attr({
+							href: `/index.php?title=${TITLES[i]}&action=history`,
+							target: '_blank',
+							rel: 'noopener noreferrer'
+						})).append('）');
+
 					list.append(line);
 				}
 
