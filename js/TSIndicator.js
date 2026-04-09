@@ -13,6 +13,8 @@ $(() => (async () => {
 
 		insertTSI();
 
+		$('#pc-templatestyles-button').attr('title', wgULS('此页面使用的模板样式表', '此頁面使用的模板樣式表'));
+
 		$('#pc-templatestyles-button > .oo-ui-buttonElement-button').on('click', async () => {
 			if (list.children().length > 0) {
 				return;
