@@ -11,8 +11,8 @@ $(() => (async () => {
 		new OO.ui.Widget(null), {
 			label: wgULS(undefined, undefined,
 				'按昵称查询用户名：',
-				'按暱稱查詢使用者名稱',
-				'按暱稱查詢用戶名'
+				'按暱稱查詢使用者名稱：',
+				'按暱稱查詢用戶名：'
 			),
 			align: 'top',
 			classes: ['pc-moename-query-field']
@@ -31,7 +31,7 @@ $(() => (async () => {
 	});
 
 	const moenameButton = new OO.ui.ButtonWidget({
-		label: wgULS('查询昵称', '查詢暱稱'),
+		label: wgULS('查询', '查詢'),
 		classes: ['pc-moename-query-button']
 	});
 
@@ -58,7 +58,7 @@ $(() => (async () => {
 	);
 	$targetInputWidget.after(moenameFieldLayout.$element);
 
-	// API：查询昵称
+	// API：查询用户ID
 	const getUserIdsByMoeName = async (moename) => {
 		return api.get({
 			action: 'moedisplayname',
@@ -72,7 +72,11 @@ $(() => (async () => {
 				return [];
 			}
 		}).catch(function (error) {
-			moenameLabel.setLabel(wgULS('API：查询昵称出错：', 'API：查詢暱稱出錯：') + error);
+			moenameLabel.setLabel(wgULS(undefined, undefined,
+				'API：查询用户ID出错：',
+				'API：查詢使用者ID出錯：',
+				'API：查詢用戶ID出錯：',
+			) + error);
 		});
 	};
 
