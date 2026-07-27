@@ -392,12 +392,18 @@ setTimeout(() => {
 		}
 
 		// 处理查询
-		function handleQuery() {
+		function handleQuery(event) {
 			const moename = moenameInput.getValue().trim();
 			if (!moename) {
 				moenameLabel.setLabel(wgULS('请输入昵称', '請輸入暱稱'));
 				return;
 			}
+			if (event) {
+				event.preventDefault();
+				event.stopPropagation();
+				if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+			}
+			if (moenameButton.isDisabled()) return;
 
 			moenameLabel.setLabel(wgULS('正在查询…', '正在查詢…'));
 			moenameButton.setDisabled(true);
@@ -422,7 +428,7 @@ setTimeout(() => {
 							+ wgULS('（昵称：', '（暱稱：') + displaynames[0].displayname
 							+ '#' + displaynames[0].displaytag + '）'
 						);
-					}).catch(function(error) {
+					}).catch(function (error) {
 						moenameLabel.setLabel(wgULS(undefined, undefined,
 							'获取用户名失败：',
 							'取得使用者名稱失敗：',
@@ -446,7 +452,35 @@ setTimeout(() => {
 		}
 
 		moenameButton.on('click', handleQuery);
-		moenameInput.on('enter', handleQuery);
+		moenameInput.on('enter', function (event) {
+			if (moenameInput.getValue().trim()) {
+				event.preventDefault();
+				event.stopPropagation();
+				handleQuery(event);
+			}
+		});
+		moenameInput.$element.find('input').on('keydown', function (event) {
+			if (event.key === 'Enter' || event.keyCode === 13) {
+				event.preventDefault();
+				event.stopPropagation();
+				handleQuery(event);
+				return false;
+			}
+		});
+		$(document).on('submit', '#mw-usercontribs-form', function (event) {
+			if (moenameInput.getValue().trim()) {
+				event.preventDefault();
+				event.stopPropagation();
+				return false;
+			}
+		});
+		$(document).on('click', '#mw-usercontribs-form .mw-htmlform-submit', function (event) {
+			if (moenameInput.getValue().trim()) {
+				event.preventDefault();
+				event.stopPropagation();
+				return false;
+			}
+		});
 
 		// 样式
 		mw.loader.addStyleTag(`
